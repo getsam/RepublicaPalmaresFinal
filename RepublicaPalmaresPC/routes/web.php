@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home', 'PalmaresController@index');
+
+
+
+Auth::routes();
+
+Route::get('/homeRestrita', 'HomeController@index')
+->name('home')
+->middleware('auth'); //torna a home PROTEGIDA SÓ PODENDO SER ACESSADA COM O LOGIN

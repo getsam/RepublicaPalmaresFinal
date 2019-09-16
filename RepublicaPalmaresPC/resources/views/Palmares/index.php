@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Republica Cultural de Palmares</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="<?php echo asset('css/bootstrap.min.css')?>" rel="stylesheet">
+
+
+
+    <!-- Animation CSS -->
+    <link href="<?php echo asset('css/animate.css')?>" rel="stylesheet">
+    <link href="<?php echo asset('font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
+
+    <link rel="stylesheet" href="<?php echo asset('css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css')?>">
+
+    <!-- Custom styles for this template -->
+    <link href="<?php echo asset('css/style.css')?>" rel="stylesheet">
+</head>
+<body id="page-top" class="landing-page">
+<div class="navbar-wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        REPÚBLICA DE CULTURAL
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="page-scroll" href="#page-top">Home</a></li>
+                        <li><a class="page-scroll" href="#features">Sobre Nós</a></li>
+                        <li><a class="page-scroll" href="#testimonials">Testemunhos</a></li>
+                        <li><a class="page-scroll" href="#teste">Programas</a></li>
+                        <li><a class="page-scroll" href="#contact">Fale Consoco</a></li>
+                        <li><a class="" href="login.html">Entrar</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+</div>
+<div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#inSlider" data-slide-to="0" class="active"></li>
+        <li data-target="#inSlider" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+       
+        <div class="item active">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Republica Cultural<br/>
+                        O espaçõ da Capoeira<br/>
+                        que abre as portas <br/>
+                        para outros projetos.
+                    </h1>
+                    
+                    <!-- <p>
+                        <a class="btn btn-lg btn-primary" href="#" role="button">READ MORE</a>
+                        <a class="caption-link" href="#" role="button">Inspinia Theme</a>
+                    </p> -->
+                </div> 
+                <!-- <div class="carousel-image wow zoomIn">
+                    <img src="img/landing/laptop.png" alt="laptop"/>
+                </div> -->
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back one"></div>
+
+        </div>
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption blank">
+                    <h1>A profundidade de nossas ações<br/>
+                         fizeram de nossa associação<br/>
+                         uma entidade muito além<br/>
+                          de uma simples academia de capoeira.</h1>
+                    <!-- <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p> -->
+                    <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back two"></div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#inSlider" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+<section id="features" class="container services">
+    <div class="row">
+        <div class="col-sm-3">
+            <h2>Artes Marciais</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+        </div>
+        <div class="col-sm-3">
+            <h2>Música</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+        </div>
+        <div class="col-sm-3">
+            <h2>Teatro</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+        </div>
+        <div class="col-sm-3">
+            <h2>Artesanato</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+        </div>
+    </div>
+</section>
+
+<section  class="container features">
+    <!-- <div class="row">
+        <div class="col-lg-12 text-center">
+            <div class="navy-line"></div>
+            <h1>Over 40+ unique view<br/> <span class="navy"> with many custom components</span> </h1>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
+        </div>
+    </div> -->
+    <!-- <div class="row">
+        <div class="col-md-3 text-center wow fadeInLeft">
+            <div>
+                <i class="fa fa-mobile features-icon"></i>
+                <h2>Full responsive</h2>
+                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+            </div>
+            <div class="m-t-lg">
+                <i class="fa fa-bar-chart features-icon"></i>
+                <h2>6 Charts Library</h2>
+                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+            </div>
+        </div>
+        <div class="col-md-6 text-center  wow zoomIn">
+            <img src="img/landing/perspective.png" alt="dashboard" class="img-responsive">
+        </div>
+        <div class="col-md-3 text-center wow fadeInRight">
+            <div>
+                <i class="fa fa-envelope features-icon"></i>
+                <h2>Mail pages</h2>
+                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+            </div>
+            <div class="m-t-lg">
+                <i class="fa fa-google features-icon"></i>
+                <h2>AngularJS version</h2>
+                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+            </div>
+        </div>
+    </div> -->
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <div class="navy-line"></div>
+            <h1>Discover great feautres</h1>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
+        </div>
+    </div>
+    <div class="row features-block">
+        <div class="col-lg-6 features-text wow fadeInLeft">
+            <small>INSPINIA</small>
+            <h2>Perfectly designed </h2>
+            <p>A nossa associação nasceu entre o final da década de setenta e o início dos anos oitenta. A motivação que nos levou a fundar esta entidade foi basicamente três coisas: em primeiro lugar a nossa paixão Pela cultura e arte genuína de nosso povo que por si só é um gesto de rebeldia de questionamento do que esta posto. Em segundo lugar, tratava-se de demonstrar na pratica e de um modo formal o nosso grau de compromisso e envolvimento com a capoeira e a arte folclore brasileiro, para nos uma arma de libertação e finalmente, víamos nesta associação uma espécie de “templo” onde a vivência na e com a capoeira ganhava um sentido ideológico, político e sobretudo filosófico</p>
+            <a href="" class="btn btn-primary">Learn more</a>
+        </div>
+        <div class="col-lg-6 text-right wow fadeInRight">
+            <img src="img/landing/dashboard.png" alt="dashboard" class="img-responsive pull-right">
+        </div>
+    </div>
+</section>
+
+
+
+<section class="features">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1>Even more great feautres</h1>
+                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
+            </div>
+        </div>
+        <div class="row features-block">
+            <div class="col-lg-3 features-text wow fadeInLeft">
+                <small>INSPINIA</small>
+                <h2>Perfectly designed </h2>
+                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with latest jQuery plugins.</p>
+                <a href="" class="btn btn-primary">Learn more</a>
+            </div>
+            <div class="col-lg-6 text-right m-t-n-lg wow zoomIn">
+                <img src="img/landing/iphone.jpg" class="img-responsive" alt="dashboard">
+            </div>
+            <div class="col-lg-3 features-text text-right wow fadeInRight">
+                <small>INSPINIA</small>
+                <h2>Perfectly designed </h2>
+                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with latest jQuery plugins.</p>
+                <a href="" class="btn btn-primary">Learn more</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section id="testimonials" class="navy-section testimonials" style="margin-top: 0">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center wow zoomIn">
+                <i class="fa fa-comment big-icon"></i>
+                <h1>
+                    What our users say
+                </h1>
+                <div class="testimonials-text">
+                    <i>"Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."</i>
+                </div>
+                <small>
+                    <strong>12.02.2014 - Andy Smith</strong>
+                </small>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="comments gray-section" style="margin-top: 0">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1>What our partners say</h1>
+                <p>Donec sed odio dui. Etiam porta sem malesuada. </p>
+            </div>
+        </div>
+        <div class="row features-block">
+            <div class="col-lg-4">
+                <div class="bubble">
+                    "Uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+                </div>
+                <div class="comments-avatar">
+                    <a href="" class="pull-left">
+                        <img alt="image" src="img/landing/avatar3.jpg">
+                    </a>
+                    <div class="media-body">
+                        <div class="commens-name">
+                            Andrew Williams
+                        </div>
+                        <small class="text-muted">Company X from California</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="bubble">
+                    "Uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+                </div>
+                <div class="comments-avatar">
+                    <a href="" class="pull-left">
+                        <img alt="image" src="img/landing/avatar1.jpg">
+                    </a>
+                    <div class="media-body">
+                        <div class="commens-name">
+                            Andrew Williams
+                        </div>
+                        <small class="text-muted">Company X from California</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="bubble">
+                    "Uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+                </div>
+                <div class="comments-avatar">
+                    <a href="" class="pull-left">
+                        <img alt="image" src="img/landing/avatar2.jpg">
+                    </a>
+                    <div class="media-body">
+                        <div class="commens-name">
+                            Andrew Williams
+                        </div>
+                        <small class="text-muted">Company X from California</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="features" id="teste">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1>More and more extra great feautres</h1>
+                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 col-lg-offset-1 features-text">
+                <small>INSPINIA</small>
+                <h2>Perfectly designed </h2>
+                <i class="fa fa-bar-chart big-icon pull-right"></i>
+                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with.</p>
+            </div>
+            <div class="col-lg-5 features-text">
+                <small>INSPINIA</small>
+                <h2>Perfectly designed </h2>
+                <i class="fa fa-bolt big-icon pull-right"></i>
+                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 col-lg-offset-1 features-text">
+                <small>INSPINIA</small>
+                <h2>Perfectly designed </h2>
+                <i class="fa fa-clock-o big-icon pull-right"></i>
+                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with.</p>
+            </div>
+            <div class="col-lg-5 features-text">
+                <small>INSPINIA</small>
+                <h2>Perfectly designed </h2>
+                <i class="fa fa-users big-icon pull-right"></i>
+                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- seção fale conosco -->
+<section id="contact" class="gray-section contact">
+    <div class="container">
+        <div class="row m-b-lg">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1>Fale conosco</h1>
+                <p> Organização Não governamental sem fins lucrativos, tem como objetivo transmitir a memória cultural de nossa história, através das mais diversas expressões culturais, saiba mais sobre nosso trabalho, fale conosco.</p>
+                <form action="cadInteressado" id="fale-conosco" method="POST">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="nome_Interessado" class="label-control pull-left">
+                                        Nome
+                                    </label>
+                                    <input id="nome_Interessado" type="text"  name="nome_Interessado" class="form-control" required placeholder="Ex: joao da silva">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="telefone_Interessado" class="label-control pull-left ">
+                                        Telefone
+                                    </label>
+                                    <input type="tel" name="telefone_Interessado" id="telefone_Interessado" required class="form-control celphones" placeholder="Ex: (99)99999-9999" >
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email_Interessado" class="label-control pull-left">
+                                        E-mail
+                                    </label>
+                                    <input type="email" name="email_Interessado" id="email_Interessado" required class="form-control" placeholder="Ex: joao@silva.com">
+                                </div>
+
+                                <div class="form-group ">
+                                    <h3 class="text-navy">
+                                        Assuntos de Interesse
+                                    </h3>
+                                    <div class="d-flex-between">
+                                        <div class="checkbox checkbox-inline checkbox-info">
+                                            <input type="checkbox" name="interesse[]" id="interesse_Aula" value="1">
+                                            <label for="interesse_Aula"><strong class="text-uppercase">Aluno</strong></label>
+                                        </div>
+    
+                                        <div class="checkbox checkbox-inline checkbox-info">
+                                            <input type="checkbox" name="interesse[]" id="interesse_Colaborador" value="2">
+                                            <label for="interesse_Colaborador">
+                                                <strong class="text-uppercase">Colaboradores</strong>
+                                            </label>
+                                        </div>
+    
+                                        <div class="checkbox checkbox-inline checkbox-info">
+                                            <input type="checkbox" name="interesse[]" id="interesse_Doador" value="3">
+                                            <label for="interesse_Doador">
+                                                <strong class="text-uppercase">Doação</strong>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <textarea id="texto_Interessado" name="mensagem_Interessado" cols="30" rows="12" required placeholder="Escreva seu texto aqui" class="form-control"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <button id="enviar-form" type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row m-b-lg">
+            <div class="col-lg-6 col-lg-offset-3 text-center">
+                <address>
+                    <strong><span class="navy">Assossiação Cultural República de Palmares</span></strong><br/>
+                    Av. Gal. Newtom Stilac Leal, 1375<br/>
+                    Cidade das Flores, Osasco <br/>
+                    São Paulo CEP: 06180-000 <br/>
+                    <abbr title="Phone">Tel:</abbr> (11) 3497-9553
+                </address>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+               
+                <p class="m-t-sm">
+                    Siga-nos em nossas redes sociais
+                </p>
+                <ul class="list-inline social-icon">
+                    <li><a href="https://www.instagram.com/oficial_acrepublicadepalmares" target="_blank"><i class="fa fa-instagram"></i></a>
+                    </li>
+                    <li><a href="https://www.facebook.com/RepublicadePalmares" target="_blank"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li><a href="https://www.youtube.com/channel/UCJE9y-cZd862V3GLphtLd7Q" target="_blank"><i class="fa fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+                <p><strong>&copy; 2019 Associação Cultural republica de Palmares</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Mainly scripts -->
+<script src="<?php echo asset('js/jquery-2.1.1.js')?>"></script>
+<script src="<?php echo asset('js/bootstrap.min.js')?>"></script>
+<script src="<?php echo asset('js/plugins/metisMenu/jquery.metisMenu.js')?>"></script>
+<script src="<?php echo asset('js/plugins/slimscroll/jquery.slimscroll.min.js')?>"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="<?php echo asset('js/inspinia.js')?>"></script>
+<script src="<?php echo asset('js/plugins/pace/pace.min.js')?>"></script>
+<script src="<?php echo asset('js/plugins/wow/wow.min.js')?>"></script>
+
+<script src="<?php echo asset('js/plugins/validate/jquery.validate.min.js')?>"></script>
+<!-- <script src="js/plugins/jasny/jasny-bootstrap.min.js"></script> -->
+
+
+<script src="<?php echo asset('js/plugins/jqmask/jquery_mask.js')?>"></script>
+<script src="<?php echo asset('js/pages/validator.js')?>"></script>
+<script src="<?php echo asset('js/pages/index.js')?>"></script>
+</body>
+</html>
