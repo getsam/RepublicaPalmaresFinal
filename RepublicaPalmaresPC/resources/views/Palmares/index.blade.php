@@ -45,7 +45,7 @@
                         <li><a class="page-scroll" href="#testimonials">Testemunhos</a></li>
                         <li><a class="page-scroll" href="#teste">Programas</a></li>
                         <li><a class="page-scroll" href="#contact">Fale Consoco</a></li>
-                        <li><a class="" href="{{ url('/entrar')}}">Entrar</a></li>
+                        <li><a class="" href="{{ url('/login')}}">Entrar</a></li>
                     </ul>
                 </div>
             </div>

@@ -5,9 +5,12 @@
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     
     <title>ONG Republica de palmares | Login </title>
     
+    {{-- JS do laravel --}}
+    {{-- <!--<script src="{{ asset('js/app.js') }}" defer></script>--> --}}
 
     <link href="<?php echo asset('css/bootstrap.min.css')?>" rel="stylesheet">
     <link href="<?php echo asset('css/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
@@ -68,6 +71,7 @@
                     <form  method="post" id="entrar_sistema">
                         @csrf
                         <div class="form-group">
+
                             <input type="email" name="email "class="form-control" placeholder="Usuário" id="usuario_login" required aria-invalid="false">
                         </div>
                         
@@ -140,5 +144,5 @@
     <script src="<?php echo asset('js/plugins/validate/jquery.validate.min.js')?>"></script>
     <script src="<?php echo asset('js/pages/login.js')?>"></script>
 
-    </body>
-    </html>
+</body>
+</html>
