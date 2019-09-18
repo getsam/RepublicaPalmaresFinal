@@ -16,7 +16,7 @@
 
     <!-- Animation CSS -->
     <link href="<?php echo asset('css/animate.css')?>" rel="stylesheet">
-    <link href="<?php echo asset('font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
+    <link href="<?php echo asset('css/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
 
     <link rel="stylesheet" href="<?php echo asset('css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css')?>">
 
@@ -45,7 +45,7 @@
                         <li><a class="page-scroll" href="#testimonials">Testemunhos</a></li>
                         <li><a class="page-scroll" href="#teste">Programas</a></li>
                         <li><a class="page-scroll" href="#contact">Fale Consoco</a></li>
-                        <li><a class="" href="login.html">Entrar</a></li>
+                        <li><a class="" href="{{ url('/entrar')}}">Entrar</a></li>
                     </ul>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                 </div> -->
             </div>
             <!-- Set background for slide in css -->
-            <div class="header-back one"></div>
+            <div class="header-back one" style="background: url({{ asset('storage/img/landing/header_one.jpg')}})  50% 0 no-repeat;"></div>
 
         </div>
         <div class="item">
@@ -92,7 +92,7 @@
                 </div>
             </div>
             <!-- Set background for slide in css -->
-            <div class="header-back two"></div>
+            <div class="header-back two" style="background: url({{ asset('storage/img/landing/header_two.jpg')}})  50% 0 no-repeat;"></div>
         </div>
     </div>
     <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
@@ -183,10 +183,11 @@
             <a href="" class="btn btn-primary">Learn more</a>
         </div>
         <div class="col-lg-6 text-right wow fadeInRight">
-            <img src="img/landing/dashboard.png" alt="dashboard" class="img-responsive pull-right">
+            <img src="{{ asset('storage/img/landing/dashboard.png')}}" alt="dashboard" class="img-responsive pull-right">
         </div>
     </div>
 </section>
+
 
 
 
@@ -207,8 +208,9 @@
                 <a href="" class="btn btn-primary">Learn more</a>
             </div>
             <div class="col-lg-6 text-right m-t-n-lg wow zoomIn">
-                <img src="img/landing/iphone.jpg" class="img-responsive" alt="dashboard">
+                <img src="{{ asset('storage/img/landing/iphone.jpg')}}" class="img-responsive" alt="dashboard">
             </div>
+            
             <div class="col-lg-3 features-text text-right wow fadeInRight">
                 <small>INSPINIA</small>
                 <h2>Perfectly designed </h2>
@@ -258,8 +260,9 @@
                 </div>
                 <div class="comments-avatar">
                     <a href="" class="pull-left">
-                        <img alt="image" src="img/landing/avatar3.jpg">
+                        <img alt="image" src="{{ asset('storage/img/landing/avatar3.jpg')}}">
                     </a>
+                    
                     <div class="media-body">
                         <div class="commens-name">
                             Andrew Williams
@@ -275,8 +278,9 @@
                 </div>
                 <div class="comments-avatar">
                     <a href="" class="pull-left">
-                        <img alt="image" src="img/landing/avatar1.jpg">
+                        <img alt="image" src="{{ asset('storage/img/landing/avatar1.jpg')}}">
                     </a>
+                    
                     <div class="media-body">
                         <div class="commens-name">
                             Andrew Williams
@@ -292,7 +296,7 @@
                 </div>
                 <div class="comments-avatar">
                     <a href="" class="pull-left">
-                        <img alt="image" src="img/landing/avatar2.jpg">
+                        <img alt="image" src="{{ asset('storage/img/landing/avatar2.jpg')}}">
                     </a>
                     <div class="media-body">
                         <div class="commens-name">
@@ -357,6 +361,7 @@
                 <h1>Fale conosco</h1>
                 <p> Organização Não governamental sem fins lucrativos, tem como objetivo transmitir a memória cultural de nossa história, através das mais diversas expressões culturais, saiba mais sobre nosso trabalho, fale conosco.</p>
                 <form action="cadInteressado" id="fale-conosco" method="POST">
+                    @csrf
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-12">

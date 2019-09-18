@@ -17,10 +17,25 @@ Route::get('/', function () {
 
 Route::get('/home', 'PalmaresController@index');
 
+Route::get('/entrar', 'EntrarController@index')
+->name('entrar');
+Route::post('/entrar', 'EntrarController@entrar');
+
+Route::get('/registrar', 'RegistroController@create')
+->name('registrar');
+Route::post('/registrar', 'RegistroController@store');
 
 
-Auth::routes();
+Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');        
+Route::post('/login', 'Auth\LoginController@login');
+Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 
-Route::get('/homeRestrita', 'HomeController@index')
-->name('home')
-->middleware('auth'); //torna a home PROTEGIDA SÓ PODENDO SER ACESSADA COM O LOGIN
+
+Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::post('/register', 'Auth\RegisterController@register');
+
+
+
+
+Route::get('/homerestrita', 'HomeController@index')
+->name('home');

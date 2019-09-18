@@ -10,7 +10,7 @@
     
 
     <link href="<?php echo asset('css/bootstrap.min.css')?>" rel="stylesheet">
-    <link href="<?php echo asset('font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
+    <link href="<?php echo asset('css/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
 
     <link rel="stylesheet" href="<?php echo asset('css/plugins/materialize/material-icons.css')?>">
 
@@ -27,7 +27,19 @@
     
     <div class="loginColumns animated fadeInDown">
         <div class="row">
-            
+
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        
+                    @endforeach
+                </ul>
+            </div>
+               <script></script>
+            @endif
+
             <div class="col-md-6">
                 <h2 class="font-bold">República Cultural</h2>
                 <h3>Assossiação Cultural República de Palmares</h3>
@@ -53,14 +65,14 @@
             <div class="col-md-6">
                 <div class="ibox-content">
                     <!-- formulario  de acesso do usuario -->
-                    <form class="m-t" role="form" id="entrar_sistema">
-                        
+                    <form  method="post" id="entrar_sistema">
+                        @csrf
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Usuário" id="usuario_login" name="email_login"required aria-invalid="false">
+                            <input type="email" name="email "class="form-control" placeholder="Usuário" id="usuario_login" required aria-invalid="false">
                         </div>
                         
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Senha" id="senha_login" required name="senha_login" aria-invalid="false">
+                            <input type="password" name="password" class="form-control" placeholder="Senha" id="senha_login" required aria-invalid="false">
                         </div>
                         <input type="submit" id="btn-login" class="btn btn-primary block full-width m-b" value="Entrar">
                         
@@ -71,9 +83,10 @@
                         <p class="text-muted text-right">
                             <small>Não possui uma conta?</small>
                         </p>
-                        <button class="btn btn-sm btn-white btn-block" id="btn-faleConsoco">Criar uma conta</button>
+                        <button class="btn btn-sm btn-white btn-block">
+                        <a href="/home"></a> Criar uma conta</button>
                     </form> <!--Fim - formulario -->
-                    <p class="m-t">
+                    <p >
                         <small>Desenvolvido por alunos da FIT &copy; 2019</small>
                     </p>
                 </div>

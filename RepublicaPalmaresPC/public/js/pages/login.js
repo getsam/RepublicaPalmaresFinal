@@ -11,7 +11,7 @@ $('#btn-login').on('click', function(e){
     });//fecha seleção do form	
 });
 
-$('#entrar_sistema').submit(function(){
+$('#entrar_sistem').submit(function(){
     //validação no banco
     console.log($('#senha_login').attr('aria-invalid'));
     var senhaValor = $('#usuario_login').val();
@@ -41,7 +41,7 @@ $('#entrar_sistema').submit(function(){
                     });
                 }
             }
-        })
+        });
         }
     return false;
 });

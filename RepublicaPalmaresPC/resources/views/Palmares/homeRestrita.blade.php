@@ -14,7 +14,7 @@
 
     <!-- Animation CSS -->
     <link href="<?php echo asset('css/animate.css')?>" rel="stylesheet">
-    <link href="<?php echo asset('font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
+    <link href="<?php echo asset('css/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
     <link href="<?php echo asset('css/style.css')?>" rel="stylesheet">
 
 </head>
@@ -89,9 +89,17 @@
                     <!-- botão Sair do sitema -->
                     <ul class="nav navbar-top-links navbar-right">
                         <li>
-                            <a href="index.html">
-                                <i class="fa fa-sign-out"></i> Sair
-                            </a>
+
+                                    <a class="fa fa-sign-out" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">Sair
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                            
                         </li>
                     </ul><!-- FIM - botão Sair do sitema -->
                 </nav>
