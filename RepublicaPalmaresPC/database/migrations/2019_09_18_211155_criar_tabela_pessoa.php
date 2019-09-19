@@ -13,7 +13,22 @@ class CriarTabelaPessoa extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('pessoa', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('CPF');
+            $table->string('nome');
+            $table->dateTime('Nascimento');
+            $table->integer('Idade');
+            $table->string('Endereço');
+            $table->string('Bairro');
+            $table->string('cidade');
+            $table->string('uf');
+            $table->string('cep');
+            $table->string('DDD');
+            $table->string('Fone1');
+            $table->string('email');
+
+        });
     }
 
     /**
@@ -23,6 +38,6 @@ class CriarTabelaPessoa extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('pessoa');
     }
 }
