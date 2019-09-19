@@ -26,5 +26,12 @@ class HomeController extends Controller
         return view('Palmares.homeRestrita');
     }
 
+    public function ShowForm()
+    {
+        return view('cadastro.cadastro');
+    }
+
+    
+
     
 }

@@ -8,26 +8,28 @@
 
     <title>ONG Republica de palmares | Login </title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="<?php echo asset('css/bootstrap.min.css')?>" rel="stylesheet">
+    <link href="<?php echo asset('css/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
+
+    
 
     <!-- resposanvel por metodo wizard -->
-    <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
+    <link href="<?php echo asset('css/plugins/steps/jquery.steps.css')?>" rel="stylesheet">
     
     <!-- date picker -->
-    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="<?php echo asset('css/plugins/datapicker/datepicker3.css')?>" rel="stylesheet">
 
     <!-- jasny -  mascara -->
-    <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo asset('css/plugins/jasny/jasny-bootstrap.min.css')?>" rel="stylesheet">
 
     <!-- switchery -  mascara -->
-    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <link href="<?php echo asset('css/plugins/switchery/switchery.css')?>" rel="stylesheet">
 
     
-    <link rel="stylesheet" href="css/plugins/dataTables/datatables.min.css">
+    <link rel="stylesheet" href="<?php echo asset('css/plugins/dataTables/datatables.min.css')?>">
 
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="<?php echo asset('css/animate.css')?>" rel="stylesheet">
+    <link href="<?php echo asset('css/style.css')?>" rel="stylesheet">
 
 </head>
 
@@ -51,8 +53,8 @@
                     <li>
                         <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Cadastro</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="cadastro.html">Criar</a></li>
-                            <li><a href="cadastroLista.html">Editar</a></li>
+                            <li><a href="{{url('homerestrita/cadastro')}}">Criar</a></li>
+                            <li><a href="{{url('homerestrita/listacadastro')}}">Editar</a></li>
                         </ul>
                     </li>
                     <li>
@@ -101,9 +103,15 @@
                     <!-- botão Sair do sitema -->
                     <ul class="nav navbar-top-links navbar-right">
                         <li>
-                            <a href="index.html">
-                                <i class="fa fa-sign-out"></i> Sair
-                            </a>
+                            <a href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">Sair
+                                        <i class="fa fa-sign-out"></i>
+                                    </a>
+                                
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
                         </li>
                     </ul><!-- FIM - botão Sair do sitema -->
                 </nav>
@@ -515,33 +523,33 @@
     </div><!-- FIM - Conteúdo princial pagina -->
 
     <!-- Principais scripts -->
-    <script src="js/jquery-2.1.1.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="<?php echo asset('js/jquery-2.1.1.js')?>"></script>
+    <script src="<?php echo asset('js/bootstrap.min.js')?>"></script>
+    <script src="<?php echo asset('js/plugins/metisMenu/jquery.metisMenu.js')?>"></script>
+    <script src="<?php echo asset('js/plugins/slimscroll/jquery.slimscroll.min.js')?>"></script>
 
     <!-- Customização da Página -->
-    <script src="js/inspinia.js"></script>
-    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="<?php echo asset('js/inspinia.js')?>"></script>
+    <script src="<?php echo asset('js/plugins/pace/pace.min.js')?>"></script>
 
     <!-- Switchery -->
-   <script src="js/plugins/switchery/switchery.js"></script>
+   <script src="<?php echo asset('js/plugins/switchery/switchery.js')?>"></script>
 
     <!-- Steps -->
-    <script src="js/plugins/staps/jquery.steps.min.js"></script>
+    <script src="<?php echo asset('js/plugins/staps/jquery.steps.min.js')?>"></script>
 
     <!-- swicth chery -->
-   <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+   <script src="<?php echo asset('js/plugins/datapicker/bootstrap-datepicker.js')?>"></script>
 
    
     <!-- data table -->
-    <script src="js/plugins/dataTables/datatables.min.js"></script>
+    <script src="<?php echo asset('js/plugins/dataTables/datatables.min.js')?>"></script>
    
     <!-- Jquery Validate -->
-    <script src="js/plugins/validate/jquery.validate.min.js"></script>
-    <script src="js/pages/cadastro.js"></script>
-    <script src="js/plugins/jqmask/jquery_mask.js"></script>
-    <script src="js/pages/validator.js"></script>
+    <script src="<?php echo asset('js/plugins/validate/jquery.validate.min.js')?>"></script>
+    <script src="<?php echo asset('js/pages/cadastro.js')?>"></script>
+    <script src="<?php echo asset('js/plugins/jqmask/jquery_mask.js')?>"></script>
+    <script src="<?php echo asset('js/pages/validator.js')?>"></script>
 
     
 

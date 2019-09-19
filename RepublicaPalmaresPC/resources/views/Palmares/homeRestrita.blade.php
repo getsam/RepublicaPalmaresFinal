@@ -39,8 +39,8 @@
                     <li>
                         <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Cadastro</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="cadastro.html">Criar</a></li>
-                            <li><a href="cadastroLista.html">Editar</a></li>
+                            <li><a href="{{ url('homerestrita/criar') }}">Criar</a></li>
+                            <li><a href="{{url('homerestrita/listacadastro')}}">Editar</a></li>
                         </ul>
                     </li>
                     <li>
@@ -93,7 +93,6 @@
                                     <a class="fa fa-sign-out" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">Sair
-                                        {{ __('Logout') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

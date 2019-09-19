@@ -31,11 +31,16 @@ Route::post('/login', 'Auth\LoginController@login');
 Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 
 
-Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-Route::post('/register', 'Auth\RegisterController@register');
+
+
 
 
 
 
 Route::get('/homerestrita', 'HomeController@index')
 ->name('home');
+Route::get('/homerestrita/criar', 'HomeController@showForm');
+Route::post('/homerestrita/criar', 'HomeController@registrar');
+Route::post('/homerestrita/listapessoas', 'HomeController@listarpessoas');
+
+
