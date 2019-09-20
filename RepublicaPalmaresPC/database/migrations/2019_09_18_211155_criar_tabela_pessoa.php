@@ -16,8 +16,11 @@ class CriarTabelaPessoa extends Migration
         Schema::create('pessoa', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('CPF');
+            $table->string('Tipo_documento')->default('Pessoa Fisica');
             $table->string('nome');
             $table->dateTime('Nascimento');
+            $table->string('Nome_responsavel');
+            $table->string('Genero');
             $table->integer('Idade');
             $table->string('Endereço');
             $table->string('Bairro');

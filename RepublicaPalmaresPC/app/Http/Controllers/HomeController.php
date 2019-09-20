@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Pessoa;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -29,6 +30,18 @@ class HomeController extends Controller
     public function ShowForm()
     {
         return view('cadastro.cadastro');
+    }
+
+    public function registrar(Request $request)
+    {
+        $pessoa = Pessoa::create($request->all());
+    }
+
+    public function listarpessoas()
+    {
+        $pessoas = Pessoa::all();
+        
+        return view('cadastro.cadastroLista', compact('pessoas'));
     }
 
     

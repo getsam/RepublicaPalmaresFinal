@@ -127,7 +127,7 @@
                                 </h2>
                                 
                                 <!-- formulario de cadastro método Wizard -->
-                                <form id="form-cadastro" action="#" class="wizard-big">
+                                <form id="form-cadastro" method="POST" class="wizard-big">
                                     <h1>Informações Básicas</h1>
                                     <!-- dados básico -->
                                     <fieldset>

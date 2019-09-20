@@ -11,9 +11,13 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+//use Symfony\Component\Routing\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
+
 
 Route::get('/home', 'PalmaresController@index');
 
@@ -24,11 +28,12 @@ Route::post('/entrar', 'EntrarController@entrar');
 Route::get('/registrar', 'RegistroController@create')
 ->name('registrar');
 Route::post('/registrar', 'RegistroController@store');
+Auth::routes();
 
-
-Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');        
+/* Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');        
 Route::post('/login', 'Auth\LoginController@login');
-Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
+Route::post('register','Auth\RegisterController@register')-name('register');
+Route::post('/logout', 'Auth\LoginController@logout')->name('logout'); */
 
 
 
@@ -41,6 +46,6 @@ Route::get('/homerestrita', 'HomeController@index')
 ->name('home');
 Route::get('/homerestrita/criar', 'HomeController@showForm');
 Route::post('/homerestrita/criar', 'HomeController@registrar');
-Route::post('/homerestrita/listapessoas', 'HomeController@listarpessoas');
+Route::get('/homerestrita/listapessoas', 'HomeController@listarpessoas');
 
 

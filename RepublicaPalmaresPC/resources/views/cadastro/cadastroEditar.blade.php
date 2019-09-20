@@ -8,7 +8,9 @@
     
     <title>ONG Republica de palmares | Login </title>
     
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+
+    <link href="<?php echo asset('css/bootstrap.min.css')?>" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
     
     <!-- switchery -  mascara -->
