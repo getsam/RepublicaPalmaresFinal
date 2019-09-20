@@ -23,10 +23,10 @@
         <!-- Menu lateral links de navegação -->
         <nav class="navbar-default navbar-static-side" role="navigation">
             <div class="sidebar-collapse">
-                <ul class="nav metismenu" id="side-menu">
+               <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element"> 
-                            <a href="homerestrita.html">
+                            <a href="{{url('/homerestrita')}}">
                                 <h1 class="text-muted">Republica de Palmares</h1>
                             </a>
                         </div>
@@ -37,34 +37,34 @@
                     <li>
                         <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Cadastro</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="cadastro.html">Criar</a></li>
-                            <li><a href="cadastroLista.html">Editar</a></li>
+                            <li><a href="{{ url('homerestrita/criar') }}">Criar</a></li>
+                            <li><a href="{{url('homerestrita/listapessoas')}}">Editar</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="modalidade.html"><i class="fa fa-shield"></i> <span class="nav-label">Modalidade</span> </a>
+                        <a href="{{url('/homerestrita/modalidade')}}"><i class="fa fa-shield"></i> <span class="nav-label">Modalidade</span> </a>
                     </li>
                     
                     <li>
                         <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Cursos</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="curso.html">Criar</a></li>
-                            <li><a href="cursoLista.html">Editar</a></li>
+                            <li><a href="{{url('/homerestrita/curso')}}">Criar</a></li>
+                            <li><a href="{{url('/homerestrita/cursolista')}}">Editar</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Doações</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="doacao.html">Doar</a></li>
-                            <li><a href="doacaoLista.html">Ver</a></li>
+                            <li><a href="{{url('/homerestrita/doacao')}}">Doar</a></li>
+                            <li><a href="{{url('/homerestrita/doacaolista')}}">Ver</a></li>
                             
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Agenda</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="agenda.html">Criar</a></li>
-                            <li><a href="listaEvento.html">Editar</a></li>
+                            <li><a href="{{url('/homerestrita/agenda')}}">Criar</a></li>
+                            <li><a href="{{url('homerestrita/listaevento')}}">Editar</a></li>
                         </ul>
                     </li>
                 </ul>

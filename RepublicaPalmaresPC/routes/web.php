@@ -30,22 +30,13 @@ Route::get('/registrar', 'RegistroController@create')
 Route::post('/registrar', 'RegistroController@store');
 Auth::routes();
 
-/* Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');        
-Route::post('/login', 'Auth\LoginController@login');
-Route::post('register','Auth\RegisterController@register')-name('register');
-Route::post('/logout', 'Auth\LoginController@logout')->name('logout'); */
-
-
-
-
-
-
-
 
 Route::get('/homerestrita', 'HomeController@index')
 ->name('home');
 Route::get('/homerestrita/criar', 'HomeController@showForm');
 Route::post('/homerestrita/criar', 'HomeController@registrar');
 Route::get('/homerestrita/listapessoas', 'HomeController@listarpessoas');
+//rota modalidade
+Route::get('homerestrita/modalidade', 'HomeController@modalidade');
 
 

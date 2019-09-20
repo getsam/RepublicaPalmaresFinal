@@ -44,6 +44,10 @@ class HomeController extends Controller
         return view('cadastro.cadastroLista', compact('pessoas'));
     }
 
+    public function modalidade(){
+        return view('Palmares.modalidade');
+    }
+
     
 
     
