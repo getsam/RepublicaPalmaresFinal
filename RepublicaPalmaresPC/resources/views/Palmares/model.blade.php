@@ -8,11 +8,11 @@
 
     <title>ONG Republica de palmares | Login </title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="<?php echo asset('css/bootstrap.min.css')?>" rel="stylesheet">
+    <link href="<?php echo asset('font-awesome/css/font-awesome.css')?>" rel="stylesheet">
 
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="<?php echo asset('css/animate.css')?>" rel="stylesheet">
+    <link href="<?php echo asset('css/style.css')?>" rel="stylesheet">
 
 </head>
 
@@ -113,14 +113,14 @@
     </div><!-- FIM - Conteúdo princial pagina -->
 
     <!-- Principais scripts -->
-    <script src="js/jquery-2.1.1.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="<?php echo asset('js/jquery-2.1.1.js')?>"></script>
+    <script src="<?php echo asset('js/bootstrap.min.js')?>"></script>
+    <script src="<?php echo asset('js/plugins/metisMenu/jquery.metisMenu.js')?>"></script>
+    <script src="<?php echo asset('js/plugins/slimscroll/jquery.slimscroll.min.js')?>"></script>
 
     <!-- Customização da Página -->
-    <script src="js/inspinia.js"></script>
-    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="<?php echo asset('js/inspinia.js')?>"></script>
+    <script src="<?php echo asset('js/plugins/pace/pace.min.js')?>"></script>
 
 
     

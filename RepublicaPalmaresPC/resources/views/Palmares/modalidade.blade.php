@@ -8,16 +8,16 @@
     
     <title>ONG Republica de palmares | Login </title>
     
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="<?php echo asset('css/bootstrap.min.css')?>" rel="stylesheet">
+    <link href="<?php echo asset('font-awesome/css/font-awesome.css')?>" rel="stylesheet">
     
-    <link rel="stylesheet" href="css/plugins/dataTables/datatables.min.css">
+    <link rel="stylesheet" href="<?php echo asset('css/plugins/dataTables/datatables.min.css')?>">
     
     <!-- switchery -  mascara -->
-    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <link href="<?php echo asset('css/plugins/switchery/switchery.css')?>" rel="stylesheet">
 
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="<?php echo asset('css/animate.css')?>" rel="stylesheet">
+    <link href="<?php echo asset('css/style.css')?>" rel="stylesheet">
     
 </head>
 
@@ -262,21 +262,21 @@
     
     
      <!-- Switchery -->
-   <script src="js/plugins/switchery/switchery.js"></script>
+   <script src="<?php echo asset('js/plugins/switchery/switchery.js')?>"></script>
     
-    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <script src="<?php echo asset('js/plugins/datapicker/bootstrap-datepicker.js')?>"></script>
 
     <!-- data table -->
-    <script src="js/plugins/dataTables/datatables.min.js"></script>
+    <script src="<?php echo asset('js/plugins/dataTables/datatables.min.js')?>"></script>
     
     <!-- Jquery Validate -->
-    <script src="js/plugins/validate/jquery.validate.min.js"></script>
-    <script src="js/plugins/jqmask/jquery_mask.js"></script>
-    <script src="js/pages/validator.js"></script>
+    <script src="<?php echo asset('js/plugins/validate/jquery.validate.min.js')?>"></script>
+    <script src="<?php echo asset('js/plugins/jqmask/jquery_mask.js')?>"></script>
+    <script src="<?php echo asset('js/pages/validator.js')?>"></script>
     
     <!-- Custom and plugin javascript -->
-    <script src="js/inspinia.js"></script>
-    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="<?php echo asset('js/inspinia.js')?>"></script>
+    <script src="<?php echo asset('js/plugins/pace/pace.min.js')?>"></script>
     
     <script>
         $(document).ready(function(){
