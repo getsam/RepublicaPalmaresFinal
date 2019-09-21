@@ -43,3 +43,4 @@ Route::get('/homerestrita/curso', 'HomeController@curso');
 Route::get('/homerestrita/doacao', 'HomeControlleer@doacao');
 Route::get('/homerestrita/doacaolista', 'HomeController@doacao');
 
+
