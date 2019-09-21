@@ -14,14 +14,14 @@ class CriarTabelaPessoa extends Migration
     public function up()
     {
         Schema::create('pessoa', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->integerIncrements('id');
             $table->string('CPF');
             $table->string('Tipo_documento')->default('Pessoa Fisica');
             $table->string('nome');
-            $table->dateTime('Nascimento');
+            $table->string('Nascimento');
+            $table->string('idade');
             $table->string('Nome_responsavel');
             $table->string('Genero');
-            $table->integer('Idade');
             $table->string('Endereço');
             $table->string('Bairro');
             $table->string('cidade');

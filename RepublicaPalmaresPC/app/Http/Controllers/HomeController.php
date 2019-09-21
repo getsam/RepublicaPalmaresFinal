@@ -26,7 +26,7 @@ class HomeController extends Controller
     {
         return view('Palmares.homeRestrita');
     }
-
+    
     public function ShowForm()
     {
         return view('cadastro.cadastro');
@@ -44,11 +44,20 @@ class HomeController extends Controller
         return view('cadastro.cadastroLista', compact('pessoas'));
     }
 
-    public function modalidade(){
+    public function modalidade()
+    {
         return view('Palmares.modalidade');
     }
 
-    
+    public function curso()
+    {
+        return view('Palmares.cursolista');
+    }
+
+    public function doacao()
+    {
+        return view('Palmares.doacaoLista');
+    }
 
     
 }

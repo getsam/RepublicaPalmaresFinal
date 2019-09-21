@@ -28,7 +28,7 @@
                <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element"> 
-                            <a href="{{('/homerestrita')}}">
+                            <a href="{{url('/homerestrita')}}">
                                 <h1 class="text-muted">Republica de Palmares</h1>
                             </a>
                         </div>

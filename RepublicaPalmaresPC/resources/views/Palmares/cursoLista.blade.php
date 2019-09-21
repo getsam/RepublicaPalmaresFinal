@@ -9,7 +9,7 @@
     <title>ONG Republica de palmares </title>
 
     <link href="<?php echo asset('css/bootstrap.min.css')?>" rel="stylesheet">
-    <link href="<?php echo asset('font-awesome/css/font-awesome.css')?>" rel="stylesheet">
+    <link href="<?php echo asset('css/font-awesome/css/font-awesome.css')?>" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo asset('css/plugins/dataTables/datatables.min.css')?>">
 
     <link href="<?php echo asset('css/animate.css')?>" rel="stylesheet">

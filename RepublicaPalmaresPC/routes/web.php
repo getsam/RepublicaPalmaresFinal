@@ -37,6 +37,9 @@ Route::get('/homerestrita/criar', 'HomeController@showForm');
 Route::post('/homerestrita/criar', 'HomeController@registrar');
 Route::get('/homerestrita/listapessoas', 'HomeController@listarpessoas');
 //rota modalidade
-Route::get('homerestrita/modalidade', 'HomeController@modalidade');
-
+Route::get('/homerestrita/modalidade', 'HomeController@modalidade');
+//Rota cursos
+Route::get('/homerestrita/curso', 'HomeController@curso');
+Route::get('/homerestrita/doacao', 'HomeControlleer@doacao');
+Route::get('/homerestrita/doacaolista', 'HomeController@doacao');
 
