@@ -128,6 +128,7 @@
                                 
                                 <!-- formulario de cadastro método Wizard -->
                                 <form id="form-cadastro" method="POST" class="wizard-big">
+                                    @csrf
                                     <h1>Informações Básicas</h1>
                                     <!-- dados básico -->
                                     <fieldset>
@@ -137,14 +138,14 @@
                                             <div class="col-sm-6">
                                                 <div class="form-group">
                                                     <label class="label-control" for="cpf_cadastro">CPF/CNPJ</label>
-                                                    <input type="text" placeholder="Ex. 99.999.999-99" class="form-control cpfCnpj" id="cpf_cadastro" name="cpf_cadastro" minlength="14" required >
+                                                    <input type="text" placeholder="Ex. 99.999.999-99" class="form-control cpfCnpj" id="cpf_cadastro" name="cpf" minlength="14" required >
                                                 </div>
                                             </div>
 
                                             <div class="col-sm-6">
                                                     <div class="form-group">
                                                         <label class="label-control" for="tipoPessoa_cadastro">Tipo Pessoa</label>
-                                                        <select class="form-control m-b" id="tipoPessoa_cadastro" name="tipoPessoa_cadastro"   disabled>
+                                                        <select class="form-control m-b" id="tipoPessoa_cadastro" name="tipo_documento"   disabled>
                                                             <option value="">Tipo de Documento</option>
                                                             <option value="1">Pessoa Fisíca</option>
                                                             <option value="2">Pessoa Juridíca</option>
@@ -155,7 +156,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group" required>
                                                     <label class="label-control" for="nome_cadastro">Nome/Razão Social</label>
-                                                    <input type="text" placeholder="Ex. João da Silva" class="form-control " id="nome_cadastro" name="nome_cadastro" required >
+                                                    <input type="text" placeholder="Ex. João da Silva" class="form-control " id="nome_cadastro" name="nome" required >
                                                 </div>
                                             </div>
                                             
@@ -163,7 +164,7 @@
                                                 <div class="form-group" id="data_1">
                                                     <label class="label-control" for="dt_nascimento">Nascimento/Abertura</label>
                                                     <div class="input-group date">
-                                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" id="nascimento_cadastro" name="nascimento_cadastro" value="01/01/1900" >
+                                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" id="nascimento_cadastro" name="nascimento" value="01/01/1900" >
                                                     </div>
                                                 </div>
                                             </div>
@@ -171,7 +172,7 @@
                                             <div class="col-sm-6">
                                                 <div class="form-group" id="genero">
                                                     <label class="label-control" for="sexo_cadastro">Gênero</label>
-                                                    <select class="form-control m-b"name="sexo_cadastro" id="sexo_cadastro" required>
+                                                    <select class="form-control m-b"name="genero" id="sexo_cadastro" required>
                                                         <option value="">Selecione</option>
                                                         <option value="1">Masculino</option>
                                                         <option value="2">Feminino</option>
@@ -201,7 +202,7 @@
                                             <div class="col-sm-10">
                                                 <div class="form-group">
                                                     <label for="endereco_cadastro" class="label-control">Logradouro</label>
-                                                    <input type="text" placeholder="Ex. Rua: Joao da Silva" id="endereco_cadastro" name="endereco_cadastro" class="form-control" minlength="5" required>
+                                                    <input type="text" placeholder="Ex. Rua: Joao da Silva" id="endereco_cadastro" name="endereco" class="form-control" minlength="5" required>
                                                 </div>
                                             </div>
                                             
@@ -224,7 +225,7 @@
                                             <div class="col-sm-6">
                                                 <div class="form-group">
                                                     <label for="bairro_cadastro" class="label-control">Bairro</label>
-                                                    <input type="text" id="bairro_cadastro" name="bairro_cadastro" placeholder="Ex. Centro" class="form-control" minlength="3" required>
+                                                    <input type="text" id="bairro_cadastro" name="bairro" placeholder="Ex. Centro" class="form-control" minlength="3" required>
                                                 </div>
                                             </div>
                                             
@@ -232,7 +233,7 @@
                                             <div class="col-sm-4">
                                                 <div class="form-group">
                                                     <label for="cidade_cadastro" class="label-control">Cidade</label>
-                                                    <input type="text" id="cidade_cadastro" name="cidade_cadastro" placeholder="Ex. São Paulo" class="form-control" required>
+                                                    <input type="text" id="cidade_cadastro" name="cidade" placeholder="Ex. São Paulo" class="form-control" required>
                                                 </div>
                                             </div>
                                             
@@ -240,13 +241,13 @@
                                             <div class="col-sm-4">
                                                 <div class="form-group">
                                                     <label for="cep_cadastro" class="label-control">CEP</label>
-                                                    <input type="text" id="cep_cadastro" data-mask="99999-999" placeholder="Ex. 00000-000" class="form-control" minlength="9" maxlength="9" name="cep_cadastro" required>
+                                                    <input type="text" id="cep_cadastro" data-mask="99999-999" placeholder="Ex. 00000-000" class="form-control" minlength="9" maxlength="9" name="cep" required>
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="form-group">
                                                     <label for="uf_cadastro" class="label-control">UF</label>
-                                                    <select class="form-control  m-b " id="uf_cadastro" name="uf_cadastro"required >
+                                                    <select class="form-control  m-b " id="uf_cadastro" name="uf"required >
                                                         <option value="">Escolha</option>
                                                         <option value="AC">Acre</option>
                                                         <option value="AL">Alagoas</option>
@@ -286,7 +287,7 @@
                                             <div class="col-sm-6">
                                                 <div class="form-group">
                                                     <label for="telefone1_cadastro">Telefone 1</label>
-                                                    <input type="text" placeholder="Ex. (11) 9999-9999" class="form-control celphones" id="telefone1_cadastro" name="telefone1_cadastro" minlength="14">
+                                                    <input type="text" placeholder="Ex. (11) 9999-9999" class="form-control celphones" id="telefone1_cadastro" name="fone1" minlength="14">
                                                 </div>
                                             </div>
                                             <div class="col-sm-6">
@@ -302,7 +303,7 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <label for="email_cadastro">Email</label>
-                                                    <input type="email" placeholder="Ex. email@site.com" class="form-control"  id="email_cadastro" name="email_cadastro" required>
+                                                    <input type="email" placeholder="Ex. email@site.com" class="form-control"  id="email_cadastro" name="email" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -495,8 +496,11 @@
 
                                         </div>
                                     </fieldset>
-    
-                                    <h1>Finalizar</h1>
+                                    
+                                    
+                                    <h1>Finalizar </h1>
+                                    
+                                    
                                     <fieldset>
                                         <h2>Termos e Condições</h2>
                                         <!-- <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required"> 

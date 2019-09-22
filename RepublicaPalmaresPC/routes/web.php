@@ -39,7 +39,7 @@ Route::get('/homerestrita/listapessoas', 'HomeController@listarpessoas');
 //rota modalidade
 Route::get('/homerestrita/modalidade', 'HomeController@modalidade');
 //Rota cursos
-Route::get('/homerestrita/curso', 'HomeController@curso');
+Route::get('/homerestrita/cursolista', 'HomeController@curso');
 Route::get('/homerestrita/doacao', 'HomeControlleer@doacao');
 Route::get('/homerestrita/doacaolista', 'HomeController@doacao');
 
