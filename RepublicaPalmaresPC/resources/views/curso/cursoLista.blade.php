@@ -48,8 +48,8 @@
                     <li>
                         <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Cursos</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="{{url('/homerestrita/curso')}}">Criar</a></li>
-                            <li><a href="{{url('/homerestrita/cursolista')}}">Editar</a></li>
+
+                            <li><a href="{{url('/homerestrita/cursolista')}}">Lista Cursos</a></li>
                         </ul>
                     </li>
                     <li>
@@ -87,7 +87,7 @@
                     <!-- botão Sair do sitema -->
                     <ul class="nav navbar-top-links navbar-right">
                         <li>
-                            <a href="index.html">
+                            <a href="{{url('/homerestrita')}}">
                                 <i class="fa fa-sign-out"></i> Sair
                             </a>
                         </li>
@@ -105,7 +105,7 @@
                             <div class="col-lg-12">
                                 <div class="ibox float-e-margins">
                                     <div class="ibox-title">
-                                        <h5>Lista de Cadastros</h5>
+                                        <h5>Lista de Cursos</h5>
                                     </div>
                                     <div class="ibox-content">
                 
@@ -113,17 +113,17 @@
                                             <table class="table table-striped table-bordered table-hover lista_cadastros" >
                                                 <thead>
                                                     <tr>
-                                                        <th>CPF/CNPJ</th>
-                                                        <th>Nome/Razão</th>
-                                                        <th>E-mail</th>
+                                                        <th>Modalidade</th>
+                                                        <th>Nome Curso</th>
+                                                        <th>Descrição</th>
                                                         <th></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Fulano de tal da Silva</td>
-                                                        <td>fulano@site.com.br</td>
+                                                        <td>Artes Marciais</td>
+                                                        <td>Capoeira</td>
+                                                        <td>Arte marcial praticada principalmente com os pés</td>
                                                         <td class="text-center ">
                                                             <a href="cadastroEditar.html">
                                                                 <button class="btn-primary btn btn-xs">
@@ -133,9 +133,9 @@
                                                         </td>
                                                     </tr>
                                                     <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Maria  da Silva</td>
-                                                        <td>maria@site.com.br</td>
+                                                        <td>Artes Marciais</td>
+                                                        <td>Muay Thay</td>
+                                                        <td>Arte marcial que utiliza principalmente cotovelos e joelhos</td>
                                                         <td class="text-center ">
                                                             <a href="cadastroEditar.html">
                                                                 <button class="btn-primary btn btn-xs">
@@ -145,9 +145,11 @@
                                                         </td>
                                                     </tr>
                                                     <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Joao da Silva</td>
-                                                        <td>joao@site.com.br</td>
+                                                        <td>Musica</td>
+                                                        <td>Violão</td>
+                                                        <td>A guitarra clássica (conhecida no Brasil como violão ) é uma guitarra acústica com cordas de nylon ou aço,
+                                                             concebida inicialmente para a interpretação de peças de música erudita.
+                                                             O corpo é oco e chato, em forma de oito, e feito de várias madeiras diferentes. </td>
                                                         <td class="text-center ">
                                                             <a href="cadastroEditar.html">
                                                                 <button class="btn-primary btn btn-xs">
@@ -157,9 +159,10 @@
                                                         </td>
                                                     </tr>
                                                     <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Fulano de tal da Silva</td>
-                                                        <td>fulano@site.com.br</td>
+                                                        <td>Artesanato</td>
+                                                        <td>Costura</td>
+                                                        <td>Este curso é voltado para aqueles que possuem interesse em aprender noções básicas de costura,
+                                                             tais como o funcionamento da máquina de costura, além de cortar,montar e modelar uma peça de roupa.</td>
                                                         <td class="text-center ">
                                                             <a href="cadastroEditar.html">
                                                                 <button class="btn-primary btn btn-xs">
@@ -169,9 +172,13 @@
                                                         </td>
                                                     </tr>
                                                     <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Maria  da Silva</td>
-                                                        <td>maria@site.com.br</td>
+                                                        <td>Artesanato</td>
+                                                        <td>Pintura</td>
+                                                        <td>Este curso oferece  uma das mais clássicas
+                                                                técnicas das artes plásticas ao acesso de todos.
+                                                                Aprenda a pintar de maneira fácil e divertida,
+                                                                utilizando diversas técnicas, podendo transferir
+                                                                diversos desenhos a sua pintura, a partir da sua imaginação. </td>
                                                         <td class="text-center ">
                                                             <a href="cadastroEditar.html">
                                                                 <button class="btn-primary btn btn-xs">
@@ -181,9 +188,9 @@
                                                         </td>
                                                     </tr>
                                                     <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Joao da Silva</td>
-                                                        <td>joao@site.com.br</td>
+                                                        <td>Artes Marciais</td>
+                                                        <td>Capoeira</td>
+                                                        <td>Arte marcial praticada principalmente com os pés</td>
                                                         <td class="text-center ">
                                                             <a href="cadastroEditar.html">
                                                                 <button class="btn-primary btn btn-xs">
@@ -192,78 +199,20 @@
                                                             </a>
                                                         </td>
                                                     </tr>
+
                                                     <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Fulano de tal da Silva</td>
-                                                        <td>fulano@site.com.br</td>
-                                                        <td class="text-center ">
-                                                            <a href="cadastroEditar.html">
-                                                                <button class="btn-primary btn btn-xs">
-                                                                    <i class="fa fa-lg fa-pencil"></i>
-                                                                </button>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Maria  da Silva</td>
-                                                        <td>maria@site.com.br</td>
-                                                        <td class="text-center ">
-                                                            <a href="cadastroEditar.html">
-                                                                <button class="btn-primary btn btn-xs">
-                                                                    <i class="fa fa-lg fa-pencil"></i>
-                                                                </button>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Joao da Silva</td>
-                                                        <td>joao@site.com.br</td>
-                                                        <td class="text-center ">
-                                                            <a href="cadastroEditar.html">
-                                                                <button class="btn-primary btn btn-xs">
-                                                                    <i class="fa fa-lg fa-pencil"></i>
-                                                                </button>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Fulano de tal da Silva</td>
-                                                        <td>fulano@site.com.br</td>
-                                                        <td class="text-center ">
-                                                            <a href="cadastroEditar.html">
-                                                                <button class="btn-primary btn btn-xs">
-                                                                    <i class="fa fa-lg fa-pencil"></i>
-                                                                </button>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Maria  da Silva</td>
-                                                        <td>maria@site.com.br</td>
-                                                        <td class="text-center ">
-                                                            <a href="cadastroEditar.html">
-                                                                <button class="btn-primary btn btn-xs">
-                                                                    <i class="fa fa-lg fa-pencil"></i>
-                                                                </button>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Joao da Silva</td>
-                                                        <td>joao@site.com.br</td>
-                                                        <td class="text-center ">
-                                                            <a href="cadastroEditar.html">
-                                                                <button class="btn-primary btn btn-xs">
-                                                                    <i class="fa fa-lg fa-pencil"></i>
-                                                                </button>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
+                                                            <td>Artes Marciais</td>
+                                                            <td>Capoeira</td>
+                                                            <td>Arte marcial praticada principalmente com os pés</td>
+                                                            <td class="text-center ">
+                                                                <a href="cadastroEditar.html">
+                                                                    <button class="btn-primary btn btn-xs">
+                                                                        <i class="fa fa-lg fa-pencil"></i>
+                                                                    </button>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    
                                                    
                                                 </tbody>
                                             </table>

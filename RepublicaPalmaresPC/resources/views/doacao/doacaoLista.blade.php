@@ -105,7 +105,7 @@
                             <div class="col-lg-12">
                                 <div class="ibox float-e-margins">
                                     <div class="ibox-title">
-                                        <h5>Lista de Cadastros</h5>
+                                        <h5>Lista de Doações</h5>
                                     </div>
                                     <div class="ibox-content">
                 
@@ -115,15 +115,15 @@
                                                     <tr>
                                                         <th>CPF/CNPJ</th>
                                                         <th>Nome/Razão</th>
-                                                        <th>E-mail</th>
+                                                        <th>Doação</th>
                                                         <th></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Fulano de tal da Silva</td>
-                                                        <td>fulano@site.com.br</td>
+                                                        <td>353.345.123-07</td>
+                                                        <td>Leonardo da Silva</td>
+                                                        <td>Cesta Basica</td>
                                                         <td class="text-center ">
                                                             <a href="cadastroEditar.html">
                                                                 <button class="btn-primary btn btn-xs">
@@ -133,9 +133,9 @@
                                                         </td>
                                                     </tr>
                                                     <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Maria  da Silva</td>
-                                                        <td>maria@site.com.br</td>
+                                                        <td>623.361.121-07</td>
+                                                        <td>Maria da Silva</td>
+                                                        <td>Roupas</td>
                                                         <td class="text-center ">
                                                             <a href="cadastroEditar.html">
                                                                 <button class="btn-primary btn btn-xs">
@@ -145,9 +145,9 @@
                                                         </td>
                                                     </tr>
                                                     <tr class="">
-                                                        <td>123.321.123-07</td>
+                                                        <td>653.321.122-07</td>
                                                         <td>Joao da Silva</td>
-                                                        <td>joao@site.com.br</td>
+                                                        <td>Equipamento Ginastica</td>
                                                         <td class="text-center ">
                                                             <a href="cadastroEditar.html">
                                                                 <button class="btn-primary btn btn-xs">
@@ -157,9 +157,9 @@
                                                         </td>
                                                     </tr>
                                                     <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Fulano de tal da Silva</td>
-                                                        <td>fulano@site.com.br</td>
+                                                        <td>223.321.112-07</td>
+                                                        <td>Alex oliveira</td>
+                                                        <td>300 R$</td>
                                                         <td class="text-center ">
                                                             <a href="cadastroEditar.html">
                                                                 <button class="btn-primary btn btn-xs">
@@ -169,9 +169,9 @@
                                                         </td>
                                                     </tr>
                                                     <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Maria  da Silva</td>
-                                                        <td>maria@site.com.br</td>
+                                                        <td>479.751.146-07</td>
+                                                        <td>João Lucas</td>
+                                                        <td>Instrumentos Musicais</td>
                                                         <td class="text-center ">
                                                             <a href="cadastroEditar.html">
                                                                 <button class="btn-primary btn btn-xs">
@@ -181,9 +181,9 @@
                                                         </td>
                                                     </tr>
                                                     <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Joao da Silva</td>
-                                                        <td>joao@site.com.br</td>
+                                                        <td>343.321.843-07</td>
+                                                        <td>Pedro Alvarez</td>
+                                                        <td>Materiais para Costura</td>
                                                         <td class="text-center ">
                                                             <a href="cadastroEditar.html">
                                                                 <button class="btn-primary btn btn-xs">
@@ -193,9 +193,9 @@
                                                         </td>
                                                     </tr>
                                                     <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Fulano de tal da Silva</td>
-                                                        <td>fulano@site.com.br</td>
+                                                        <td>124.345.298-07</td>
+                                                        <td>Fabio Mesquita</td>
+                                                        <td>Roupas de frio</td>
                                                         <td class="text-center ">
                                                             <a href="cadastroEditar.html">
                                                                 <button class="btn-primary btn btn-xs">
@@ -205,9 +205,9 @@
                                                         </td>
                                                     </tr>
                                                     <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Maria  da Silva</td>
-                                                        <td>maria@site.com.br</td>
+                                                        <td>153.451.143-07</td>
+                                                        <td>Julian Brandt</td>
+                                                        <td>Cordões Para Graduação</td>
                                                         <td class="text-center ">
                                                             <a href="cadastroEditar.html">
                                                                 <button class="btn-primary btn btn-xs">
@@ -217,9 +217,9 @@
                                                         </td>
                                                     </tr>
                                                     <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Joao da Silva</td>
-                                                        <td>joao@site.com.br</td>
+                                                        <td>567.355.455-07</td>
+                                                        <td>Everson Bastos</td>
+                                                        <td>Equipamentos Esportivos</td>
                                                         <td class="text-center ">
                                                             <a href="cadastroEditar.html">
                                                                 <button class="btn-primary btn btn-xs">
@@ -228,43 +228,7 @@
                                                             </a>
                                                         </td>
                                                     </tr>
-                                                    <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Fulano de tal da Silva</td>
-                                                        <td>fulano@site.com.br</td>
-                                                        <td class="text-center ">
-                                                            <a href="cadastroEditar.html">
-                                                                <button class="btn-primary btn btn-xs">
-                                                                    <i class="fa fa-lg fa-pencil"></i>
-                                                                </button>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Maria  da Silva</td>
-                                                        <td>maria@site.com.br</td>
-                                                        <td class="text-center ">
-                                                            <a href="cadastroEditar.html">
-                                                                <button class="btn-primary btn btn-xs">
-                                                                    <i class="fa fa-lg fa-pencil"></i>
-                                                                </button>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="">
-                                                        <td>123.321.123-07</td>
-                                                        <td>Joao da Silva</td>
-                                                        <td>joao@site.com.br</td>
-                                                        <td class="text-center ">
-                                                            <a href="cadastroEditar.html">
-                                                                <button class="btn-primary btn btn-xs">
-                                                                    <i class="fa fa-lg fa-pencil"></i>
-                                                                </button>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                   
+
                                                 </tbody>
                                             </table>
                                         </div>

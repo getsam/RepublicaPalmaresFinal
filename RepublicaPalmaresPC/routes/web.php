@@ -33,14 +33,22 @@ Auth::routes();
 
 Route::get('/homerestrita', 'HomeController@index')
 ->name('home');
-Route::get('/homerestrita/criar', 'HomeController@showForm');
-Route::post('/homerestrita/criar', 'HomeController@registrar');
-Route::get('/homerestrita/listapessoas', 'HomeController@listarpessoas');
-//rota modalidade
-Route::get('/homerestrita/modalidade', 'HomeController@modalidade');
-//Rota cursos
-Route::get('/homerestrita/cursolista', 'HomeController@curso');
-Route::get('/homerestrita/doacao', 'HomeControlleer@doacao');
-Route::get('/homerestrita/doacaolista', 'HomeController@doacao');
+
+//rotas cadastro pessoas
+Route::get('/homerestrita/criar', 'CadastroController@indexform');
+Route::post('/homerestrita/criar', 'CadastroController@registrar');
+Route::get('/homerestrita/listapessoas', 'CadastroController@listarpessoas');
+
+//rotas modalidade
+Route::get('/homerestrita/modalidade', 'ModalidadeController@modalidade');
+
+
+//Rotas cursos
+Route::get('/homerestrita/curso', 'CursoController@index');
+Route::get('/homerestrita/cursolista', 'CursoController@cursolista');
+
+
+Route::get('/homerestrita/doacao', 'DoacaoControlleer@index');
+Route::get('/homerestrita/doacaolista', 'DoacaoController@doacao');
 
 
