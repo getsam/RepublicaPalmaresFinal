@@ -106,6 +106,11 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="ibox float-e-margins">
+                                    @if(!empty($mensagem))
+                                        <div class="alert succes">
+                                            {{$mensagem}}
+                                        </div>
+                                    @endif
                                     <div class="ibox-title">
                                         <h5>Lista de Cadastros</h5>
                                     </div>

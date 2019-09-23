@@ -70,16 +70,21 @@ class HomeController extends Controller
         $pessoa->email = $email;
 
         $pessoa->save();
+        $request->session()
+        ->flash('mensagem',
+            "Cadastro de {$pessoa->nome} criado com sucesso"
+        );
 
-        redirect('/homerestrita/listapessoas');
+        return redirect('/homerestrita/listapessoas');
 
     }
 
-    public function listarpessoas()
+    public function listarpessoas(Request $request)
     {
         $pessoas = Pessoa::query()
         ->orderBy('nome')
         ->get();
+        $mensagem = $request->session()->get('mensagem');
         
         return view('cadastro.cadastroLista', compact('pessoas'));
     }
