@@ -9,7 +9,7 @@
     <title>ONG Republica de palmares </title>
 
     <link href="<?php echo asset('css/bootstrap.min.css')?>" rel="stylesheet">
-    <link href="<?php echo asset('font-awesome/css/font-awesome.css')?>" rel="stylesheet">
+    <link href="<?php echo asset('css/font-awesome/css/font-awesome.css')?>" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo asset('css/plugins/dataTables/datatables.min.css')?>">
 
     <link href="<?php echo asset('css/animate.css')?>" rel="stylesheet">
@@ -27,11 +27,13 @@
                     <li class="nav-header">
                         <div class="dropdown profile-element"> 
                             <a href="{{url('/homerestrita')}}">
-                                <h1 class="text-muted">Republica de Palmares</h1>
+                                <div class="content_img">
+                                    <img src="url({{ asset('img/Logo_capoeira_vetorizado_finalizado_normal-01.png')}})" alt="" class="img-responsive">
+                                </div>
                             </a>
                         </div>
                         <div class="logo-element">
-                            RCP
+                            <img src="url({{ asset('img/Logo_capoeira_vetorizado_finalizado_normal-01.png')}})" alt="" class="img-responsive">
                         </div>
                     </li>
                     <li>

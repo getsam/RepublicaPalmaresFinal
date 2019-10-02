@@ -1,1 +1,0 @@
-//implementar layout de herança templates
