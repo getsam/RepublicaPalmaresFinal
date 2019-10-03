@@ -424,12 +424,11 @@
         
 @section('scripts')
     <!-- Switchery -->
-    <script src="js/plugins/switchery/switchery.js"></script>
-    
-    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <script src="<?php echo asset('js/plugins/switchery/switchery.js')?>"></script>
+    <script src="<?php echo asset('js/plugins/datapicker/bootstrap-datepicker.js')?>"></script>
     <!-- Jquery Validate -->
-    <script src="js/plugins/validate/jquery.validate.min.js"></script>
-    <script src="js/plugins/jqmask/jquery_mask.js"></script>
-    <script src="js/pages/validator.js"></script>
-    <script src="js/pages/cadastroEditar.js"></script>
+    <script src="<?php echo asset('js/plugins/validate/jquery.validate.min.js')?>"></script>
+    <script src="<?php echo asset('js/plugins/jqmask/jquery_mask.js')?>"></script>
+    <script src="<?php echo asset('js/pages/validator.js')?>"></script>
+    <script src="<?php echo asset('js/pages/cadastroEditar.js')?>"></script>
 @endsection
