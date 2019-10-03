@@ -30,12 +30,12 @@
                         <div class="dropdown profile-element"> 
                             <a href="{{url('/homerestrita')}}">
                                 <div class="content_img">
-                                    <img src="{{ asset('storage/img/Logo_Republica_Cultural.png')}}" alt="" class="img-responsive">
+                                    <img src="{{ asset('storage/img/Logo_Republica_Cultural.png')}}" alt="" class="logo-responsive">
                                 </div>
                             </a>
                         </div>
                         <div class="logo-element">
-                            <img src="{{ asset('storage/img/Logo_capoeira_vetorizado_finalizado_normal-01.png')}}" alt="" class="img-responsive">
+                            <img src="{{ asset('storage/img/Logo_capoeira_vetorizado_finalizado_normal-01.png')}}" alt="" class="logo-responsive">
                         </div>
                     </li>
                     <li>
@@ -129,6 +129,8 @@
                 </nav>
             </div> <!-- FIM - Barra superior header da pagina -->
             
+            @yield('conteudo')
+
             <div class="row border-bottom">
             <!-- envelope do Conteúdo das views     -->
                 <div class="wrapper wrapper-content animated fadeInRight">
