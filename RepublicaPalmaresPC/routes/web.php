@@ -50,8 +50,8 @@ Route::get('/homerestrita/curso', 'CursoController@index');
 Route::get('/homerestrita/cursolista', 'CursoController@cursolista');
 
 // Rotas Doação
-Route::get('/homerestrita/doacao', 'DoacaoControlleer@index');
-Route::get('/homerestrita/doacaolista', 'DoacaoController@doacao');
+Route::get('/homerestrita/doacao', 'DoacaoController@index');
+Route::get('/homerestrita/doacaolista', 'DoacaoController@doacoes');
 
 // Rotas Aluno
 Route::get('/homerestrita/aluno', 'AlunoController@index');
@@ -64,4 +64,8 @@ Route::get('/homerestrita/colaboradorlista', 'ColaboradorController@colaboradore
 // Rotas agenda
 Route::get('/homerestrita/agenda', 'AgendaController@index');
 Route::get('/homerestrita/agendaevento', 'AgendaController@eventos');
+
+//Rotas departtamento
+Route::ger('/homerestrita/departamento', 'DepartamentoController@index');
+Route::get('/homerestrita/departamentolista', 'DepartamentoController@departamentos');
 

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DoacaoController extends Controller
+class DepartamentoController extends Controller
 {
     public function __construct()
     {
@@ -13,11 +13,11 @@ class DoacaoController extends Controller
 
     public function index()
     {
-        return view('doacao.doacao');
+        return view('departamento.departamento');
     }
 
-    public function doacoes()
+    public function departamentos()
     {
-        return view('doacao.doacaoLista');
+        return view('departamento.departamentoLista');
     }
 }
