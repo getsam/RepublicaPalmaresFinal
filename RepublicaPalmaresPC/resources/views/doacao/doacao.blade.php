@@ -3,7 +3,7 @@
 @section('link')
     <link rel="stylesheet" href="<?php echo asset('css/plugins/dataTables/datatables.min.css')?>">
     <link href="<?php echo asset('css/plugins/switchery/switchery.css')?>" rel="stylesheet">
-    <link href="<?php echo asset('css/plugins/clockpicker/clockpicker.css'?>" rel="stylesheet')">
+    <link href="<?php echo asset('css/plugins/clockpicker/clockpicker.css')?>" rel="stylesheet">
     <link href="<?php echo asset('css/plugins/chosen/chosen.css')?>" rel="stylesheet">
 @endsection
 
