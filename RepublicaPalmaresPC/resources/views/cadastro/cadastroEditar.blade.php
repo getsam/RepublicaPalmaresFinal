@@ -12,13 +12,13 @@
             <div class="tabs-container">
                 <ul class="nav nav-tabs">
                     <li class="active" ><a data-toggle="tab" href="#tab-1"> Cadastro</a></li>
-                    <li class="{{}} "><a data-toggle="tab" href="#tab-2">Informações de acesso</a></li>
+                    <li><a data-toggle="tab" href="#tab-2">Informações de acesso</a></li>
                 </ul>
                 <div class="tab-content">
                     <div id="tab-1" class="tab-pane active">
                         <div class="panel-body">
                             <div class="row">
-                                
+                                @foreach ($pessoa as $pessoa)
                                 <form role="form" action="#" method="#">
                                     <div class="col-sm-12 ">
                                         <h3 class="text-center m-t-lg">Dados Básicos</h3>
@@ -26,14 +26,14 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="documento_editar" class="label-control">CPF/CNPJ</label>
-                                            <input type="text" placeholder="Preencha com o CPF" class="form-control" id="documento_editar" name="documento_editar" required>
+                                            <input value="{{ $pessoa->CPF }}" type="text" placeholder="Preencha com o CPF" class="form-control" id="documento_editar" name="documento_editar" required>
                                         </div>
                                     </div>
                                     
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="tiposoc_editar" class="label-control">Tipo Pesooa</label>
-                                            <select class="form-control m-b" name="tiposoc_editar" id="tiposoc_editar">
+                                        <select value="{{ $pessoa->tipo_documento }}" class="form-control m-b" name="tiposoc_editar" id="tiposoc_editar">
                                                 <option value="">Selecione</option>
                                                 <option value="0">Pessoa Fisíca</option>
                                                 <option value="1">Pessoas Juridíca</option>
@@ -44,7 +44,7 @@
                                     <div class="col-sm-12">
                                         <div class="form-group">
                                             <label for="nome_editar" class="label-control">Nome/Razão Social</label>
-                                            <input type="text" placeholder="Prencher com o nome" class="form-control" name="nome_editar" id="nome_editar" required>
+                                            <input value="{{ $pessoa->nome }}" type="text" placeholder="Prencher com o nome" class="form-control" name="nome_editar" id="nome_editar" required>
                                         </div>
                                     </div>
                                     
@@ -52,7 +52,7 @@
                                         <div class="form-group" id="data_1">
                                             <label class="label-control" for="dt_nascimento">Nascimento/Abertura</label>
                                             <div class="input-group date" >
-                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" id="nascimento_cadastro" name="nascimento_cadastro" value="01/01/1900" >
+                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" id="nascimento_cadastro" name="nascimento_cadastro" value="{{ $pessoa->nascimento }}" >
                                             </div>
                                         </div>
                                     </div>
@@ -60,7 +60,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="genero_editar" class="label-control">Gênero</label>
-                                            <select class="form-control m-b" name="name_editar" id="name-editar">
+                                            <select value="{{ $pessoa->genero }}" class="form-control m-b" name="name_editar" id="name-editar" >
                                                 <option value="0">Masculino</option>
                                                 <option value="1">Feminino</option>
                                             </select>                                                   
@@ -89,14 +89,14 @@
                                     <div class="col-sm-12">
                                         <div class="form-group">
                                             <label for="endereco_editar" class="label-control">Logradouro</label>
-                                            <input type="text" placeholder="Prenche com o logradouro" class="form-control" id="endereco_editar" name="endereco_editar">
+                                            <input value="{{ $pessoa->endereco }}"type="text" placeholder="Prenche com o logradouro" class="form-control" id="endereco_editar" name="endereco_editar">
                                         </div>
                                     </div>
                                     
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="numero_editar">Número</label>
-                                            <input type="text" placeholder="Prenche com o número" class="form-control" id="numero_editar" name="numero_editar">
+                                            <input  type="text" placeholder="Prenche com o número" class="form-control" id="numero_editar" name="numero_editar">
                                         </div>
                                     </div>
                                     
@@ -112,7 +112,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="bairro_editar">Bairro</label>
-                                            <input type="text" placeholder="Prenche com o bairro" class="form-control" id="bairro_editar" name="bairro_editar">
+                                            <input value="{{ $pessoa->bairro }}"type="text" placeholder="Prenche com o bairro" class="form-control" id="bairro_editar" name="bairro_editar">
                                         </div>
                                     </div>
                                     
@@ -120,7 +120,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="cidade_editar">Cidade</label>
-                                            <input type="text" placeholder="Prenche com o cidade" class="form-control" id="cidade_editar" name="cidade_editar">
+                                            <input value="{{ $pessoa->cidade }}" type="text" placeholder="Prenche com o cidade" class="form-control" id="cidade_editar" name="cidade_editar">
                                         </div>
                                     </div>
                                     
@@ -128,14 +128,14 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="uf_editar">UF</label>
-                                            <input type="text" placeholder="Prenche com o UF" class="form-control" id="uf_editar" name="uf_editar">
+                                            <input value="{{ $pessoa->uf }}"type="text" placeholder="Prenche com o UF" class="form-control" id="uf_editar" name="uf_editar">
                                         </div>
                                     </div>
                                     
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="cep_editar">cep</label>
-                                            <input type="text" placeholder="Prenche com o UF" class="form-control" id="cep_editar" name="cep_editar">
+                                            <input value="{{ $pessoa->cep }}" type="text" placeholder="Prenche com o UF" class="form-control" id="cep_editar" name="cep_editar">
                                         </div>
                                     </div>
                                     
@@ -149,7 +149,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="tel1_editar">Telefone 1</label>
-                                            <input type="text" placeholder="Prenche com o telefone" class="form-control" id="tel1_editar" name="tel1_editar">
+                                            <input value="{{ $pessoa->fone1 }}"type="text" placeholder="Prenche com o telefone" class="form-control" id="tel1_editar" name="tel1_editar">
                                         </div>
                                     </div>
                                     
@@ -169,7 +169,7 @@
                                     <div class="col-sm-12">
                                         <div class="form-group">
                                             <label for="email_editar">E-mail</label>
-                                            <input type="email" placeholder="Prenche com o e-mail" class="form-control" id="email_editar" name="email_editar">
+                                            <input value="{{ $pessoa->email }}" type="email" placeholder="Prenche com o e-mail" class="form-control" id="email_editar" name="email_editar">
                                         </div>
                                     </div>
                                     
@@ -180,6 +180,7 @@
                                         </div>
                                     </div>
                                 </form>
+                                @endforeach
                             </div>
                         </div>
                     </div>

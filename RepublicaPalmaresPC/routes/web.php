@@ -40,6 +40,7 @@ Route::get('/homerestrita', 'HomeController@index')
 Route::get('/homerestrita/criar', 'CadastroController@indexform');
 Route::post('/homerestrita/criar', 'CadastroController@registrar');
 Route::get('/homerestrita/listapessoas', 'CadastroController@listarpessoas');
+Route::get('/homerestrita/editar/{id}', 'CadastroController@editar');
 
 //rotas modalidade
 Route::get('/homerestrita/modalidade', 'ModalidadeController@modalidade');
