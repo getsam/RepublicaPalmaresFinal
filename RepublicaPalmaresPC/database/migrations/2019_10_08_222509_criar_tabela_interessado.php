@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriarTabelaPessoa extends Migration
+class CriarTabelaInteressado extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,13 @@ class CriarTabelaPessoa extends Migration
      */
     public function up()
     {
-        Schema::create('pessoa', function (Blueprint $table) {
-            $table->integerIcrements('id');
-            $table->string('cpf');
-            $table->integer('tipo_documento')->default(1);
+        Schema::create('interessado', function (Blueprint $table) {
+            $table->integerIncrements('id');
             $table->string('nome');
-            $table->string('dt_nascimento');
-            $table->integer('genero');
-            $table->integer('endereco');
+            $table->string('telefone');
             $table->string('email');
-
+            $table->string('descricao');
+            $table->string('tipo_interessado');
         });
     }
 
@@ -33,6 +30,6 @@ class CriarTabelaPessoa extends Migration
      */
     public function down()
     {
-        Schema::drop('pessoa');
+        Schema::drop('interessado');
     }
 }
