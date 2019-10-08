@@ -66,6 +66,6 @@ Route::get('/homerestrita/agenda', 'AgendaController@index');
 Route::get('/homerestrita/agendaevento', 'AgendaController@eventos');
 
 //Rotas departtamento
-Route::ger('/homerestrita/departamento', 'DepartamentoController@index');
+Route::get('/homerestrita/departamento', 'DepartamentoController@index');
 Route::get('/homerestrita/departamentolista', 'DepartamentoController@departamentos'); 
 
