@@ -16,7 +16,7 @@ class CriarTabelaGraduacao extends Migration
         Schema::create('graduacao', function (Blueprint $table) {
             $table->integerIncrements('id');
             $table->string('nome');
-            $table->integer('curso');
+            $table->integer('id_curso');
         });
     }
 

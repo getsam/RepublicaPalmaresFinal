@@ -19,7 +19,7 @@ class CriarTabelaCurso extends Migration
             $table->string('descricao');
             $table->dateTime('dt_hora_ini');
             $table->dateTime('dt_hora_fim');
-            $table->integer('modalidade');
+            $table->integer('id_modalidade');
         });
     }
 

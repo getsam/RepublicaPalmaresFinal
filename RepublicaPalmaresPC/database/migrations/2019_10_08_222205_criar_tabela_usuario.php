@@ -17,7 +17,7 @@ class CriarTabelaUsuario extends Migration
             $table->integerIncrements('id');
             $table->string('email');
             $table->char('senha',20);
-            $table->integer('pessoa');
+            $table->integer('id_pessoa');
         });
     }
 
