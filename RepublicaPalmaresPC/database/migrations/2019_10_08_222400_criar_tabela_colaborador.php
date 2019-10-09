@@ -15,7 +15,11 @@ class CriarTabelaColaborador extends Migration
     {
         Schema::create('colaborador', function (Blueprint $table) {
             $table->integerIncrements('id');
-            $table->integer('pessoa');
+            $table->integer('pessoa_id');
+
+            $table->foreign('pessoa_id')
+                ->references('id')
+                ->on('pessoa');
         });
     }
 

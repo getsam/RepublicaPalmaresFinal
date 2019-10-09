@@ -15,8 +15,15 @@ class CriarTabelaAlunoCurso extends Migration
     {
         Schema::create('aluno_curso', function (Blueprint $table) {
             $table->integerIncrements('id');
-            $table->integer('aluno');
-            $table->integer('curso');
+            $table->integer('aluno_id');
+            $table->integer('curso_id');
+
+            $table->foreign('aluno_id')
+                ->references('id')
+                ->on('aluno');
+            $table->foreign('curso_id')
+                ->references('id')
+                ->on('curso');
         });
     }
 

@@ -19,9 +19,9 @@ class CriarTabelaCurso extends Migration
             $table->string('descricao');
             $table->dateTime('dt_hora_ini');
             $table->dateTime('dt_hora_fim');
-            $table->integer('id_modalidade');
+            $table->integer('modalidade_id');
 
-            $table->foreign('id_modalidade')
+            $table->foreign('modalidade_id')
                 ->references('id')
                 ->on('modalidade');
         });

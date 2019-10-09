@@ -11,6 +11,16 @@ class Curso extends Model
 
     public function modalidade()
     {
-        return $this->hasOne(Modalidade::class);
+        return $this->belongsTo(Modalidade::class);
+    }
+
+    public function alunos()
+    {
+        return $this->belongsToMany(Aluno::class, AlunoCurso::class);
+    }
+
+    public function graduacoes()
+    {
+        return $this->hasMany(Graduacao::class);
     }
 }

@@ -15,8 +15,15 @@ class CriarTabelaColaboradorCargo extends Migration
     {
         Schema::create('colaborador_cargo', function (Blueprint $table) {
             $table->integerIncrements('id');
-            $table->integer('colaborador');
-            $table->integer('cargo');
+            $table->integer('colaborador_id');
+            $table->integer('cargo_id');
+
+            $table->foreign('colaborador_id')
+                ->references('id')
+                ->on('colaborador');
+            $table->foreign('cargo_id')
+                ->references('id')
+                ->on('cargo');
         });
     }
 

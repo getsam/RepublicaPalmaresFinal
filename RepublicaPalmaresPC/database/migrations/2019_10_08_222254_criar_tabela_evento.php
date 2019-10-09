@@ -15,9 +15,19 @@ class CriarTabelaEvento extends Migration
     {
         Schema::create('evento', function (Blueprint $table) {
             $table->integerIncrements('id');
-            $table->integer('modalidade');
-            $table->integer('curso');
-            $table->integer('pessoa');
+            $table->integer('modalidade_id');
+            $table->integer('curso_id');
+            $table->integer('pessoa_id');
+
+            $table->foreign('modalidade_id')
+                ->references('id')
+                ->on('modalidade');
+            $table->foreign('curso_id')
+                ->references('id')
+                ->on('curso');
+            $table->foreign('pessoa_id')
+                ->references('id')
+                ->on('pessoa');
         });
     }
 
