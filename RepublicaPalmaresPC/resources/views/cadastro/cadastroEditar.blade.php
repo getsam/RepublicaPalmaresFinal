@@ -52,7 +52,7 @@
                                         <div class="form-group" id="data_1">
                                             <label class="label-control" for="dt_nascimento">Nascimento/Abertura</label>
                                             <div class="input-group date" >
-                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" id="nascimento_cadastro" name="nascimento_cadastro" value="{{ $pessoa->nascimento }}" >
+                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" id="nascimento_cadastro" name="nascimento_cadastro" value="{{ $pessoa->Nascimento }}" >
                                             </div>
                                         </div>
                                     </div>
