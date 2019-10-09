@@ -26,7 +26,7 @@
         <nav class="navbar-default navbar-static-side" role="navigation">
             <div class="sidebar-collapse">
                <ul class="nav metismenu" id="side-menu">
-                    <li class="nav-header">
+                    <li class="nav-header" style="height: 54px;">
                         <div class="dropdown profile-element"> 
                             <a href="{{url('/homerestrita')}}">
                                 <div class="content_img">
