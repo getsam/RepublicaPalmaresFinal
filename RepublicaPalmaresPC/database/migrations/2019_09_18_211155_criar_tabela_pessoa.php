@@ -20,8 +20,17 @@ class CriarTabelaPessoa extends Migration
             $table->string('nome');
             $table->string('dt_nascimento');
             $table->integer('genero');
-            $table->integer('endereco');
+            $table->integer('id_endereco');
+            $table->string('id_telefone');
             $table->string('email');
+
+            $table->foreign('id_endereco')
+                ->references('id')
+                ->on('endereco');
+            
+            $table->foreign('id_telefone')
+                ->references('id')
+                ->on('telefone');
 
         });
     }

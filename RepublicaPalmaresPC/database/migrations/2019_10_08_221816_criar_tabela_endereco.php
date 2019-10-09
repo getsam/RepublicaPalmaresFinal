@@ -19,7 +19,8 @@ class CriarTabelaEndereco extends Migration
             $table->char('numero',50);
             $table->string('complemento');
             $table->string('bairro');
-            $table->string('cidadde');
+            $table->string('cidade');
+            $table->string('cep');
             $table->char('uf',3);
         });
     }
