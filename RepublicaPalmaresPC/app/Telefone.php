@@ -8,4 +8,9 @@ class Telefone extends Model
 {   
     protected $table = 'telefone';
     public $timestamps = false;
+
+    public function pessoa()
+    {
+        return $this->belongsTo(Pessoa::class);
+    }
 }

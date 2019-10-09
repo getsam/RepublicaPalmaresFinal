@@ -17,8 +17,12 @@ class CriarTabelaCargo extends Migration
             $table->integerIncrements('id');
             $table->string('nome');
             $table->string('descricao');
-            $table->integer('depto');
+            $table->integer('depto_id');
             $table->date('dt_entrada');
+
+            $table->foreign('depto_id')
+                ->references('id')
+                ->on('depto');
         });
     }
 
