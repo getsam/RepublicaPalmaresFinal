@@ -74,4 +74,18 @@ class CadastroController extends Controller
         
         return view('cadastro.cadastroLista', compact('pessoas'));
     }
+
+    public function showeditar(Request $request, $id)
+    {
+        $id = $id;
+        $pessoa = Pessoa::query()
+            ->where('id','=', "$id")
+            ->get();
+        return view('cadastro.cadastroEditar', compact('pessoa'));
+    }
+
+    public function editar(Request $request)
+    {
+        //
+    }
 }

@@ -30,12 +30,14 @@
                         <div class="dropdown profile-element"> 
                             <a href="{{url('/homerestrita')}}">
                                 <div class="content_img">
-                                    <img src="{{ asset('storage/img/Logo_Republica_Cultural.png')}}" alt="" class="logo-responsive">
+                                    <img src="{{ asset('storage/img/Logo_Republica_Cultural.png')}}" alt="" 
+                                    class="logo-responsive">
                                 </div>
                             </a>
                         </div>
                         <div class="logo-element">
-                            <img src="{{ asset('storage/img/Logo_capoeira_vetorizado_finalizado_normal-01.png')}}" alt="" class="logo-responsive">
+                            <img src="{{ asset('storage/img/Logo_capoeira_vetorizado_finalizado_normal-01.png')}}" alt="" 
+                            class="logo-responsive">
                         </div>
                     </li>
                     <li>
@@ -80,7 +82,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Doações</span> <span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-money"></i> <span class="nav-label">Doações</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="{{url('/homerestrita/doacao')}}">Doar</a></li>
                             <li><a href="{{url('/homerestrita/doacaolista')}}">Ver</a></li>
@@ -88,7 +90,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Agenda</span> <span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-calendar"></i> <span class="nav-label">Agenda</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="{{url('/homerestrita/agenda')}}">Criar</a></li>
                             <li><a href="{{url('homerestrita/agendaevento')}}">Editar</a></li>
@@ -115,10 +117,12 @@
                     <ul class="nav navbar-top-links navbar-right">
                         <li>
 
-                            <a class="fa fa-sign-out" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();">Sair
-                            </a>
+
+                                    <a href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                                     <i class="fa fa-sign-out" aria-hidden="true"></i>Sair
+                                    </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf

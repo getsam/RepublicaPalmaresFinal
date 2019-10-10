@@ -62,7 +62,7 @@
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Republica Cultural<br/>
-                        O espaçõ da Capoeira<br/>
+                        O espaço da Capoeira<br/>
                         que abre as portas <br/>
                         para outros projetos.
                     </h1>

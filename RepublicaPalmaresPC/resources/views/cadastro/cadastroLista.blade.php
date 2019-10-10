@@ -41,7 +41,7 @@
                                                     <td>{{ $pessoa->nome }}</td>
                                                     <td>{{ $pessoa->email }}</td>
                                                     <td class="text-center ">
-                                                        <a href="cadastroEditar.html">
+                                                        <a href="{{url("/homerestrita/editar/$pessoa->id")}}">
                                                             <button class="btn-primary btn btn-xs">
                                                                 <i class="fa fa-lg fa-pencil"></i>
                                                             </button>
