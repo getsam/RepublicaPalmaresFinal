@@ -49,7 +49,7 @@ Route::get('/homerestrita/modalidade', 'ModalidadeController@modalidade');
 
 //Rotas cursos
 Route::get('/homerestrita/curso', 'CursoController@index');
-Route::get('/homerestrita/cursolista', 'CursoController@cursolista');
+Route::get('/homerestrita/cursolista', 'CursoController@cursos');
 
 // Rotas Doação
 Route::get('/homerestrita/doacao', 'DoacaoController@index');
