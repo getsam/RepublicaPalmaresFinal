@@ -20,4 +20,9 @@ class ColaboradorController extends Controller
     {
         return view('colaborador.colaboradorlista');
     }
+
+    public function editar()
+    {
+        return view('colaborador.colaboradorEditar');
+    }
 }

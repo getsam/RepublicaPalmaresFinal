@@ -43,7 +43,7 @@
                                                     <td>10/03/2019</td>
                                                     <td></td>
                                                     <td class="text-center ">
-                                                        <a href="colaboradorEditar.html">
+                                                        <a href="{{url('/homerestrita/colaboradoreditar')}}">
                                                             <button class="btn-primary btn btn-xs">
                                                                 <i class="fa fa-lg fa-pencil"></i>
                                                             </button>
@@ -68,7 +68,7 @@
                                                         </a>
                                                     </td>
                                                 </tr>
-                                                <tr class="">
+                                                {{-- <tr class="">
                                                     <td>03</td>
                                                     <td>27101925609</td>
                                                     <td>Eduardo Batista de Souza</td>
@@ -85,7 +85,7 @@
                                                             </button>
                                                         </a>
                                                     </td>
-                                                </tr>
+                                                </tr> --}}
                                             </tbody>
                                         </table>
                                     </div>

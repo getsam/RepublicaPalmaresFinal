@@ -62,6 +62,7 @@ Route::get('/homerestrita/alunolista', 'AlunoController@alunos');
 // Rotas Colaborador
 Route::get('/homerestrita/colaborador', 'ColaboradorController@index');
 Route::get('/homerestrita/colaboradorlista', 'ColaboradorController@colaboradores');
+Route::get('/homerestrita/editarcolaborador' , 'ColaboradorController@editar');
 
 // Rotas agenda
 Route::get('/homerestrita/agenda', 'AgendaController@index');
