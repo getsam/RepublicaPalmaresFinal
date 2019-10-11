@@ -36,6 +36,9 @@ Auth::routes();
 Route::get('/homerestrita', 'HomeController@index')
 ->name('home');
 
+//rotas cadastro interessado
+Route::post('cadInteressado', 'HomeController@registrar');
+
 //rotas cadastro pessoas
 Route::get('/homerestrita/criar', 'CadastroController@indexform');
 Route::post('/homerestrita/criar', 'CadastroController@registrar');
