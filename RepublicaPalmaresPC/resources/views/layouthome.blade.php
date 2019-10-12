@@ -28,7 +28,7 @@
                <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element"> 
-                            <a href="{{url('/homerestrita')}}">
+                            <a href="{{url('/home')}}">
                                 <div class="content_img">
                                     <img src="{{ asset('storage/img/Logo_Republica_Cultural.png')}}" alt="" 
                                     class="logo-responsive">
@@ -43,57 +43,57 @@
                     <li>
                         <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Cadastro</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="{{ url('homerestrita/criar') }}">Criar</a></li>
-                            <li><a href="{{url('homerestrita/listapessoas')}}">Editar</a></li>
+                            <li><a href="{{ url('home/criar') }}">Criar</a></li>
+                            <li><a href="{{url('home/listapessoas')}}">Editar</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="{{url('/homerestrita/modalidade')}}"><i class="fa fa-shield"></i> <span class="nav-label">Modalidade</span> </a>
+                        <a href="{{url('/home/modalidade')}}"><i class="fa fa-shield"></i> <span class="nav-label">Modalidade</span> </a>
                     </li>
                     
                     <li>
                         <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Cursos</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="{{url('/homerestrita/curso')}}">Criar</a></li>
-                            <li><a href="{{url('/homerestrita/cursolista')}}">Editar</a></li>
+                            <li><a href="{{url('/home/curso')}}">Criar</a></li>
+                            <li><a href="{{url('/home/cursolista')}}">Editar</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-users"></i> <span class="nav-label">Alunos</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="{{url('/homerestrita/aluno')}}">Criar</a></li>
-                            <li><a href="{{url('/homerestrita/alunolista')}}">Editar</a></li>
+                            <li><a href="{{url('/home/aluno')}}">Criar</a></li>
+                            <li><a href="{{url('/home/alunolista')}}">Editar</a></li>
                         </ul>
                     </li>
 
                     <li>
                         <a href="#"><i class="fa fa-institution"></i> <span class="nav-label">Depto/ Cargo</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="{{url('/homerestrita/departamento')}}">Criar</a></li>
-                            <li><a href="{{url('/homerestrita/departamentolista')}}">Editar</a></li>
+                            <li><a href="{{url('/home/departamento')}}">Criar</a></li>
+                            <li><a href="{{url('/home/departamentolista')}}">Editar</a></li>
                         </ul>
                     </li>
 
                     <li>
                         <a href="#"><i class="fa fa-briefcase"></i> <span class="nav-label">Colaborador</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="{{url('/homerestrita/colaborador')}}">Criar</a></li>
-                            <li><a href="{{url('/homerestrita/colaboradorlista')}}">Editar</a></li>
+                            <li><a href="{{url('/home/colaborador')}}">Criar</a></li>
+                            <li><a href="{{url('/home/colaboradorlista')}}">Editar</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-money"></i> <span class="nav-label">Doações</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="{{url('/homerestrita/doacao')}}">Doar</a></li>
-                            <li><a href="{{url('/homerestrita/doacaolista')}}">Ver</a></li>
+                            <li><a href="{{url('/home/doacao')}}">Doar</a></li>
+                            <li><a href="{{url('/home/doacaolista')}}">Ver</a></li>
                             
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-calendar"></i> <span class="nav-label">Agenda</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="{{url('/homerestrita/agenda')}}">Criar</a></li>
-                            <li><a href="{{url('homerestrita/agendaevento')}}">Editar</a></li>
+                            <li><a href="{{url('/home/agenda')}}">Criar</a></li>
+                            <li><a href="{{url('home/agendaevento')}}">Editar</a></li>
                         </ul>
                     </li>
                 </ul>

@@ -14,7 +14,7 @@ class CriarTabelaPessoa extends Migration
     public function up()
     {
         Schema::create('pessoa', function (Blueprint $table) {
-            $table->integerIcrements('id');
+            $table->integerIncrements('id');
             $table->string('cpf');
             $table->integer('tipo_documento')->default(1);
             $table->string('nome');
@@ -42,6 +42,6 @@ class CriarTabelaPessoa extends Migration
      */
     public function down()
     {
-        Schema::drop('pessoa');
+        Schema::dropIfExists('pessoa');
     }
 }
