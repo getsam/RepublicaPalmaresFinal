@@ -32,6 +32,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')
 ->name('home');
 
+//rotas cadastro interessado
+Route::post('cadInteressado', 'HomeController@registrar');
+
 //rotas cadastro pessoas
 Route::get('/home/criar', 'CadastroController@indexform');
 Route::post('/home/criar', 'CadastroController@registrar');
