@@ -16,7 +16,7 @@ class CursoController extends Controller
         return view('curso.curso');
     }
 
-    public function curso()
+    public function cursos()
     {
         return view('curso.cursolista');
     }
