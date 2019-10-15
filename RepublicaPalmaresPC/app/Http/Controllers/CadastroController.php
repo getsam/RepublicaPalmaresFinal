@@ -95,11 +95,24 @@ class CadastroController extends Controller
     public function showeditar(Request $request, $id)
     {
         $id = $id;
+
         $pessoa = DB::table('pessoa')
-            ->join('endereco', 'pessoa.id_telefone', '=', 'endereco.id')
-            ->where('id','=', "$id")
+            ->join('endereco', 'pessoa.id_endereco', '=', 'endereco.id')
+            ->join('telefone', 'pessoa.id_telefone', '=', 'telefone.id')
+            ->where('pessoa.id','=', "$id")
             ->get();
-        return view('cadastro.cadastroEditar', compact('pessoa'));
+
+        $endereco = DB::table('endereco')
+            ->join('pessoa', 'endereco.id', '=', 'pessoa.id_endereco')
+            ->where('pessoa.id', '=', "$id")
+            ->get();
+        
+        $telefone = DB::table('telefone')
+            ->join('pessoa', 'telefone.id', '=', 'pessoa.id_telefone')
+            ->where('pessoa.id', '=', "$id")
+            ->get();
+
+        return view('cadastro.cadastroEditar', compact('pessoa','endereco','telefone'));
     }
 
     public function editar(Request $request)
