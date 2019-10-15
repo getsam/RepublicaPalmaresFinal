@@ -96,7 +96,7 @@ class CadastroController extends Controller
     {
         $id = $id;
         $pessoa = DB::table('pessoa')
-            ->join('endereco', 'pessoa.id', '=', 'endereco.')
+            ->join('endereco', 'pessoa.id_telefone', '=', 'endereco.id')
             ->where('id','=', "$id")
             ->get();
         return view('cadastro.cadastroEditar', compact('pessoa'));
