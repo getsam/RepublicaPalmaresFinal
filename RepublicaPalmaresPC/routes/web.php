@@ -44,6 +44,9 @@ Route::put('/home/editar/{id}','CadastroController@editar');
 
 //rotas modalidade
 Route::get('/home/modalidade', 'ModalidadeController@modalidade');
+Route::get('/home/listarModalidade/{id}', 'ModalidadeController@listarModalidade');
+Route::put('/home/editarModalidade/{id}','ModalidadeController@editar');
+Route::post('/home/criar','ModalidadeController@registrar');
 
 
 //Rotas cursos
