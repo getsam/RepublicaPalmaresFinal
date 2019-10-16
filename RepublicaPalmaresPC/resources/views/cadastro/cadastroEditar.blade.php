@@ -19,6 +19,9 @@
                         <div class="panel-body">
                             <div class="row">
                                 @foreach ($pessoa as $pessoa)
+                                @foreach ($endereco as $endereco)
+                                @foreach ($telefone as $telefone)
+                            
                                 <form role="form" action="#" method="#">
                                     <div class="col-sm-12 ">
                                         <h3 class="text-center m-t-lg">Dados Básicos</h3>
@@ -26,7 +29,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="documento_editar" class="label-control">CPF/CNPJ</label>
-                                            <input value="{{ $pessoa->CPF }}" type="text" placeholder="Preencha com o CPF" class="form-control" id="documento_editar" name="documento_editar" required>
+                                            <input value="{{ $pessoa->cpf }}" type="text" placeholder="Preencha com o CPF" class="form-control" id="documento_editar" name="documento_editar" required>
                                         </div>
                                     </div>
                                     
@@ -52,7 +55,7 @@
                                         <div class="form-group" id="data_1">
                                             <label class="label-control" for="dt_nascimento">Nascimento/Abertura</label>
                                             <div class="input-group date" >
-                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" id="nascimento_cadastro" name="nascimento_cadastro" value="{{ $pessoa->Nascimento }}" >
+                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" id="nascimento_cadastro" name="nascimento_cadastro" value="{{ $pessoa->dt_nascimento }}" >
                                             </div>
                                         </div>
                                     </div>
@@ -89,14 +92,14 @@
                                     <div class="col-sm-12">
                                         <div class="form-group">
                                             <label for="endereco_editar" class="label-control">Logradouro</label>
-                                            <input value="{{ $pessoa->endereco }}"type="text" placeholder="Prenche com o logradouro" class="form-control" id="endereco_editar" name="endereco_editar">
+                                            <input value="{{ $endereco->logradouro }}"type="text" placeholder="Prenche com o logradouro" class="form-control" id="endereco_editar" name="endereco_editar">
                                         </div>
                                     </div>
                                     
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="numero_editar">Número</label>
-                                            <input  type="text" placeholder="Prenche com o número" class="form-control" id="numero_editar" name="numero_editar">
+                                        <input value="{{ $endereco->numero }}" type="text" placeholder="Prenche com o número" class="form-control" id="numero_editar" name="numero_editar">
                                         </div>
                                     </div>
                                     
@@ -104,7 +107,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="complemento_editar">Complemento</label>
-                                            <input type="text" placeholder="Prenche com o complemento" class="form-control" id="complemento_editar" name="complemento_editar">
+                                        <input value="{{ $endereco->complemento }}" type="text" placeholder="Prenche com o complemento" class="form-control" id="complemento_editar" name="complemento_editar">
                                         </div>
                                     </div>
                                     
@@ -112,7 +115,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="bairro_editar">Bairro</label>
-                                            <input value="{{ $pessoa->bairro }}"type="text" placeholder="Prenche com o bairro" class="form-control" id="bairro_editar" name="bairro_editar">
+                                            <input value="{{ $endereco->bairro }}"type="text" placeholder="Prenche com o bairro" class="form-control" id="bairro_editar" name="bairro_editar">
                                         </div>
                                     </div>
                                     
@@ -120,7 +123,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="cidade_editar">Cidade</label>
-                                            <input value="{{ $pessoa->cidade }}" type="text" placeholder="Prenche com o cidade" class="form-control" id="cidade_editar" name="cidade_editar">
+                                            <input value="{{ $endereco->cidade }}" type="text" placeholder="Prenche com o cidade" class="form-control" id="cidade_editar" name="cidade_editar">
                                         </div>
                                     </div>
                                     
@@ -128,14 +131,14 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="uf_editar">UF</label>
-                                            <input value="{{ $pessoa->uf }}"type="text" placeholder="Prenche com o UF" class="form-control" id="uf_editar" name="uf_editar">
+                                            <input value="{{ $endereco->uf }}"type="text" placeholder="Prenche com o UF" class="form-control" id="uf_editar" name="uf_editar">
                                         </div>
                                     </div>
                                     
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="cep_editar">cep</label>
-                                            <input value="{{ $pessoa->cep }}" type="text" placeholder="Prenche com o UF" class="form-control" id="cep_editar" name="cep_editar">
+                                            <input value="{{ $endereco->cep }}" type="text" placeholder="Prenche com o UF" class="form-control" id="cep_editar" name="cep_editar">
                                         </div>
                                     </div>
                                     
@@ -149,14 +152,14 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="tel1_editar">Telefone 1</label>
-                                            <input value="{{ $pessoa->fone1 }}"type="text" placeholder="Prenche com o telefone" class="form-control" id="tel1_editar" name="tel1_editar">
+                                            <input value="{{ $telefone->telefone }}"type="text" placeholder="Prenche com o telefone" class="form-control" id="tel1_editar" name="tel1_editar">
                                         </div>
                                     </div>
                                     
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="tel2_editar">Telefone 2</label>
-                                            <input type="text" placeholder="Prenche com o telefone" class="form-control" id="tel2_editar" name="tel2_editar">
+                                        <input value="{{ $telefone->telefone2 }}" type="text" placeholder="Prenche com o telefone" class="form-control" id="tel2_editar" name="tel2_editar">
                                         </div>
                                     </div>
                                     
@@ -180,6 +183,8 @@
                                         </div>
                                     </div>
                                 </form>
+                                @endforeach
+                                @endforeach
                                 @endforeach
                             </div>
                         </div>

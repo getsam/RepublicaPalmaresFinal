@@ -37,11 +37,11 @@
                                         <tbody>
                                             @foreach ($pessoas as $pessoa)   
                                                 <tr class="">
-                                                    <td>{{ $pessoa->CPF }}</td>
+                                                    <td>{{ $pessoa->cpf }}</td>
                                                     <td>{{ $pessoa->nome }}</td>
                                                     <td>{{ $pessoa->email }}</td>
                                                     <td class="text-center ">
-                                                        <a href="{{url("/homerestrita/editar/$pessoa->id")}}">
+                                                        <a href="{{url("/home/editar/$pessoa->id")}}">
                                                             <button class="btn-primary btn btn-xs">
                                                                 <i class="fa fa-lg fa-pencil"></i>
                                                             </button>

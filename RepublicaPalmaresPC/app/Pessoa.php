@@ -8,6 +8,9 @@ class Pessoa extends Model
 {   
     protected $table = 'pessoa';
     public $timestamps = false;
+    protected $fillable = [
+        'cpf','tipo_documento','nome','dt_nascimento','genero','email'
+    ];
 
     public function endereco()
     {
