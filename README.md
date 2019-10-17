@@ -10,9 +10,15 @@ Para rodar este projeto e testar na sua maquina é necessario ter o php https://
 
 tambem é necessario ter o composer instalado https://getcomposer.org/
 
-atribua os dois as variaveis de ambiente de seu sistema 
+atribua os dois as variaveis path de ambiente do seu sistema 
+
+Na pasta do projeto use
+
+    `composer install`
+    
+Para instalar as dependencias do projeto
  
-Use os comandos abaixo
+Use o comando abaixo
 
     php artisan serve (ou php -S localhost:8000 -t public)
 
@@ -27,7 +33,7 @@ para acessar o login use
 
 Para usar as funcionalidades do banco voce precisa de um servidor mysql local rodando na porta 3306
 
-crie um database chamado republicapalmares
+crie um database chamado republicapalmares ou pode alterar as configurações do banco no arquivo .env
     
 use os comandos 
 
