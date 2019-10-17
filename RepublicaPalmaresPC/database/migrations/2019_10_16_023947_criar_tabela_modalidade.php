@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriarTabelaColaborador extends Migration
+class CriarTabelaModalidade extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CriarTabelaColaborador extends Migration
      */
     public function up()
     {
-        Schema::create('colaborador', function (Blueprint $table) {
-            $table->integerIncrements('id');
-            $table->integer('pessoa_id');
-
-            $table->foreign('pessoa_id')
-                ->references('id')
-                ->on('pessoa');
+        Schema::create('modalidade', function (Blueprint $table) {
+            $table->integerIncrements('id',true);
+            $table->string('modalidade');
+            $table->string('descricao');
         });
     }
 
@@ -30,6 +27,6 @@ class CriarTabelaColaborador extends Migration
      */
     public function down()
     {
-        Schema::drop('colaborador');
+        Schema::drop('modalidade');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriarTabelaColaboradorCargo extends Migration
+class CriarTabelaCargo extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,16 @@ class CriarTabelaColaboradorCargo extends Migration
      */
     public function up()
     {
-        Schema::create('colaborador_cargo', function (Blueprint $table) {
+        Schema::create('cargo', function (Blueprint $table) {
             $table->integerIncrements('id');
-            $table->integer('colaborador_id');
-            $table->integer('cargo_id');
+            $table->string('nome');
+            $table->string('descricao');
+            $table->integer('depto_id')->unsigned();
+            $table->date('dt_entrada');
 
-            $table->foreign('colaborador_id')
+            $table->foreign('depto_id')
                 ->references('id')
-                ->on('colaborador');
-            $table->foreign('cargo_id')
-                ->references('id')
-                ->on('cargo');
+                ->on('depto');
         });
     }
 
@@ -34,6 +33,6 @@ class CriarTabelaColaboradorCargo extends Migration
      */
     public function down()
     {
-        Schema::drop('colaborador_cargo');
+        Schema::drop('cargo');
     }
 }

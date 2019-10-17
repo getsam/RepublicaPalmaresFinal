@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Modalidade;
+use App\Curso;
 
 class CursoController extends Controller
 {
@@ -12,12 +14,21 @@ class CursoController extends Controller
     // }
 
     public function index()
-    {
-        return view('curso.curso');
+    {   
+        $modalidades = Modalidade::query()
+        ->orderBy('modalidade')
+        ->get();
+
+        return view('curso.curso',compact('modalidades'));
     }
 
     public function cursos()
     {
-        return view('curso.cursolista');
+        return view('curso.cursoLista');
+    }
+
+    public function registrar(Request $request)
+    {
+        
     }
 }

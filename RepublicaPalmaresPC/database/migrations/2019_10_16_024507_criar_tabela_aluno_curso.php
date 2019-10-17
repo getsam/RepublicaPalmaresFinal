@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriarTabelaUsuario extends Migration
+class CriarTabelaAlunoCurso extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,17 @@ class CriarTabelaUsuario extends Migration
      */
     public function up()
     {
-        Schema::create('usuario', function (Blueprint $table) {
+        Schema::create('aluno_curso', function (Blueprint $table) {
             $table->integerIncrements('id');
-            $table->string('email');
-            $table->char('senha',20);
-            $table->integer('pessoa_id');
+            $table->integer('aluno_id')->unsigned();
+            $table->integer('curso_id')->unsigned();
 
-            $table->foreign('pessoa_id')
+            $table->foreign('aluno_id')
                 ->references('id')
-                ->on('pessoa');
+                ->on('aluno');
+            $table->foreign('curso_id')
+                ->references('id')
+                ->on('curso');
         });
     }
 
@@ -32,6 +34,6 @@ class CriarTabelaUsuario extends Migration
      */
     public function down()
     {
-        Schema::drop('usuario');
+        Schema::drop('aluno_curso');
     }
 }

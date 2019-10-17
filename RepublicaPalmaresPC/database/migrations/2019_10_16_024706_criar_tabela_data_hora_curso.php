@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriarTabelaCurso extends Migration
+class CriarTabelaDataHoraCurso extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,17 @@ class CriarTabelaCurso extends Migration
      */
     public function up()
     {
-        Schema::create('curso', function (Blueprint $table) {
+        Schema::create('data_hora_curso', function (Blueprint $table) {
             $table->integerIncrements('id');
-            $table->string('nome');
-            $table->string('descricao');
-            $table->dateTime('dt_hora_ini');
-            $table->dateTime('dt_hora_fim');
-            $table->integer('modalidade_id');
+            $table->timestamps();
+            $table->string('dias_aula');
+            $table->time('tm_ini');
+            $table->time('tm_fim');
+            $table->integer('curso_id')->unsigned()->nulable();
 
-            $table->foreign('modalidade_id')
+            $table->foreign('curso_id')
                 ->references('id')
-                ->on('modalidade');
+                ->on('curso');
         });
     }
 
@@ -34,6 +34,6 @@ class CriarTabelaCurso extends Migration
      */
     public function down()
     {
-        Schema::drop('curso');
+        Schema::drop('data_hora_curso');
     }
 }

@@ -29,15 +29,15 @@
                                 <h3 class="text-center m-t-lg"></h3>
                             </div> -->
                             <form action="#" id="cadastrar_modalidade">
+                                @csrf
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="modalidade_curso" class="label-control">Modadlidade</label>
                                         <select class="form-control m-b" name="modalidade_curso" id="modalidade_curso">
                                             <option value="">Selecione</option>
-                                            <option value="0">Arte Marcial</option>
-                                            <option value="1">Artesanato</option>
-                                            <option value="2">Teatro</option>
-                                            <option value="1">Música</option>
+                                            @foreach ($modalidades as $modalidade)
+                                                <option value="{{$modalidade->id}}">{{$modalidade->modalidade}}</option>
+                                            @endforeach
                                         </select> 
                                     </div>
                                 </div>
@@ -45,7 +45,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label class="label-control" for="curso_capacidade">Capacidade máxima de Alunos</label>
-                                        <input type="number" class="form-control m-b"name="curso_capacidade" id="curso_capacidade" placeholder="Preencher somente se houver qtd máxima"value=""/> 
+                                        <input type="number" class="form-control m-b"name="curso_capacidade" id="curso_capacidade" placeholder="Preencher somente se houver quantidade máxima"value=""/> 
                                     </div>
                                 </div>
 
@@ -59,7 +59,7 @@
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <label class="label-control" for="curso_descricao">Descrição do Curso</label>
-                                        <textarea name="curso_descricao" class="form-control m-b" id="curso_descricao" placeholder="Descreva a modalidade" cols="30" rows="5" required></textarea> 
+                                        <textarea name="curso_descricao" class="form-control m-b" id="curso_descricao" placeholder="Descreva o curso" cols="30" rows="5" required></textarea> 
                                     </div>
                                 </div>
 

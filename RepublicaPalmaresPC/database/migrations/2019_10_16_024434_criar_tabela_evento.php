@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriarTabelaPresenca extends Migration
+class CriarTabelaEvento extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CriarTabelaPresenca extends Migration
      */
     public function up()
     {
-        Schema::create('presenca', function (Blueprint $table) {
+        Schema::create('evento', function (Blueprint $table) {
             $table->integerIncrements('id');
-            $table->integer('modalidade_id');
-            $table->integer('curso_id');
-            $table->integer('aluno_id');
-            $table->integer('colaborador_id');
-            $table->integer('status');
-            $table->dateTime('dt_presenca');
+            $table->integer('modalidade_id')->unsigned();
+            $table->integer('curso_id')->unsigned();
+            $table->integer('pessoa_id')->unsigned();
 
             $table->foreign('modalidade_id')
                 ->references('id')
@@ -28,12 +25,9 @@ class CriarTabelaPresenca extends Migration
             $table->foreign('curso_id')
                 ->references('id')
                 ->on('curso');
-            $table->foreign('aluno_id')
+            $table->foreign('pessoa_id')
                 ->references('id')
-                ->on('aluno');
-            $table->foreign('colaborador_id')
-                ->references('id')
-                ->on('colaborador');
+                ->on('pessoa');
         });
     }
 
@@ -44,6 +38,6 @@ class CriarTabelaPresenca extends Migration
      */
     public function down()
     {
-        Schema::drop('presenca');
+        Schema::drop('evento');
     }
 }
