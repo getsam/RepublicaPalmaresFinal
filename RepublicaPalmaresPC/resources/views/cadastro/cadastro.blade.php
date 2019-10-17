@@ -17,7 +17,6 @@
 <div class="row border-bottom">
         <!-- envelope do Conteúdo das views     -->
             <div class="wrapper wrapper-content animated fadeInRight">
-            
                     <div class="ibox-content m-b-lg">
                             <h2>
                                Cadastro de Pessoas

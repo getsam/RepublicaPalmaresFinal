@@ -48,7 +48,7 @@ Route::post('/home/criarmodalidade','ModalidadeController@registrar');
 
 //Rotas cursos
 Route::get('/home/curso', 'CursoController@index');
-Route::post('/home/criar','CursoController@registrar');
+Route::post('/home/criarcurso','CursoController@registrar');
 Route::get('/home/cursolista', 'CursoController@cursos');
 
 // Rotas Doação
