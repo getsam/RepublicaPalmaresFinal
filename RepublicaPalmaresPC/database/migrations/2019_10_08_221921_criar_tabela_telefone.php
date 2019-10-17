@@ -16,7 +16,7 @@ class CriarTabelaTelefone extends Migration
         Schema::create('telefone', function (Blueprint $table) {
             $table->integerIncrements('id');
             $table->string('telefone');
-            $table->string('telefone2');
+            $table->string('telefone2')->nullable();
         });
     }
 
