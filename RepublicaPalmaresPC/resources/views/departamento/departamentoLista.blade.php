@@ -1,4 +1,4 @@
-@extends('conteudo')
+@extends('layouthome')
 
 @section('link')
     <link rel="stylesheet" href="<?php echo asset('css/plugins/dataTables/datatables.min.css')?>">
