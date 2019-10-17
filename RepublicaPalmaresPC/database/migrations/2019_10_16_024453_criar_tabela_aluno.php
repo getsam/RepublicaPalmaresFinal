@@ -16,7 +16,7 @@ class CriarTabelaAluno extends Migration
         Schema::create('aluno', function (Blueprint $table) {
             $table->integerIncrements('id');
             $table->integer('pessoa_id')->unsigned();
-            $table->string('nome_responsavel');
+            $table->string('nome_responsavel')->nullable();
 
             $table->foreign('pessoa_id')
                 ->references('id')

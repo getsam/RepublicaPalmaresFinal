@@ -74,8 +74,8 @@ class CadastroController extends Controller
 
 
         $request->session()
-        ->flash('mensagem',
-            "Cadastro de {$pessoa->nome} criado com sucesso"
+            ->flash('mensagem',
+                "Cadastro de {$pessoa->nome} criado com sucesso"
         );
 
         return redirect('/home/listapessoas');

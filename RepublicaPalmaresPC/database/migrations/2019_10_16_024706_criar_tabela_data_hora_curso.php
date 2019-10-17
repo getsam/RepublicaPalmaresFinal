@@ -17,9 +17,9 @@ class CriarTabelaDataHoraCurso extends Migration
             $table->integerIncrements('id');
             $table->timestamps();
             $table->string('dias_aula');
-            $table->time('tm_ini');
-            $table->time('tm_fim');
-            $table->integer('curso_id')->unsigned()->nulable();
+            $table->time('hora_inicio');
+            $table->time('hora_fim');
+            $table->integer('curso_id')->unsigned();
 
             $table->foreign('curso_id')
                 ->references('id')

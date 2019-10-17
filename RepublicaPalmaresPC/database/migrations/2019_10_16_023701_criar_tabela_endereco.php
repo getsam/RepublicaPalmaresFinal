@@ -17,7 +17,7 @@ class CriarTabelaEndereco extends Migration
             $table->integerIncrements('id');
             $table->string('logradouro');
             $table->char('numero',50);
-            $table->string('complemento');
+            $table->string('complemento')->nullable();
             $table->string('bairro');
             $table->string('cidade');
             $table->string('cep');

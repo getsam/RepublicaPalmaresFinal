@@ -15,9 +15,14 @@ class CriarTabelaDoacao extends Migration
     {
         Schema::create('doacao', function (Blueprint $table) {
             $table->integerIncrements('id');
-            $table->string('valor');
             $table->dateTime('dt_doacao');
-            $table->string('status');
+            $table->string('valor');
+            $table->text('observacao')->nullable();
+            $table->integer('pessoa_id')->unsigned();
+
+            $table->foreign('pessoa_id')
+                ->references('id')
+                ->on('pessoa');
         });
     }
 

@@ -17,7 +17,7 @@ class CriarTabelaCurso extends Migration
             $table->integerIncrements('id');
             $table->string('nome');
             $table->string('descricao');
-            $table->string('qnt_pessoas');
+            $table->string('qnt_pessoas')->nullable();
             $table->integer('modalidade_id')->unsigned();
         });
 
