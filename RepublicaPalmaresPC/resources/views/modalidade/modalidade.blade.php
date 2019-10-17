@@ -2,19 +2,22 @@
     
 @section('link')
     <link rel="stylesheet" href="<?php echo asset('css/plugins/dataTables/datatables.min.css')?>">
-    <link href="<?php echo asset('css/plugins/switchery/switchery.css')?>" rel="stylesheet">    
+    <link href="<?php echo asset('css/plugins/switchery/switchery.css')?>" rel="stylesheet"> 
+    <script src ="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 @endsection
     
 @section('conteudo')
     <div class="wrapper wrapper-content animated fadeInRight"> 
         
         <div class="row m-b-lg">
-            
             <div class="ibox-content panel-body">
                 @if(!empty(Session::has('mensagem')))
-                    <div class="alert alert-success" role="alert">
-                        {{Session::get('mensagem')}}
-                    </div>
+                    <script> swal({ title : " Cadastrada!!! " ,
+                                    text: '{{Session::get('mensagem')}}',
+                                    icon: "success",
+                                    button: "Okay",
+                        }); 
+                    </script>
                 @endif
                 <div class="col-sm-12 m-b-lg">
                     <h2 class="text-uppercase text-center">
@@ -78,7 +81,7 @@
                             <div class="col-sm-12 m-b-md">
                                 <h3 class="text-center m-t-lg">Cadastrar Nova Modalidade</h3>
                             </div>
-                            <form action="criar" method="POST" id="cadastrar_modalidade">
+                            <form action="criarmodalidade" method="POST" id="cadastrar_modalidade">
                                 @csrf
                                 <div class="col-sm-3">
                                     <div class="form-group">
@@ -125,6 +128,7 @@
 
 @section('scripts')
         <!-- Switchery -->
+
    <script src="<?php echo asset('js/plugins/switchery/switchery.js')?>"></script>
     
    <script src="<?php echo asset('js/plugins/datapicker/bootstrap-datepicker.js')?>"></script>

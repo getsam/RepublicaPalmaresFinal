@@ -19,9 +19,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PalmaresController@index');
 
-Route::get('/entrar', 'EntrarController@index')
-->name('entrar');
-Route::post('/entrar', 'EntrarController@entrar');
 
 Route::get('/registrar', 'RegistroController@create')
 ->name('registrar');
@@ -46,7 +43,7 @@ Route::put('/home/editar/{id}','CadastroController@editar');
 Route::get('/home/modalidade', 'ModalidadeController@modalidade');
 Route::get('/home/listarModalidade/{id}', 'ModalidadeController@listarModalidade');
 Route::put('/home/editarModalidade/{id}','ModalidadeController@editar');
-Route::post('/home/criar','ModalidadeController@registrar');
+Route::post('/home/criarmodalidade','ModalidadeController@registrar');
 
 
 //Rotas cursos
