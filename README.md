@@ -12,13 +12,11 @@ tambem é necessario ter o composer instalado https://getcomposer.org/
 
 atribua os dois as variaveis path de ambiente do seu sistema 
 
-Na pasta do projeto use
+É necessario instalar as dependencias do projeto portanto na pasta do projeto use
 
     composer install
     
-Para instalar as dependencias do projeto
- 
-Use o comando abaixo
+Para rodar o servidor use o comando abaixo
 
     php artisan serve (ou php -S localhost:8000 -t public)
 
