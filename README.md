@@ -13,8 +13,10 @@ tambem é necessario ter o composer instalado https://getcomposer.org/
 atribua os dois as variaveis path de ambiente do seu sistema 
 
 Na pasta do projeto use
+
     `composer install`
-Para instalar a dependencias do projeto
+    
+Para instalar as dependencias do projeto
  
 Use o comando abaixo
 
