@@ -1,7 +1,7 @@
 # Republica Palmares Painel Control
 
 ## Sobre
-Projeto desenvolvido para cadastro e consulta de colaboradores, alunos e doadores da Republica de Palmares
+Projeto desenvolvido para cadastro e consulta de colaboradores, alunos e doadores da Republica Cultural de Palmares
 
 
 ## Executando
@@ -14,7 +14,7 @@ atribua os dois as variaveis path de ambiente do seu sistema
 
 Na pasta do projeto use
 
-    `composer install`
+    composer install
     
 Para instalar as dependencias do projeto
  
