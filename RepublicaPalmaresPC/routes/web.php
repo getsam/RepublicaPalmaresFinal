@@ -70,5 +70,6 @@ Route::get('/home/agendaevento', 'AgendaController@eventos');
 
 //Rotas departtamento
 Route::get('/home/departamento', 'DepartamentoController@index');
+Route::post('/home/departamento','DepartamentoController@registrarDepartamento');
 Route::get('/home/departamentolista', 'DepartamentoController@departamentos'); 
 

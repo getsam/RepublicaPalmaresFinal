@@ -31,10 +31,9 @@
                                                 <div class="input-group">
                                                     <select data-placeholder="Selecione a Departamento..." id="dpto_colab" name="dpto_colab" class="chosen-select form-control"  tabindex="1">
                                                         <option value="">Selecione..</option>
-                                                        <option value="1">Recepção</option>
-                                                        <option value="2">Aulas</option>
-                                                        <option value="3">Financeiro</option>
-                                                        <option value="4">Depto Geral</option>
+                                                        @foreach ($departamento as $departamento)
+                                                            <option value="1">{{ $departamento->nome }}</option>
+                                                        @endforeach
                                                     </select>  
                                                     <span class="input-group-btn">
                                                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-target="toltip" title="Adicionar Departamento">
@@ -97,17 +96,18 @@
                             </button>
                             <p class="modal-title">Incluir departamento</p>
                         </div>
-                        <form action="#">
+                        <form method="post" >
+                        @csrf
                             <div class="modal-body">
                             
                                 <div class="form-group">
-                                    <label class="label-control"for="nome_Depto">Nome Departamento</label>
-                                    <input type="text" class="form-control m-b"name="nome_Depto" id="nome_Depto" required/>                     
+                                    <label class="label-control"for="nome_dpto">Nome Departamento</label>
+                                    <input type="text" class="form-control m-b"name="nome_dpto" id="nome_dpto" required/>                     
                                 </div>
         
                                 <div class="form-group">
-                                    <label class="label-control" for="descricao_depto">Descrição da Departamento</label>
-                                    <textarea name="descricao_depto" class="form-control m-b" id="descricao_depto" placeholder="Descreva o departamento" cols="30" rows="3" ></textarea> 
+                                    <label class="label-control" for="descricao">Descrição do Departamento</label>
+                                    <textarea name="descricao" class="form-control m-b" id="descricao" placeholder="Descreva o departamento" cols="30" rows="3" ></textarea> 
                                 </div>
                             
                             </div>

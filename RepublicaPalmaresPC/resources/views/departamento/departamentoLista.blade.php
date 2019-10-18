@@ -2,6 +2,7 @@
 
 @section('link')
     <link rel="stylesheet" href="<?php echo asset('css/plugins/dataTables/datatables.min.css')?>">
+    <script src ="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 @endsection
 
 @section('conteudo')
@@ -14,6 +15,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="ibox float-e-margins">
+                            @if(!empty(Session::has('mensagem')))
+                                <script> swal({ title : " Cadastrada!!! " ,
+                                                text: '{{Session::get('mensagem')}}',
+                                                icon: "success",
+                                                button: "Okay",
+                                    }); 
+                                </script>
+                            @endif
                             <div class="ibox-title">
                                 <h5>Lista de Cargo/Departamento</h5>
                             </div>

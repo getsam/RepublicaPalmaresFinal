@@ -52,7 +52,7 @@ $("#form-cadastro").steps({
         finish: "Finalizar",
         next: "Próximo",
         previous: "Anterior",
-        loading: "Carregando ..."
+        loading: "Carregando . .."
     }
 }).validate({
     errorPlacement: function (error, element)
@@ -121,7 +121,7 @@ var documento = $('#cpf').on('blur', function(e){
         
 
     }
-    else if($('#cpf_cadastro').val().length >= 15){
+    else if($('#cpf').val().length >= 15){
         $("#tipo_documento").val("2");
         if($("#genero").hasClass('hide')){
             $("#porte").removeClass('hide').attr('required');

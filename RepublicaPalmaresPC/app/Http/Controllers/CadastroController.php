@@ -31,6 +31,7 @@ class CadastroController extends Controller
         $cidade = $request->cidade;
         $cep = $request->cep;
         $uf = $request->uf;
+        
 
         $idEndereco = DB::table('endereco')->insertGetId([
             'logradouro' => $logradouro,
