@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Departamento;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 
 class DepartamentoController extends Controller
 {
@@ -45,6 +45,12 @@ class DepartamentoController extends Controller
 
     public function departamentos()
     {
-        return view('departamento.departamentoLista');
+        $cargos = DB::table('cargo')
+        ->join('departamento', 'cargo.depto_id', '=', 'departamento.id');
+
+        $departamentos = DB::table('departamento')
+        ->join('cargo', 'departamento.id', '=', 'cargo.depto_id');      
+
+        return view('departamento.departamentoLista', compact('cargos', 'departamentos'));
     }
 }

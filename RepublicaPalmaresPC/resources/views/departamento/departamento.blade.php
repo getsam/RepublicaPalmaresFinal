@@ -40,7 +40,7 @@
                                                     <select data-placeholder="Selecione a Departamento..." id="departamento_colaborador" name="departamento_colaborador" class="chosen-select form-control"  tabindex="1">
                                                         <option value="">Selecione..</option>
                                                         @foreach ($departamento as $departamento)
-                                                            <option value="1">{{ $departamento->nome }}</option>
+                                                    <option value="{{ $departamento->nome }}">{{ $departamento->nome }}</option>
                                                         @endforeach
                                                     </select>  
                                                     <span class="input-group-btn">

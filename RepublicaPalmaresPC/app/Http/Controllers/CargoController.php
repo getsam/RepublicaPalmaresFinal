@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Cargo;
+use App\Departamento;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -21,21 +22,16 @@ class CargoController extends Controller
         $observacaoCargo = $request->observacao_cargo;
 
         $departamentoId = DB::table('departamento')
-            ->select('id')
             ->where('nome','=',"$departamento")
             ->get();
 
-        $idDepartamento = 0 ;
-        foreach($departamentoId as $id){
-            $idDepartamento = $id;
-        }
-
+        
         $cargo = new Cargo();
         $cargo->nome = $nomeCargo;
         $cargo->descricao = $descricaoCargo;
         $cargo->observacao =$observacaoCargo;
         $cargo->dt_entrada = date('Y/m/d');
-        $cargo->depto_id = $idDepartamento;
+        $cargo->depto_id = $departamentoId->first()->id;
 
         $cargo->save();
 
@@ -46,6 +42,7 @@ class CargoController extends Controller
 
         return redirect('/home/departamento');
 
+        // return var_dump();
 
     }
 }

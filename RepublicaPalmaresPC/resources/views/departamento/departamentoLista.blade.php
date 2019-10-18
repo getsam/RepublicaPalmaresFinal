@@ -41,48 +41,24 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach ($departamentos as $departamento)
+                                            @foreach ($cargos as $cargo)
                                             <tr class="">
-                                                <td>01</td>
-                                                <td>Diretoria</td>
-                                                <td>Diretor geral</td>
-                                                <td>Responsável pela administração geral da Ong</td>
-                                                <td></td>
-                                                <td class="text-center ">
-                                                    <a href="cargoDeptoEditar.html">
-                                                        <button class="btn-primary btn btn-xs">
-                                                            <i class="fa fa-lg fa-pencil"></i>
-                                                        </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr class="">
-                                                <td>02</td>
-                                                <td>Diretoria</td>
-                                                <td>Diretor Financeiro</td>
-                                                <td>Responsável pela administração financeira da Ong</td>
-                                                <td></td>
-                                                <td class="text-center ">
-                                                    <a href="cargoDeptoEditar.html">
-                                                        <button class="btn-primary btn btn-xs">
-                                                            <i class="fa fa-lg fa-pencil"></i>
-                                                        </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr class="">
-                                                <td>03</td>
-                                                <td>Financeiro</td>
-                                                <td>Contas a pagar</td>
-                                                <td>Responsável pelas Contas a pagar e a receber</td>
-                                                <td></td>
-                                                <td class="text-center ">
-                                                    <a href="cargoDeptoEditar.html">
-                                                        <button class="btn-primary btn btn-xs">
-                                                            <i class="fa fa-lg fa-pencil"></i>
-                                                        </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
+                                                    <td>{{ $cargo->id }}</td>
+                                                    <td>{{ $departamento->nome }}</td>
+                                                    <td>{{ $cargo->nome }}</td>
+                                                    <td>{{ $cargo->descricao }}</td>
+                                                    <td>{{ $cargo->Observacao }}</td>
+                                                    <td class="text-center ">
+                                                        <a href="{{url("/home/departamento/editar/$cargo->id")}}">
+                                                            <button class="btn-primary btn btn-xs">
+                                                                <i class="fa fa-lg fa-pencil"></i>
+                                                            </button>
+                                                        </a>
+                                                    </td>
+                                                </tr>    
+                                            @endforeach    
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
