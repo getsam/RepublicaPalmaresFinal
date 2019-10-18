@@ -71,6 +71,7 @@ Route::get('/home/agendaevento', 'AgendaController@eventos');
 //Rotas departamento,cargo
 Route::get('/home/departamento', 'DepartamentoController@index');
 Route::post('/home/departamento', 'DepartamentoController@registrarDepartamento');
+Route::get('/home/departamento/editar/{id}', 'CargoController@showEditar');
 
 Route::get('/home/departamentocargo', 'CargoController@registrarCargo');
 Route::get('/home/departamentolista', 'DepartamentoController@departamentos'); 

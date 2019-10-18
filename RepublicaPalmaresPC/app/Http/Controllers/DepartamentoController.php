@@ -16,10 +16,10 @@ class DepartamentoController extends Controller
 
     public function index()
     {
-        $departamento = Departamento::query()
+        $departamentos = Departamento::query()
         ->orderBy('nome')
         ->get();
-        return view('departamento.departamento', compact('departamento'));
+        return view('departamento.departamento', compact('departamentos'));
     }
 
     public function registrarDepartamento(Request $request)
@@ -46,11 +46,14 @@ class DepartamentoController extends Controller
     public function departamentos()
     {
         $cargos = DB::table('cargo')
-        ->join('departamento', 'cargo.depto_id', '=', 'departamento.id');
+        ->select(DB::raw('cargo.id ,cargo.nome, departamento.nome as departamento, cargo.descricao, cargo.observacao'))
+        ->join('departamento', 'cargo.depto_id', '=', 'departamento.id')
+        ->get();
 
         $departamentos = DB::table('departamento')
-        ->join('cargo', 'departamento.id', '=', 'cargo.depto_id');      
+        ->get();      
 
+        // return var_dump($cargos->first());
         return view('departamento.departamentoLista', compact('cargos', 'departamentos'));
     }
 }

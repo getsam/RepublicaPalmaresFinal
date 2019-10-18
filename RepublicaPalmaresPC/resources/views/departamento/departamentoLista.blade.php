@@ -41,14 +41,13 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($departamentos as $departamento)
                                             @foreach ($cargos as $cargo)
                                             <tr class="">
                                                     <td>{{ $cargo->id }}</td>
-                                                    <td>{{ $departamento->nome }}</td>
+                                                    <td>{{ $cargo->departamento }}</td>
                                                     <td>{{ $cargo->nome }}</td>
                                                     <td>{{ $cargo->descricao }}</td>
-                                                    <td>{{ $cargo->Observacao }}</td>
+                                                    <td>{{ $cargo->observacao }}</td>
                                                     <td class="text-center ">
                                                         <a href="{{url("/home/departamento/editar/$cargo->id")}}">
                                                             <button class="btn-primary btn btn-xs">
@@ -58,7 +57,6 @@
                                                     </td>
                                                 </tr>    
                                             @endforeach    
-                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

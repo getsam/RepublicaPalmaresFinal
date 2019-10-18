@@ -33,14 +33,17 @@
                                         </div>
                                     <form action="/home/departamentocargo" id="cadastrar_cargo">
                                        @csrf 
+                                       @foreach ($cargos as $cargo)
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label for="departamento_colaborador" class="label-control">Departamento</label>
                                                 <div class="input-group">
                                                     <select data-placeholder="Selecione a Departamento..." id="departamento_colaborador" name="departamento_colaborador" class="chosen-select form-control"  tabindex="1">
-                                                        <option value="">Selecione..</option>
+                                                        
+
+                                                       <option value="">{{ $cargo->departamento }}</option>
                                                         @foreach ($departamentos as $departamento)
-                                                    <option value="{{ $departamento->nome }}">{{ $departamento->nome }}</option>
+                                                            <option value="1">{{ $departamento->nome }}</option>
                                                         @endforeach
                                                     </select>  
                                                     <span class="input-group-btn">
@@ -55,7 +58,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label class="label-control"for="nome_cargo">Nome cargo</label>
-                                                <input type="text" class="form-control m-b"name="nome_cargo" id="nome_cargo" required/>
+                                                <input type="text" value="{{ $cargo->nome }}" class="form-control m-b"name="nome_cargo" id="nome_cargo" required/>
                                                                                                     
                                             </div>
                                         </div>
@@ -63,14 +66,14 @@
                                         <div class="col-sm-12">
                                             <div class="form-group">
                                                 <label class="label-control" for="descricao_cargo">Descrição do cargo</label>
-                                                <textarea name="descricao_cargo" class="form-control m-b" id="descricao_cargo" placeholder="Descreva o cargo" cols="30" rows="5" required></textarea>                                                  
+                                                <textarea name="descricao_cargo" class="form-control m-b" id="descricao_cargo" placeholder="Descreva o cargo" cols="30" rows="5" required>{{ $cargo->descricao }}</textarea>            
                                             </div>
                                         </div>
 
                                         <div class="col-sm-12">
                                             <div class="form-group">
                                                 <label class="label-control" for="observacao_cargo">Observação do cargo</label>
-                                                <textarea name="observacao_cargo" class="form-control m-b" id="observacao_cargo" placeholder="Descreva o cargo" cols="30" rows="5" required></textarea>                                                  
+                                                <textarea name="observacao_cargo" class="form-control m-b" id="observacao_cargo" placeholder="Descreva o cargo" cols="30" rows="5" required>{{ $cargo->observacao }}</textarea>                                                  
                                             </div>
                                         </div>
 
@@ -83,7 +86,7 @@
                                                 </button>
                                             </div>
                                         </div>
-
+                                    @endforeach
                                     </form>
                                     
                                 </div>

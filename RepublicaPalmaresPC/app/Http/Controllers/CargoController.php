@@ -45,4 +45,19 @@ class CargoController extends Controller
         // return var_dump();
 
     }
+
+    public function showEditar(Request $request, $id)
+    {   
+        $departamentos = Departamento::query()
+        ->orderBy('nome')
+        ->get();
+
+        $cargos = DB::table('cargo')
+        ->select(DB::raw('cargo.id ,cargo.nome, departamento.nome as departamento, cargo.descricao, cargo.observacao'))
+        ->join('departamento', 'cargo.depto_id', '=', 'departamento.id')
+        ->where('cargo.id','=',"$id")
+        ->get();
+
+        return view('departamento.departamentoEditar',compact('cargos','departamentos'));
+    }
 }
