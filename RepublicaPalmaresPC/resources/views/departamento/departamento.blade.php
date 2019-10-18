@@ -96,8 +96,8 @@
                             </button>
                             <p class="modal-title">Incluir departamento</p>
                         </div>
-                        <form method="post" >
-                        @csrf
+                        <form method="post" action="departamento" >
+                            @csrf
                             <div class="modal-body">
                             
                                 <div class="form-group">

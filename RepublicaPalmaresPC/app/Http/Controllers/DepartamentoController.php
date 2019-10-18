@@ -36,6 +36,8 @@ class DepartamentoController extends Controller
                 "Cadastro do {$departamento->nome} criado com sucesso"
         );
 
+        return redirect('/home/departamento');
+
     }
 
     public function departamentos()
