@@ -45,11 +45,11 @@ Route::get('/home/listarModalidade/{id}', 'ModalidadeController@listarModalidade
 Route::put('/home/editarModalidade/{id}','ModalidadeController@editar');
 Route::post('/home/criarmodalidade','ModalidadeController@registrar');
 
-
 //Rotas cursos
 Route::get('/home/curso', 'CursoController@index');
 Route::post('/home/criarcurso','CursoController@registrar');
-Route::get('/home/cursolista', 'CursoController@cursos');
+Route::get('/home/cursolista', 'CursoController@listarCursos');
+Route::get('home/showeditarcurso/{id}', 'CursoController@showEditar');
 
 // Rotas Doação
 Route::get('/home/doacao', 'DoacaoController@index');

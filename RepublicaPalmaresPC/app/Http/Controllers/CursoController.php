@@ -25,9 +25,15 @@ class CursoController extends Controller
         return view('curso.curso',compact('modalidades'));
     }
 
-    public function cursos()
+    public function listarCursos(Request $request)
     {
-        return view('curso.cursoLista');
+        $cursos = DB::table('curso')
+            ->join('modalidade', 'curso.modalidade_id', '=', 'modalidade.id')
+            ->select('curso.*','modalidade.modalidade')
+            ->orderBy('curso.nome')
+            ->get();
+
+        return view('curso.cursoLista',compact('cursos'));
     }
 
     public function registrar(Request $request)
