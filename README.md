@@ -20,7 +20,7 @@ Para rodar o servidor use o comando abaixo
 
     php artisan serve (ou php -S localhost:8000 -t public)
 
-Accesse `http://localhost:8000/home`
+Accesse `http://localhost:8000/`
 
 para acessar o login use 
 
