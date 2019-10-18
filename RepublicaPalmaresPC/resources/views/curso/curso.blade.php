@@ -6,12 +6,21 @@
     <!-- switchery -  mascara -->
     <link href="<?php echo asset('css/plugins/switchery/switchery.css')?>" rel="stylesheet">
     <link href="<?php echo asset('css/plugins/clockpicker/clockpicker.css')?>" rel="stylesheet">
+    <script src ="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 @endsection
 
 @section('conteudo')
 
     <div class="wrapper wrapper-content animated fadeInRight"> 
-
+        @if(!empty(Session::has('mensagem')))
+        <script> swal({ 
+                    title : " Cadastrada!!! " ,
+                    text: '{{Session::get('mensagem')}}',
+                    icon: "success",
+                    button: "Okay",
+                }); 
+        </script>
+        @endif
         <div class="row m-b-lg">
 
             <div class="ibox-content panel-body">
@@ -28,7 +37,7 @@
                             <!-- <div class="col-sm-12 m-b-md">
                                 <h3 class="text-center m-t-lg"></h3>
                             </div> -->
-                            <form action="#" id="cadastrar_modalidade">
+                            <form action="criarcurso" id="cadastrar_modalidade" method="POST">
                                 @csrf
                                 <div class="col-sm-6">
                                     <div class="form-group">
@@ -73,15 +82,15 @@
                                         <label for="dias_Curso" class="label-control">Dias de Aula</label>
                                         <select class="form-control m-b" name="dias_Curso" id="dias_Curso">
                                             <option value="">Selecione</option>
-                                            <option value="0">Segunda-Feira</option>
-                                            <option value="1">Terça-feira</option>
-                                            <option value="2">Quarta-feira</option>
-                                            <option value="1">Quinta-feira</option>
-                                            <option value="1">Sexta-feira</option>
-                                            <option value="1">Sábado</option>
-                                            <option value="1">Domingo</option>
-                                            <option value="1">Diariamente (exceto finais de semana)</option>
-                                            <option value="1">Diariamente</option>
+                                            <option value="Segunda-Feira">Segunda-Feira</option>
+                                            <option value="Terça-feira">Terça-feira</option>
+                                            <option value="Quarta-feira">Quarta-feira</option>
+                                            <option value="Quinta-feira">Quinta-feira</option>
+                                            <option value="Sexta-feira">Sexta-feira</option>
+                                            <option value="Sábado">Sábado</option>
+                                            <option value="Domingo">Domingo</option>
+                                            <option value="Diariamente (exceto finais de semana)">Diariamente (exceto finais de semana)</option>
+                                            <option value="Diariamente">Diariamente</option>
                                         </select> 
                                     </div>
                                 </div>
@@ -111,7 +120,7 @@
                                 <div class="col-sm-2">
                                     <div class="text-center m-b-md m-t-md">
 
-                                        <button class="btn  btn-primary btn-rounded text-uppercase" type="button" value="Adicionar">
+                                        <button class="btn  btn-primary btn-rounded text-uppercase" type="button" value="Adicionar" onclick="AddLinhaTabelaHora()">
                                             <span class="fa fa-plus"></span>
                                             adicionar
                                         </button>
@@ -130,51 +139,7 @@
                                                     <th class="text-center">Remover</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
-                                                <tr class="">
-                                                    <td>Segunda-Feira</td>
-                                                    <td>
-                                                        19:30
-                                                    </td>
-                                                    <td>
-                                                        21:00
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <button class="btn-danger btn btn-xs">
-                                                            <i class="fa fa-lg fa-close"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Quarta-feira</td>
-                                                    <td>
-                                                        19:30
-                                                    </td>
-                                                    <td>
-                                                        21:00
-                                                    </td>
-                                                    <td class="text-center ">
-                                                        <button class="btn-danger btn btn-xs">
-                                                            <i class="fa fa-lg fa-close"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-
-                                                <tr class="">
-                                                    <td>Sexta-feira</td>
-                                                    <td>
-                                                        19:30
-                                                    </td>
-                                                    <td>
-                                                        21:00
-                                                    </td>
-                                                    <td class="text-center ">
-                                                        <button class="btn-danger btn btn-xs">
-                                                            <i class="fa fa-lg fa-close"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-
+                                            <tbody id="tabela-hora">
                                             </tbody>
                                         </table>
                                     </div>
@@ -201,7 +166,7 @@
                                 <div class="col-sm-2">
                                     <div class="text-center m-b-md m-t-md">
 
-                                        <button class="btn  btn-primary btn-rounded text-uppercase" type="button" value="Adicionar">
+                                        <button class="btn  btn-primary btn-rounded text-uppercase" type="button" value="Adicionar" onclick="AddLinhaTabelaGraduaco()">
                                             <span class="fa fa-plus"></span>
                                             adicionar
                                         </button>
@@ -219,136 +184,7 @@
                                                     <th class="text-center">Remover</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
-                                                <tr class="">
-                                                    <td>001</td>
-                                                    <td>
-                                                        Cordão Verde
-                                                    </td>
-
-                                                    <td class="text-center">
-                                                        <button class="btn-danger btn btn-xs">
-                                                            <i class="fa fa-lg fa-close"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-
-                                                <tr class="">
-                                                    <td>002</td>
-                                                    <td>
-                                                        Cordão Verde-Amarelo
-                                                    </td>
-
-                                                    <td class="text-center">
-                                                        <button class="btn-danger btn btn-xs">
-                                                            <i class="fa fa-lg fa-close"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-
-                                                <tr class="">
-                                                    <td>003</td>
-                                                    <td>
-                                                        Cordão Amarelo
-                                                    </td>
-
-                                                    <td class="text-center">
-                                                        <button class="btn-danger btn btn-xs">
-                                                            <i class="fa fa-lg fa-close"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-
-                                                <tr class="">
-                                                    <td>004</td>
-                                                    <td>
-                                                        Cordão Amarelo-Azul
-                                                    </td>
-
-                                                    <td class="text-center">
-                                                        <button class="btn-danger btn btn-xs">
-                                                            <i class="fa fa-lg fa-close"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-
-                                                <tr class="">
-                                                    <td>005</td>
-                                                    <td>
-                                                        Cordão Azul
-                                                    </td>
-
-                                                    <td class="text-center">
-                                                        <button class="btn-danger btn btn-xs">
-                                                            <i class="fa fa-lg fa-close"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-
-                                                <tr class="">
-                                                    <td>006</td>
-                                                    <td>
-                                                        Cordão Trançado
-                                                    </td>
-
-                                                    <td class="text-center">
-                                                        <button class="btn-danger btn btn-xs">
-                                                            <i class="fa fa-lg fa-close"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-
-                                                <tr class="">
-                                                    <td>007</td>
-                                                    <td>
-                                                        Cordão Branco-Verde (Mestre 1º nível)
-                                                    </td>
-
-                                                    <td class="text-center">
-                                                        <button class="btn-danger btn btn-xs">
-                                                            <i class="fa fa-lg fa-close"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-
-                                                <tr class="">
-                                                    <td>008</td>
-                                                    <td>
-                                                        Cordão Branco-Amarelo (Mestre 2º nível)
-                                                    </td>
-
-                                                    <td class="text-center">
-                                                        <button class="btn-danger btn btn-xs">
-                                                            <i class="fa fa-lg fa-close"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-
-                                                <tr class="">
-                                                    <td>009</td>
-                                                    <td>
-                                                        Cordão Branco-Azul (Mestre 3º nível)
-                                                    </td>
-
-                                                    <td class="text-center">
-                                                        <button class="btn-danger btn btn-xs">
-                                                            <i class="fa fa-lg fa-close"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-
-                                                <tr class="">
-                                                    <td>010</td>
-                                                    <td>
-                                                        Cordão Branco (Grão Mestre)
-                                                    </td>
-
-                                                    <td class="text-center">
-                                                        <button class="btn-danger btn btn-xs">
-                                                            <i class="fa fa-lg fa-close"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
+                                            <tbody id="tabela-graduacao">
                                             </tbody>
                                         </table>
                                     </div>
@@ -359,7 +195,7 @@
                                     <div class="text-center m-b-md m-t-sm">
                                         <button id="cancelar_modalidade" class="btn btn-warning text-uppercase" type="reset" value="Cancelar">Cancelar</button>
 
-                                        <button class="btn  btn-primary text-uppercase" type="button" value="Adicionar">Salvar</button>
+                                        <button class="btn  btn-primary text-uppercase" type="submit" value="Adicionar">Salvar</button>
                                     </div>
                                 </div>
 
@@ -391,9 +227,68 @@
 
 @section('scriptUnico') 
     <script>
+        var id = 0
         $(document).ready(function(){
             
         $('.clockpicker').clockpicker();
         })
+
+        function RemoveLinhaTabela(item) {
+                var tr = $(item).closest('tr');
+
+                tr.fadeOut(400, function() {
+                tr.remove();  
+                });
+
+                return false;
+        }
+
+        function AddLinhaTabelaHora(){
+
+            var novaLinha = $("<tr>");
+            var itemCelula = "";
+            var dias_Curso = $('#dias_Curso').val();
+            var horaInicio_Curso = $('#horaInicio_Curso').val();
+            var horaFim_Curso = $('#horaFim_Curso').val();
+
+            itemCelula += '<td><input readonly name="dias_Curso[]" style="border:none;" value="'+dias_Curso+'"></td>';
+            itemCelula += '<td><input name="horaInicio_Curso[]" readonly style="border:none;" value="'+horaInicio_Curso+'"></td>';
+            itemCelula += '<td><input name="horaFim_Curso[]" readonly style="border:none;" value="'+horaFim_Curso+'"></td>';
+            itemCelula += '<td class="text-center">';
+            itemCelula += '<button type="button" onclick="RemoveLinhaTabela(this)" class="btn-danger btn btn-xs">';
+            itemCelula += '<i class="fa fa-lg fa-close"></i>';
+            itemCelula += '</button>';
+            itemCelula += '</td>';
+
+            novaLinha.append(itemCelula);
+            $("#tabela-hora").append(novaLinha);
+
+            return false;
+            }
+        
+            function AddLinhaTabelaGraduaco(){
+
+                var novaLinha = $("<tr>");
+                var itemCelula = "";
+                if ($('#idGraduacao'+id).html() == undefined){
+                    idGraduacao_Curso = 0;
+                }else{
+                    idGraduacao_Curso = $('#idGraduacao'+id).html();
+                }                
+                var nomeGraduacao_Curso = $('#nomeGraduacao_Curso').val();
+
+                itemCelula += '<td id="idGraduacao'+(id+1)+'">'+(parseInt(idGraduacao_Curso)+1)+'</td>';
+                itemCelula += '<td><input readonly name="nome_graduacao[]" style="border:none;" value="'+nomeGraduacao_Curso+'"></td>';
+                itemCelula += '<td class="text-center">';
+                itemCelula += '<button type="button" onclick="RemoveLinhaTabela(this)" class="btn-danger btn btn-xs">';
+                itemCelula += '<i class="fa fa-lg fa-close"></i>';
+                itemCelula += '</button>';
+                itemCelula += '</td>';
+                console.log(idGraduacao_Curso);
+                novaLinha.append(itemCelula);
+                $("#tabela-graduacao").append(novaLinha);
+                id++;
+                return false;
+            }
     </script>
 @endsection

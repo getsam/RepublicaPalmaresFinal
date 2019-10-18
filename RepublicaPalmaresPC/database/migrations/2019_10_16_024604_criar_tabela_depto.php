@@ -13,7 +13,7 @@ class CriarTabelaDepto extends Migration
      */
     public function up()
     {
-        Schema::create('departamento', function (Blueprint $table) {
+        Schema::create('depto', function (Blueprint $table) {
             $table->integerIncrements('id');
             $table->string('nome');
             $table->string('descricao',100);
