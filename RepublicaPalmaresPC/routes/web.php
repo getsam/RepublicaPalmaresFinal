@@ -68,9 +68,10 @@ Route::get('/home/editarcolaborador' , 'ColaboradorController@editar');
 Route::get('/home/agenda', 'AgendaController@index');
 Route::get('/home/agendaevento', 'AgendaController@eventos');
 
-//Rotas departamento
+//Rotas departamento,cargo
 Route::get('/home/departamento', 'DepartamentoController@index');
 Route::post('/home/departamento', 'DepartamentoController@registrarDepartamento');
-Route::post('/home/departamento', 'DepartamentoController@registrarCagos');
+
+Route::get('/home/departamentocargo', 'CargoController@registrarCargo');
 Route::get('/home/departamentolista', 'DepartamentoController@departamentos'); 
 

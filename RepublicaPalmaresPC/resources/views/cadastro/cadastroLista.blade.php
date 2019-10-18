@@ -2,7 +2,6 @@
 
 @section('link')
     <link rel="stylesheet" href="<?php echo asset('js/plugins/dataTables/datatables.min.js')?>">    
-    <script src ="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 @endsection
 
 @section('conteudo')   

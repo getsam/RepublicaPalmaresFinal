@@ -15,7 +15,14 @@
                         <div class="col-lg-12">
                             
                             <div class="ibox-content">
-                                    
+                                @if(!empty(Session::has('mensagem')))
+                                    <script> swal({ title : " Cadastrada!!! " ,
+                                                    text: '{{Session::get('mensagem')}}',
+                                                    icon: "success",
+                                                    button: "Okay",
+                                        }); 
+                                    </script>
+                                @endif
 
                                 <div class="row">
                                     
@@ -24,12 +31,13 @@
                                                 Cadastrar cargo/departamento
                                             </h2>
                                         </div>
-                                    <form action="#" id="cadastrar_cargo">
+                                    <form action="/home/departamentocargo" id="cadastrar_cargo">
+                                       @csrf 
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label for="dpto_colab" class="label-control">Departamento</label>
+                                                <label for="departamento_colaborador" class="label-control">Departamento</label>
                                                 <div class="input-group">
-                                                    <select data-placeholder="Selecione a Departamento..." id="dpto_colab" name="dpto_colab" class="chosen-select form-control"  tabindex="1">
+                                                    <select data-placeholder="Selecione a Departamento..." id="departamento_colaborador" name="departamento_colaborador" class="chosen-select form-control"  tabindex="1">
                                                         <option value="">Selecione..</option>
                                                         @foreach ($departamento as $departamento)
                                                             <option value="1">{{ $departamento->nome }}</option>
@@ -70,7 +78,9 @@
                                             <div class="text-center m-b-md m-t-sm">
                                                 <button id="cancelar_modalidade" class="btn btn-warning text-uppercase" type="reset" value="Cancelar">Cancelar</button>
 
-                                                <button class="btn  btn-primary text-uppercase" type="button" value="Adicionar">Salvar</button>
+                                            <button class="btn  btn-primary text-uppercase"  type="submit" value="Adicionar">Salvar
+                                                
+                                                </button>
                                             </div>
                                         </div>
 

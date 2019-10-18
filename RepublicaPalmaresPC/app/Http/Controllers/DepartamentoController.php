@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Departamento;
 use Illuminate\Http\Request;
+
 
 class DepartamentoController extends Controller
 {
@@ -37,6 +39,7 @@ class DepartamentoController extends Controller
         );
 
         return redirect('/home/departamento');
+
 
     }
 

@@ -19,6 +19,7 @@ class CriarTabelaCargo extends Migration
             $table->string('descricao');
             $table->integer('depto_id')->unsigned();
             $table->date('dt_entrada');
+            $table->string('observacao');
 
             $table->foreign('depto_id')
                 ->references('id')
