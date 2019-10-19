@@ -19,14 +19,15 @@
                 <div class="p-sm">
                    <div class="row">
 
-                        <form action="#" id="cadastrar_Colaborador">
+                        <form method="POST" action="#" id="cadastrar_Colaborador">
+                        @csrf
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <label for="dpto_colab" class="label-control">Departamento</label>
-                                    <select data-placeholder="Selecione a Departamento..." id="dpto_colab" name="dpto_colab" class="chosen-select form-control"  tabindex="1">
+                                    <label for="dpto_colaborador" class="label-control">Departamento</label>
+                                    <select data-placeholder="Selecione a Departamento..." id="dpto_colaborador" name="dpto_colaborador" class="chosen-select form-control"  tabindex="1">
                                         <option value="">Selecione..</option>
                                         @foreach ($departamentos as $departamento)
-                                        <option value="1">{{ $departamento->nome }}</option>    
+                                        <option value="{{ $departamento->nome }}">{{ $departamento->nome }}</option>    
                                         @endforeach
                                         
                                         
@@ -36,11 +37,11 @@
 
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <label for="depto_cargo" class="label-control">Cargo</label>
-                                    <select data-placeholder="Selecione o Cargo..." id="depto_cargo" name="depto_cargo" class="chosen-select form-control"  tabindex="1">
+                                    <label for="cargo" class="label-control">Cargo</label>
+                                    <select data-placeholder="Selecione o Cargo..." id="cargo" name="cargo" class="chosen-select form-control"  tabindex="1">
                                         <option value="">Selecione..</option>
                                         @foreach ($cargos as $cargo)
-                                        <option value="1">{{ $cargo->nome }}</option>     
+                                        <option value="{{ $cargo->nome }}">{{ $cargo->nome }}</option>     
                                         @endforeach
                                        
                                         
@@ -50,23 +51,23 @@
 
                             <div class="col-sm-4">
                                 <div class="form-group" id="data_1">
-                                    <label for="data_matricula" class="label-control">Data de entrada</label>
+                                    <label for="data_entrada" class="label-control">Data de entrada</label>
                                     <div class="input-group date">
                                         <span class="input-group-addon">
                                             <i class="fa fa-calendar"></i>
                                         </span> 
-                                        <input type="text" id="data_matricula" class="form-control" value="03/09/2019">
+                                        <input type="text" id="data_entrada" name="data_entra" class="form-control" value="03/09/2019">
                                     </div>
                                 </div>
                             </div>     
 
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <label for="doc_colab" class="label-control">CPF/ CNPJ</label>
-                                    <select data-placeholder="Selecione o documento..." id="doc_colab" name="doc_colab" class="chosen-select form-control"  tabindex="1">
+                                    <label for="cpf_colaborador" class="label-control">CPF/ CNPJ</label>
+                                    <select data-placeholder="Selecione o documento..." id="cpf_colaborador" name="cpf_colaborador" class="chosen-select form-control"  tabindex="1">
                                         <option value="">Selecione..</option>
                                         @foreach ($pessoas as $pessoa)
-                                            <option value="1">{{ $pessoa->cpf }}}}</option>    
+                                            <option value="{{ $pessoa->cpf }}">{{ $pessoa->cpf }}</option>    
                                         @endforeach
                                     </select>   
                                 </div>
@@ -78,7 +79,7 @@
                                     <select data-placeholder="Selecione o anluno..." id="nome_colab" name="nome_colab" class="chosen-select form-control"  tabindex="1">
                                         <option value="">Selecione..</option>
                                         @foreach ($pessoas as $pessoa)
-                                        <option value="1">{{ $pessoa->nome }}}}</option>    
+                                        <option value="{{ $pessoa->nome }}">{{ $pessoa->nome }}</option>    
                                         @endforeach
                                     </select>   
                                 </div>
@@ -86,8 +87,8 @@
 
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label class="label-control" for="curso_descricao">Observação</label>
-                                    <textarea name="curso_descricao" class="form-control m-b" id="curso_descricao" placeholder="Observação" cols="30" rows="5" required></textarea> 
+                                    <label class="label-control" for="observacao_cargo">Observação</label>
+                                    <textarea name="observacao_cargo" class="form-control m-b" id="observacao_cargo" placeholder="Observação" cols="30" rows="5" required></textarea> 
                                 </div>
                             </div>
 
@@ -95,7 +96,7 @@
                                 <div class="text-center m-b-md m-t-sm">
                                     <button id="cancelar_modalidade" class="btn btn-warning text-uppercase" type="reset" value="Cancelar">Cancelar</button>
 
-                                    <button class="btn  btn-primary text-uppercase" type="button" value="Adicionar">Salvar</button>
+                                    <button class="btn  btn-primary text-uppercase" type="submit" value="Adicionar">Salvar</button>
                                 </div>
                             </div>
 
