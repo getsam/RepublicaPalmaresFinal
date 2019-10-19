@@ -41,10 +41,17 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Cadastro</span> <span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-list-alt"></i> <span class="nav-label">Cadastro</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="{{ url('home/criar') }}">Criar</a></li>
                             <li><a href="{{url('home/listapessoas')}}">Editar</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user "></i> <span class="nav-label">Usúario</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">Criar</a></li>
+                            <li><a href="#">Editar</a></li>
                         </ul>
                     </li>
                     <li>

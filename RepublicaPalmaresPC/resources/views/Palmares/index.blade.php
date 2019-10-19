@@ -61,9 +61,9 @@
         <div class="item active">
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>Republica Cultural<br/>
+                    <h1>República Cultural<br/>
                         O espaço da Capoeira<br/>
-                        que abre as portas <br/>
+                        que abre portas <br/>
                         para outros projetos.
                     </h1>
                     
@@ -110,23 +110,31 @@
     <div class="row">
         <div class="col-sm-3">
             <h2>Artes Marciais</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+            <p>Existem centenas de estilos diferentes de artes marciais e cada uma desenvolve técnicas de luta e métodos de treinamento que garantem a eficiência do estilo. Nosso carro chefe é a capoeira mas, abrimos espaço para diversas outra modalidades tais como: Boxe, Judô, Muay-Tay entre outras.</p>
+            <p>
+            <a class="navy-link" href="#contact" role="button">Saiba Mais &raquo;</a>
+            </p>
         </div>
         <div class="col-sm-3">
             <h2>Música</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+            <p>Boas Músicas muitas vezes refletem o ambiente e o tempo de sua criação. A música em si é história, e cada uma normalmente tem o seu próprio plano de fundo e um enredo. Baseado nesta linha de pensamento que oferecemos diversos cursos de música, entre eles pode mos citar: Percusão, cordas e cantos.</p>
+            <p>
+            <a class="navy-link" href="#contact" role="button">Saiba Mais &raquo;</a>
+            </p>
         </div>
         <div class="col-sm-3">
             <h2>Teatro</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+            <p>O teatro é uma das manifestações artísticas mais poderosas, principalmente por ser uma das mais completas, o estudante pode passar por várias experiências e formas de vida distintas e acaba melhorando o seu próprio repertório, tornando-se uma pessoa mais flexível, interessante, inteligente e autoconfiante.</p>
+            <p>
+            <a class="navy-link" href="#contact" role="button">Saiba Mais &raquo;</a>
+            </p>
         </div>
         <div class="col-sm-3">
             <h2>Artesanato</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+            <p>Artesanato existe desde a idade média quando trabalhadores qualificados eram necessários para produzir itens de necessidade básica. Hoje em dia, a maioria das mercadorias é feita em uma linha de produção de fábrica, então artesãos talentosos e capazes de exibir suas habilidades podem ter uma carreira reconhecida e lucrativa.</p>
+            <p>
+            <a class="navy-link" href="#contact" role="button">Saiba Mais &raquo;</a>
+            </p>
         </div>
     </div>
 </section>
@@ -433,7 +441,7 @@
                     Av. Gal. Newtom Stilac Leal, 1375<br/>
                     Cidade das Flores, Osasco <br/>
                     São Paulo CEP: 06180-000 <br/>
-                    <abbr title="Phone">Tel:</abbr> (11) 3497-9553
+                    <a href="tel:(11)34979553" title="Phone">Tel: (11) 3497-9553</a>
                 </address>
             </div>
         </div>
