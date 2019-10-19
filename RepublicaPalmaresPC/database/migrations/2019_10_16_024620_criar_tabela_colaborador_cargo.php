@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriarTabelaAlunoCurso extends Migration
+class CriarTabelaColaboradorCargo extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,17 @@ class CriarTabelaAlunoCurso extends Migration
      */
     public function up()
     {
-        Schema::create('aluno_curso', function (Blueprint $table) {
+        Schema::create('colaborador_cargo', function (Blueprint $table) {
             $table->integerIncrements('id');
-            $table->integer('aluno_id');
-            $table->integer('curso_id');
+            $table->integer('colaborador_id')->unsigned();
+            $table->integer('cargo_id')->unsigned();
 
-            $table->foreign('aluno_id')
+            $table->foreign('colaborador_id')
                 ->references('id')
-                ->on('aluno');
-            $table->foreign('curso_id')
+                ->on('colaborador');
+            $table->foreign('cargo_id')
                 ->references('id')
-                ->on('curso');
+                ->on('cargo');
         });
     }
 
@@ -34,6 +34,6 @@ class CriarTabelaAlunoCurso extends Migration
      */
     public function down()
     {
-        Schema::drop('aluno_curso');
+        Schema::drop('colaborador_cargo');
     }
 }

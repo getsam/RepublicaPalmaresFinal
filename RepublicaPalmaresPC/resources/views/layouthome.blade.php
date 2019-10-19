@@ -14,6 +14,7 @@
     <!-- Animation CSS -->
     <link href="<?php echo asset('css/animate.css')?>" rel="stylesheet">
     <link href="<?php echo asset('css/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
+    <script src ="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @yield('link')
     
 

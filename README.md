@@ -1,7 +1,7 @@
 # Republica Palmares Painel Control
 
 ## Sobre
-Projeto desenvolvido para cadastro e consulta de colaboradores, alunos e doadores da Republica de Palmares
+Projeto desenvolvido para cadastro e consulta de colaboradores, alunos e doadores da Republica Cultural de Palmares
 
 
 ## Executando
@@ -10,13 +10,17 @@ Para rodar este projeto e testar na sua maquina é necessario ter o php https://
 
 tambem é necessario ter o composer instalado https://getcomposer.org/
 
-atribua os dois as variaveis de ambiente de seu sistema 
- 
-Use os comandos abaixo
+atribua os dois as variaveis path de ambiente do seu sistema 
+
+É necessario instalar as dependencias do projeto portanto na pasta do projeto use
+
+    composer install
+    
+Para rodar o servidor use o comando abaixo
 
     php artisan serve (ou php -S localhost:8000 -t public)
 
-Accesse `http://localhost:8000/home`
+Accesse `http://localhost:8000/`
 
 para acessar o login use 
 
@@ -27,7 +31,7 @@ para acessar o login use
 
 Para usar as funcionalidades do banco voce precisa de um servidor mysql local rodando na porta 3306
 
-crie um database chamado republicapalmares
+crie um database chamado republicapalmares ou pode alterar as configurações do banco no arquivo .env
     
 use os comandos 
 

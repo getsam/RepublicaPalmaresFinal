@@ -52,7 +52,7 @@ $("#form-cadastro").steps({
         finish: "Finalizar",
         next: "Próximo",
         previous: "Anterior",
-        loading: "Carregando ..."
+        loading: "Carregando . .."
     }
 }).validate({
     errorPlacement: function (error, element)
@@ -61,25 +61,25 @@ $("#form-cadastro").steps({
     },
     
     rules: {
-        cpf_cadastro: { required:true},
-        nome_cadastro: { required:true},
-        telefone1_cadastro:{required: true},
+        cpf: { required:true},
+        nome: { required:true},
+        telefone:{required: true},
         senha_cadastro: {required: true, minlength:4},
         confSenha_cadastro: {required: true,minlength:4, equalTo: '#senha_cadastro'}
     },
     messages: {
-        cpf_cadastro: { required:'Campo obrigatório', minlength: "Por favor, informe um Documento válido"},
-        nome_cadastro: { required:'Campo obrigatório'},
-        sexo_cadastro:{ required:'Campo obrigatório'},
+        cpf: { required:'Campo obrigatório', minlength: "Por favor, informe um Documento válido"},
+        nome: { required:'Campo obrigatório'},
+        genero:{ required:'Campo obrigatório'},
         porte_cadastro:{ required:'Campo obrigatório'},
-        endereco_cadastro:{required:'Campo obrigatório', minlength: "Por favor, informe um Endereço válido"},
-        numero_cadastro: {required:'!'},
-        bairro_cadastro:{required:'Campo obrigatório', minlength: "Por favor, informe um Bairro válido"},
-        cidade_cadastro:{required:'Campo obrigatório'},
-        cep_cadastro:{required:'Campo obrigatório', minlength: "Por favor, informe um CEP válido"},
-        uf_cadastro:{required:'Campo obrigatório'},
-        telefone1_cadastro:{required:'Obrigatório pelo meno um telefone de contato',  minlength: "Por favor, informe um telefone fixo ou celular válido"},
-        email_cadastro:{required:'Campo obrigatório', email:'Por favor, informe um endereço de e-mail válido'},
+        endereco:{required:'Campo obrigatório', minlength: "Por favor, informe um Endereço válido"},
+        numero: {required:'!'},
+        bairro:{required:'Campo obrigatório', minlength: "Por favor, informe um Bairro válido"},
+        cidade:{required:'Campo obrigatório'},
+        cep:{required:'Campo obrigatório', minlength: "Por favor, informe um CEP válido"},
+        uf:{required:'Campo obrigatório'},
+        telefone:{required:'Obrigatório pelo menos um telefone de contato',  minlength: "Por favor, informe um telefone fixo ou celular válido"},
+        email:{required:'Campo obrigatório', email:'Por favor, informe um endereço de e-mail válido'},
         emailUser_cadastro:{required:'Campo obrigatório', email:'Por favor, informe um endereço de e-mail válido'},
         senha_cadastro:{required:'Campo obrigatório', minlength:'Minímo 4 caracteres'},
         confSenha_cadastro:{required:'Campo obrigatório',  minlength:'Minímo 4 caracteres', equalTo:'Senhas não conferem'}
@@ -109,9 +109,9 @@ var switchery_3 = new Switchery(elem_3, { color: '#1AB394' });
 
 
 // recebe o campo documento e atualiza o tipo documento
-var documento = $('#cpf_cadastro').on('blur', function(e){
-    if($('#cpf_cadastro').val().length == 14){
-        $("#tipoPessoa_cadastro").val("1");
+var documento = $('#cpf').on('blur', function(e){
+    if($('#cpf').val().length == 14){
+        $("#tipo_documento").val("1");
         if($("#porte").hasClass('hide')){
             $("#genero").removeClass('hide').attr('required');
         }else{
@@ -121,8 +121,8 @@ var documento = $('#cpf_cadastro').on('blur', function(e){
         
 
     }
-    else if($('#cpf_cadastro').val().length >= 15){
-        $("#tipoPessoa_cadastro").val("2");
+    else if($('#cpf').val().length >= 15){
+        $("#tipo_documento").val("2");
         if($("#genero").hasClass('hide')){
             $("#porte").removeClass('hide').attr('required');
         }else{

@@ -2,16 +2,23 @@
     
 @section('link')
     <link rel="stylesheet" href="<?php echo asset('css/plugins/dataTables/datatables.min.css')?>">
-    <link href="<?php echo asset('css/plugins/switchery/switchery.css')?>" rel="stylesheet">    
+    <link href="<?php echo asset('css/plugins/switchery/switchery.css')?>" rel="stylesheet"> 
+    <script src ="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 @endsection
     
 @section('conteudo')
     <div class="wrapper wrapper-content animated fadeInRight"> 
         
         <div class="row m-b-lg">
-            
             <div class="ibox-content panel-body">
-                    
+                @if(!empty(Session::has('mensagem')))
+                    <script> swal({ title : " Cadastrada!!! " ,
+                                    text: '{{Session::get('mensagem')}}',
+                                    icon: "success",
+                                    button: "Okay",
+                        }); 
+                    </script>
+                @endif
                 <div class="col-sm-12 m-b-lg">
                     <h2 class="text-uppercase text-center">
                         Modalidades
@@ -35,68 +42,26 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr >
-                                            <td>
-                                                001
-                                            </td>
-                                            <td>
-                                                    Artes Marciais
-                                            </td>
-                                            <td>
-                                                Molidade que abrange toda e qualquer curso de arte marcial e/ou  qualuqer esportes de combate e/ou de defesa pessoal.
-                                            </td>
-                                            <td class="text-center ">
-                                                <button class="btn-info btn btn-xs">
-                                                    <i class="fa fa-lg fa-pencil"></i>
-                                                </button>
-                                            </td>
-                                        </tr>
-
+                                        @foreach ($modalidades as $modalidade)
                                         <tr>
-                                            <td>002</td>
-                                            <td>
-                                                Artesanato
-                                            </td>
-                                            <td>
-                                                Molidade que abrange toda e qualquer curso de criação e desenvolvimento manual de artigos e/ou utensilios através do trabalho manual, utilizando-se de matéria-prima natural, ou produção de um artesão.
-                                            </td>
-                                            <td class="text-center ">
-                                                <button class="btn-info btn btn-xs">
-                                                    <i class="fa fa-lg fa-pencil"></i>
-                                                </button>
-                                            </td>
-                                        </tr>
-
-                                        <tr class="">
-                                            <td>003</td>
-                                            <td>
-                                                Teatro
-                                            </td>
-                                            <td>
-                                                Molidade que abrange toda e qualquer curso de criação e desenvolvimento manual de artigos e/ou utensilios através do trabalho manual, utilizando-se de matéria-prima natural, ou produção de um artesão.
-                                            </td>
-                                            <td class="text-center ">
-                                                <button class="btn-info btn btn-xs">
-                                                    <i class="fa fa-lg fa-pencil"></i>
-                                                </button>
-                                            </td>
-                                        </tr>
-
-                                        <tr class="">
-                                            <td>004</td>
-                                            <td>
-                                                Música
-                                            </td>
-                                            <td>
-                                                Molidade que abrange toda e qualquer curso de música, tais como: Voz e vocalização, instrumentos de corda, intrumentos de percursão .
-                                            </td>
-                                            <td class="text-center ">
-                                                <button class="btn-info btn btn-xs">
-                                                    <i class="fa fa-lg fa-pencil"></i>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        
+                                                <td>
+                                                    {{$modalidade->id}}
+                                                </td>
+                                                <td>
+                                                    {{$modalidade->modalidade}}
+                                                </td>
+                                                <td>
+                                                    {{$modalidade->descricao}}
+                                                </td>
+                                                <td class="text-center ">
+                                                <a href="{{url("/home/listarModalidade/$modalidade->id")}}">
+                                                    <button class="btn-info btn btn-xs">
+                                                        <i class="fa fa-lg fa-pencil"></i>
+                                                    </button>
+                                                </a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -116,7 +81,8 @@
                             <div class="col-sm-12 m-b-md">
                                 <h3 class="text-center m-t-lg">Cadastrar Nova Modalidade</h3>
                             </div>
-                            <form action="#" id="cadastrar_modalidade">
+                            <form action="criarmodalidade" method="POST" id="cadastrar_modalidade">
+                                @csrf
                                 <div class="col-sm-3">
                                     <div class="form-group">
                                         <label class="label-control" for="Id_modalidade_criar">ID da Modalidade</label>
@@ -145,7 +111,7 @@
                                     <div class="text-center m-b-md m-t-sm">
                                         <button id="cancelar_modalidade" class="btn btn-warning text-uppercase" type="reset" value="Cancelar">Cancelar</button>
 
-                                        <button class="btn  btn-primary text-uppercase" type="button" value="Adicionar">Salvar</button>
+                                        <button class="btn  btn-primary text-uppercase" type="submit" value="Adicionar">Salvar</button>
                                     </div>
                                 </div>
 
@@ -162,6 +128,7 @@
 
 @section('scripts')
         <!-- Switchery -->
+
    <script src="<?php echo asset('js/plugins/switchery/switchery.js')?>"></script>
     
    <script src="<?php echo asset('js/plugins/datapicker/bootstrap-datepicker.js')?>"></script>

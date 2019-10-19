@@ -19,9 +19,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PalmaresController@index');
 
-Route::get('/entrar', 'EntrarController@index')
-->name('entrar');
-Route::post('/entrar', 'EntrarController@entrar');
 
 Route::get('/registrar', 'RegistroController@create')
 ->name('registrar');
@@ -44,11 +41,15 @@ Route::put('/home/editar/{id}','CadastroController@editar');
 
 //rotas modalidade
 Route::get('/home/modalidade', 'ModalidadeController@modalidade');
-
+Route::get('/home/listarModalidade/{id}', 'ModalidadeController@listarModalidade');
+Route::put('/home/editarModalidade/{id}','ModalidadeController@editar');
+Route::post('/home/criarmodalidade','ModalidadeController@registrar');
 
 //Rotas cursos
 Route::get('/home/curso', 'CursoController@index');
-Route::get('/home/cursolista', 'CursoController@cursos');
+Route::post('/home/criarcurso','CursoController@registrar');
+Route::get('/home/cursolista', 'CursoController@listarCursos');
+Route::get('home/showeditarcurso/{id}', 'CursoController@showEditar');
 
 // Rotas Doação
 Route::get('/home/doacao', 'DoacaoController@index');
@@ -67,7 +68,11 @@ Route::get('/home/editarcolaborador' , 'ColaboradorController@editar');
 Route::get('/home/agenda', 'AgendaController@index');
 Route::get('/home/agendaevento', 'AgendaController@eventos');
 
-//Rotas departtamento
+//Rotas departamento,cargo
 Route::get('/home/departamento', 'DepartamentoController@index');
+Route::post('/home/departamento', 'DepartamentoController@registrarDepartamento');
+Route::get('/home/departamento/editar/{id}', 'CargoController@showEditar');
+
+Route::get('/home/departamentocargo', 'CargoController@registrarCargo');
 Route::get('/home/departamentolista', 'DepartamentoController@departamentos'); 
 

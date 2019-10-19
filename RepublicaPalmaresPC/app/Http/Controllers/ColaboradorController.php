@@ -3,17 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ColaboradorController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     public function index()
-    {
-        return view('colaborador.colaborador');
+    {   
+        $departamentos = DB::table('departamento')->get();
+        $pessoas = DB::table('pessoa')->get();
+        $cargos = DB::table('cargo')->get();
+        return view('colaborador.colaborador', compact('pessoas','departamentos','cargos'));
     }
 
     public function colaboradores()

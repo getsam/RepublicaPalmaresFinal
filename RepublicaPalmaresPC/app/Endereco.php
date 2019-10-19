@@ -4,13 +4,16 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class endereco extends Model
+class Endereco extends Model
 {   
     protected $table = 'endereco';
     public $timestamps = false;
+    protected $fillable = [
+        'logradouro','numero','complemento','bairro','cidade','cep','uf','email'
+    ];
 
     public function pessoa()
     {
-        return $this->belongsTo(Pessoa::class);
+        return $this->belongsTo(Pessoa::class,'id_endereco');
     }
 }

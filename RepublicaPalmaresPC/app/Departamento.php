@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Depto extends Model
+class Departamento extends Model
 {   
-    protected $table = 'depto';
+    protected $table = 'departamento';
     public $timestamps = false;
 
     public function cargo()

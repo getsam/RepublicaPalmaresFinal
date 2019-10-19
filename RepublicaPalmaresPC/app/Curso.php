@@ -23,4 +23,9 @@ class Curso extends Model
     {
         return $this->hasMany(Graduacao::class);
     }
+
+    public function dt_hr_cursos()
+    {
+        return $this->hasMany(dataHoraCurso::class);
+    }
 }

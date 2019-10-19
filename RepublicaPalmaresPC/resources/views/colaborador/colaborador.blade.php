@@ -25,10 +25,11 @@
                                     <label for="dpto_colab" class="label-control">Departamento</label>
                                     <select data-placeholder="Selecione a Departamento..." id="dpto_colab" name="dpto_colab" class="chosen-select form-control"  tabindex="1">
                                         <option value="">Selecione..</option>
-                                        <option value="1">Recepção</option>
-                                        <option value="2">Aulas</option>
-                                        <option value="3">Financeiro</option>
-                                        <option value="4">Depto Geral</option>
+                                        @foreach ($departamentos as $departamento)
+                                        <option value="1">{{ $departamento->nome }}</option>    
+                                        @endforeach
+                                        
+                                        
                                     </select>   
                                 </div>
                             </div>
@@ -38,10 +39,11 @@
                                     <label for="depto_cargo" class="label-control">Cargo</label>
                                     <select data-placeholder="Selecione o Cargo..." id="depto_cargo" name="depto_cargo" class="chosen-select form-control"  tabindex="1">
                                         <option value="">Selecione..</option>
-                                        <option value="1">Recepicionista</option>
-                                        <option value="2">Professor(a)</option>
-                                        <option value="3">Tesoureiro</option>
-                                        <option value="4">Ajudante geral</option>
+                                        @foreach ($cargos as $cargo)
+                                        <option value="1">{{ $cargo->nome }}</option>     
+                                        @endforeach
+                                       
+                                        
                                     </select>   
                                 </div>
                             </div>
@@ -63,25 +65,21 @@
                                     <label for="doc_colab" class="label-control">CPF/ CNPJ</label>
                                     <select data-placeholder="Selecione o documento..." id="doc_colab" name="doc_colab" class="chosen-select form-control"  tabindex="1">
                                         <option value="">Selecione..</option>
-                                        <option value="1">725.234.432-07</option>
-                                        <option value="2">010.234.098-98</option>
-                                        <option value="3">456.123.654.00</option>
-                                        <option value="4">123.321.123-32</option>
-                                        <option value="5">010.101.123-01</option>
+                                        @foreach ($pessoas as $pessoa)
+                                            <option value="1">{{ $pessoa->cpf }}}}</option>    
+                                        @endforeach
                                     </select>   
                                 </div>
                             </div>
 
                             <div class="col-sm-8">
                                 <div class="form-group">
-                                    <label for="nome_colab" class="label-control">Colaboador</label>
+                                    <label for="nome_colab" class="label-control">Colaborador</label>
                                     <select data-placeholder="Selecione o anluno..." id="nome_colab" name="nome_colab" class="chosen-select form-control"  tabindex="1">
                                         <option value="">Selecione..</option>
-                                        <option value="1">João Batista da Silva</option>
-                                        <option value="2">Maria Aparecida dos Santos</option>
-                                        <option value="3">Claudio Marques Soares</option>
-                                        <option value="4">Alan Rocha</option>
-                                        <option value="5">Jorge Albano</option>
+                                        @foreach ($pessoas as $pessoa)
+                                        <option value="1">{{ $pessoa->nome }}}}</option>    
+                                        @endforeach
                                     </select>   
                                 </div>
                             </div>                         

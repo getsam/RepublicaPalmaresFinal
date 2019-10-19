@@ -51,10 +51,10 @@ class HomeController extends Controller
         $interessado->save();
         $request->session()
         ->flash('mensagem',
-            "Obridado {$interessado->nome}, seu cadastro já foi enviadao para nós, aguarde retorno"
+            "Obridado {$request->nome_Interessado}, seu cadastro já foi enviadao para nós, aguarde retorno"
         );
 
-        return redirect('/home');
+        return redirect('/home/modalidade');
     }
 
     

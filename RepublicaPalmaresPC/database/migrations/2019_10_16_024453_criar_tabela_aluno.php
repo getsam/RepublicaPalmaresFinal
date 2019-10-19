@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriarTabelaTelefone extends Migration
+class CriarTabelaAluno extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,14 @@ class CriarTabelaTelefone extends Migration
      */
     public function up()
     {
-        Schema::create('telefone', function (Blueprint $table) {
+        Schema::create('aluno', function (Blueprint $table) {
             $table->integerIncrements('id');
-            $table->string('telefone');
-            $table->string('telefone2');
+            $table->integer('pessoa_id')->unsigned();
+            $table->string('nome_responsavel')->nullable();
+
+            $table->foreign('pessoa_id')
+                ->references('id')
+                ->on('pessoa');
         });
     }
 
@@ -27,6 +31,6 @@ class CriarTabelaTelefone extends Migration
      */
     public function down()
     {
-        Schema::drop('telefone');
+        Schema::drop('aluno');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriarTabelaAluno extends Migration
+class CriarTabelaGraduacao extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CriarTabelaAluno extends Migration
      */
     public function up()
     {
-        Schema::create('aluno', function (Blueprint $table) {
+        Schema::create('graduacao', function (Blueprint $table) {
             $table->integerIncrements('id');
-            $table->integer('pessoa_id');
-            $table->string('nome_responsavel');
+            $table->string('nome');
+            $table->integer('curso_id')->unsigned();
 
-            $table->foreign('pessoa_id')
+            $table->foreign('curso_id')
                 ->references('id')
-                ->on('pessoa');
+                ->on('curso');
         });
     }
 
@@ -31,6 +31,6 @@ class CriarTabelaAluno extends Migration
      */
     public function down()
     {
-        Schema::drop('aluno');
+        Schema::drop('graduacao');
     }
 }

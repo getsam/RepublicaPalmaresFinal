@@ -1,7 +1,8 @@
-@extends('conteudo')
+@extends('layouthome')
 
 @section('link')
     <link rel="stylesheet" href="<?php echo asset('css/plugins/dataTables/datatables.min.css')?>">
+    <script src ="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 @endsection
 
 @section('conteudo')
@@ -14,6 +15,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="ibox float-e-margins">
+                            @if(!empty(Session::has('mensagem')))
+                                <script> swal({ title : " Cadastrada!!! " ,
+                                                text: '{{Session::get('mensagem')}}',
+                                                icon: "success",
+                                                button: "Okay",
+                                    }); 
+                                </script>
+                            @endif
                             <div class="ibox-title">
                                 <h5>Lista de Cargo/Departamento</h5>
                             </div>
@@ -32,48 +41,22 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach ($cargos as $cargo)
                                             <tr class="">
-                                                <td>01</td>
-                                                <td>Diretoria</td>
-                                                <td>Diretor geral</td>
-                                                <td>Responsável pela administração geral da Ong</td>
-                                                <td></td>
-                                                <td class="text-center ">
-                                                    <a href="cargoDeptoEditar.html">
-                                                        <button class="btn-primary btn btn-xs">
-                                                            <i class="fa fa-lg fa-pencil"></i>
-                                                        </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr class="">
-                                                <td>02</td>
-                                                <td>Diretoria</td>
-                                                <td>Diretor Financeiro</td>
-                                                <td>Responsável pela administração financeira da Ong</td>
-                                                <td></td>
-                                                <td class="text-center ">
-                                                    <a href="cargoDeptoEditar.html">
-                                                        <button class="btn-primary btn btn-xs">
-                                                            <i class="fa fa-lg fa-pencil"></i>
-                                                        </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr class="">
-                                                <td>03</td>
-                                                <td>Financeiro</td>
-                                                <td>Contas a pagar</td>
-                                                <td>Responsável pelas Contas a pagar e a receber</td>
-                                                <td></td>
-                                                <td class="text-center ">
-                                                    <a href="cargoDeptoEditar.html">
-                                                        <button class="btn-primary btn btn-xs">
-                                                            <i class="fa fa-lg fa-pencil"></i>
-                                                        </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
+                                                    <td>{{ $cargo->id }}</td>
+                                                    <td>{{ $cargo->departamento }}</td>
+                                                    <td>{{ $cargo->nome }}</td>
+                                                    <td>{{ $cargo->descricao }}</td>
+                                                    <td>{{ $cargo->observacao }}</td>
+                                                    <td class="text-center ">
+                                                        <a href="{{url("/home/departamento/editar/$cargo->id")}}">
+                                                            <button class="btn-primary btn btn-xs">
+                                                                <i class="fa fa-lg fa-pencil"></i>
+                                                            </button>
+                                                        </a>
+                                                    </td>
+                                                </tr>    
+                                            @endforeach    
                                         </tbody>
                                     </table>
                                 </div>

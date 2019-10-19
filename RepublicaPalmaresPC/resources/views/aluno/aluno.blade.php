@@ -52,11 +52,10 @@
                                     <label for="doc_Aluno" class="label-control">CPF/ CNPJ</label>
                                     <select data-placeholder="Selecione o documento..." id="doc_Aluno" name="doc_Aluno" class="chosen-select form-control"  tabindex="1">
                                         <option value="">Selecione..</option>
-                                        <option value="1">725.234.432-07</option>
-                                        <option value="2">010.234.098-98</option>
-                                        <option value="3">456.123.654.00</option>
-                                        <option value="4">123.321.123-32</option>
-                                        <option value="5">010.101.123-01</option>
+                                        @foreach ($pessoa as $pessoa)
+                                            <option value="1">{{ $pessoa->cpf }}</option>
+                                        @endforeach
+                                        
                                     </select>   
                                 </div>
                             </div>
@@ -66,11 +65,9 @@
                                     <label for="nome_Aluno" class="label-control">Aluno</label>
                                     <select data-placeholder="Selecione o anluno..." id="nome_Aluno" name="nome_Aluno" class="chosen-select form-control"  tabindex="1">
                                         <option value="">Selecione..</option>
-                                        <option value="1">João Batista da Silva</option>
-                                        <option value="2">Maria Aparecida dos Santos</option>
-                                        <option value="3">Claudio Marques Soares</option>
-                                        <option value="4">Alan Rocha</option>
-                                        <option value="5">Jorge Albano</option>
+                                        @foreach ($pessoa1 as $pessoa)
+                                            <option value="1">{{ $pessoa->nome }}</option>    
+                                        @endforeach
                                     </select>   
                                 </div>
                             </div>
