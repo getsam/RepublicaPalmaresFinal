@@ -108,93 +108,23 @@
 
 <section id="features" class="container services">
     <div class="row">
-        <div class="col-sm-3">
-            <h2>Artes Marciais</h2>
-            <p>Existem centenas de estilos diferentes de artes marciais e cada uma desenvolve técnicas de luta e métodos de treinamento que garantem a eficiência do estilo. Nosso carro chefe é a capoeira mas, abrimos espaço para diversas outra modalidades tais como: Boxe, Judô, Muay-Tay entre outras.</p>
-            <p>
+        <div class="col-sm-12">
+            <h2>NOssa história</h2>
+            <p>A nossa associação nasceu entre o final da década de setenta e o início dos anos oitenta. A motivação que nos levou a fundar esta entidade foi basicamente três coisas: em primeiro lugar a nossa paixão Pela cultura e arte genuína de nosso povo que por si só é um gesto de rebeldia de questionamento do que esta posto. Em segundo lugar, tratava-se de demonstrar na pratica e de um modo formal o nosso grau de compromisso e envolvimento com a capoeira e a arte folclore brasileiro, para nós uma arma de libertação e finalmente, víamos nesta associação uma espécie de “templo” onde a vivência na e com a capoeira ganhava um sentido ideológico, político e sobretudo filosófico.</p>
+            <p> Tratava-se de perceber e demonstrar a dimensão aglutinadora e libertadora de nossa arte. Desde o começo de nossas atividades, homens, mulheres, jovens e crianças da periferia se identificavam com a capoeira e lotavam os espaços onde oferecíamos os nossos cursos. Cada instrutor, Professor ou mestre percebeu esta atitude das pessoas é  uma escolha e se é uma escolha, é uma atitude política na sua essência. E ai? As pessoas escolheram a sua arte, a capoeira para si ou para alguém de sua família e o que você tem para oferecer? Pancada? Violência? Defesa pessoal?</p>
+            <p>A resposta que nos da Associação de Capoeira República de Palmares (ACRP) oferecemos foram projetos de trabalho dando a cada aluno a oportunidade de conhecer um outro lado de nossa historia, uma historia não contada; a historia dos quilombos, dos negros, de suas crenças, de seus cantos, de seus heróis como Zumbi, Canga Zumba, Mestre Bimba, Mestre Pastinha e tantos outros. Foi assim no projeto Expanção da Capoeira em Osasco, que atendia cerca de 450 pessoas nos centros de vivencia e que priorizava menores em situação de risco entre 1982 e 1986.</p>
+           
+            <p>A profundidade de nossas ações fizeram de nossa associação uma entidade muito além de uma simples academia de capoeira e os novos projetos apontam para um novo caráter com muito mais amplitude aprofundando a dimensão cultural de nossa casa. Queremos ir mais longe e mais fundo nas questões, nos nossos aportes. Temos uma história que aponta nesta direção e o momento cobra esta decisão</p>
+            <p>Decidimos em Assembléia no final de 2007 que não podemos nos contentar em sermos apenas “Associação de Capoeira República de Palmares”, somos agora uma Associação Cultural República de Palmares e faremos de nossas experiências uma Republica Cultural onde a Capoeira tem seu espaço mas abre as portas para outros projetos que complementarão o sentido de ser de nossa nova entidade.</p>
+            <!-- <p>
             <a class="navy-link" href="#contact" role="button">Saiba Mais &raquo;</a>
-            </p>
+            </p> -->
         </div>
-        <div class="col-sm-3">
-            <h2>Música</h2>
-            <p>Boas Músicas muitas vezes refletem o ambiente e o tempo de sua criação. A música em si é história, e cada uma normalmente tem o seu próprio plano de fundo e um enredo. Baseado nesta linha de pensamento que oferecemos diversos cursos de música, entre eles pode mos citar: Percusão, cordas e cantos.</p>
-            <p>
-            <a class="navy-link" href="#contact" role="button">Saiba Mais &raquo;</a>
-            </p>
-        </div>
-        <div class="col-sm-3">
-            <h2>Teatro</h2>
-            <p>O teatro é uma das manifestações artísticas mais poderosas, principalmente por ser uma das mais completas, o estudante pode passar por várias experiências e formas de vida distintas e acaba melhorando o seu próprio repertório, tornando-se uma pessoa mais flexível, interessante, inteligente e autoconfiante.</p>
-            <p>
-            <a class="navy-link" href="#contact" role="button">Saiba Mais &raquo;</a>
-            </p>
-        </div>
-        <div class="col-sm-3">
-            <h2>Artesanato</h2>
-            <p>Artesanato existe desde a idade média quando trabalhadores qualificados eram necessários para produzir itens de necessidade básica. Hoje em dia, a maioria das mercadorias é feita em uma linha de produção de fábrica, então artesãos talentosos e capazes de exibir suas habilidades podem ter uma carreira reconhecida e lucrativa.</p>
-            <p>
-            <a class="navy-link" href="#contact" role="button">Saiba Mais &raquo;</a>
-            </p>
-        </div>
+        
     </div>
 </section>
 
-<section  class="container features">
-    <!-- <div class="row">
-        <div class="col-lg-12 text-center">
-            <div class="navy-line"></div>
-            <h1>Over 40+ unique view<br/> <span class="navy"> with many custom components</span> </h1>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
-        </div>
-    </div> -->
-    <!-- <div class="row">
-        <div class="col-md-3 text-center wow fadeInLeft">
-            <div>
-                <i class="fa fa-mobile features-icon"></i>
-                <h2>Full responsive</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            </div>
-            <div class="m-t-lg">
-                <i class="fa fa-bar-chart features-icon"></i>
-                <h2>6 Charts Library</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            </div>
-        </div>
-        <div class="col-md-6 text-center  wow zoomIn">
-            <img src="img/landing/perspective.png" alt="dashboard" class="img-responsive">
-        </div>
-        <div class="col-md-3 text-center wow fadeInRight">
-            <div>
-                <i class="fa fa-envelope features-icon"></i>
-                <h2>Mail pages</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            </div>
-            <div class="m-t-lg">
-                <i class="fa fa-google features-icon"></i>
-                <h2>AngularJS version</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            </div>
-        </div>
-    </div> -->
-    <div class="row">
-        <div class="col-lg-12 text-center">
-            <div class="navy-line"></div>
-            <h1>Discover great feautres</h1>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
-        </div>
-    </div>
-    <div class="row features-block">
-        <div class="col-lg-6 features-text wow fadeInLeft">
-            <small>INSPINIA</small>
-            <h2>Perfectly designed </h2>
-            <p>A nossa associação nasceu entre o final da década de setenta e o início dos anos oitenta. A motivação que nos levou a fundar esta entidade foi basicamente três coisas: em primeiro lugar a nossa paixão Pela cultura e arte genuína de nosso povo que por si só é um gesto de rebeldia de questionamento do que esta posto. Em segundo lugar, tratava-se de demonstrar na pratica e de um modo formal o nosso grau de compromisso e envolvimento com a capoeira e a arte folclore brasileiro, para nos uma arma de libertação e finalmente, víamos nesta associação uma espécie de “templo” onde a vivência na e com a capoeira ganhava um sentido ideológico, político e sobretudo filosófico</p>
-            <a href="" class="btn btn-primary">Learn more</a>
-        </div>
-        <div class="col-lg-6 text-right wow fadeInRight">
-            <img src="{{ asset('storage/img/landing/dashboard.png')}}" alt="dashboard" class="img-responsive pull-right">
-        </div>
-    </div>
-</section>
+
 
 
 
@@ -203,27 +133,33 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <div class="navy-line"></div>
-                <h1>Even more great feautres</h1>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
+            
+                <div class="navy-line m-b-lg"></div>
+                
+                <h1 class="m-b-n-xs">Capoeira</h1>
+                <small>Nosso carro chefe</small>
+                
+                <p class="m-t-lg">Mestre Bimba, Mestre Pastinha entre  outros anônimos, são figuras que se transformaram em ícones mundiais, em verdadeiras vergas de sustentação, e, porque não dizer raízes das duas vertentes da Capoeira do Brasil para o mundo; Bimba com a Regional e Pastinha com a capoeira Angola, um voando e marcializando e o outro se resguardando e serpenteando. Ambos na roda, na ginga, nos toques de berimbau verdadeiros tripés de nossa arte.</p>
+                <p>Depois de tantas lutas dentro e fora da roda, nossa memória e nosso saber vão aos poucos sendo reconhecido e valorizado. A Capoeira é hoje, patrimônio histórico e material do povo brasileiro tombado pelo IPHAM*.</p>
+                <p>A capoeira é fruto de uma experiência, de uma vivência histórica e tradicional de nosso povo, e sobreviveu praticamente tendo como base a oralidade. É hora de darmos um salto de qualidade para isto, este conhecimento, esta experiência educativa, precisa ser sistematizada e transformada em conteúdo histórico e pedagógico a ser trabalhado em ambientes que vão além das rodas de capoeira, nas salas de aulas até as universidades. Cabe a nós, o papel de protagonistas do destino da capoeira em nossa história. Não temos o direito de abandonar a capoeira como “um barco solto nas ondas do mar” sem direção.</p>
             </div>
         </div>
         <div class="row features-block">
             <div class="col-lg-3 features-text wow fadeInLeft">
-                <small>INSPINIA</small>
-                <h2>Perfectly designed </h2>
-                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with latest jQuery plugins.</p>
-                <a href="" class="btn btn-primary">Learn more</a>
+                <small>Capoeira</small>
+                <h2>Angola </h2>
+                <p>Os negros vindos para o Brasil eram em sua maioria de Angola, diziam ser mais ágeis, por terem estatura mediana e por isto tinham mais aproveitamento no trabalho e no jogo da Capoeira. O nome “CAPOEIRA” deu-se pelo motivo dos escravos ao fugirem para as matas, cujo nome é Capoeira. Os senhores mandavam os capitães-do-mato buscarem os escravos, que os atacavam com pés, mãos e cabeça, dando-lhes surras ou até mesmo matando-os, porém os que sobreviviam voltavam para os seus patrões indignados. Então os Senhores perguntavam: -”Cadê os negros?” e a resposta era: – Nos pegaram na Capoeira”, referindo-se ao local onde formam vencidos</p>
+                <!-- <a href="" class="btn btn-primary">Learn more</a> -->
             </div>
             <div class="col-lg-6 text-right m-t-n-lg wow zoomIn">
-                <img src="{{ asset('storage/img/landing/iphone.jpg')}}" class="img-responsive" alt="dashboard">
+                <img src="{{ asset('storage/img/landing/Logo_RCP.jpg')}}" class="img-responsive" alt="Capoeira republica de Palmares">
             </div>
             
             <div class="col-lg-3 features-text text-right wow fadeInRight">
-                <small>INSPINIA</small>
-                <h2>Perfectly designed </h2>
-                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with latest jQuery plugins.</p>
-                <a href="" class="btn btn-primary">Learn more</a>
+                <small>Capoeira</small>
+                <h2>Regional </h2>
+                <p>Afluente da Capoeira Angola, a Capoeira Regional é caracterizada pela agilidade de seus movimentos, bem como a variedade bem maior do que os da Capoeira Angola. Digo “afluente da Capoeira Angola” porque foi a partir dela que Manoel dos Reis Machado criou a Capoeira Regional. Inspirado nos movimentos da Angola mesclados com os do batuque, uma dança africana na qual o pai de Manoel dos Reis Machado, o senhor Luiz Cândido Machado era campeão, foi criada a “luta regional baiana”, um dos títulos que a capoeira regional teve. O estilo regional de jogar capoeira é marcado pela rapidez de seus golpes e contra-golpes e pelo ritmo acelerado dos toques do berimbau.</p>
+                <!-- <a href="" class="btn btn-primary">Learn more</a> -->
             </div>
         </div>
     </div>
@@ -322,38 +258,43 @@
 <section class="features" id="teste">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-12 text-center p-w-xl">
                 <div class="navy-line"></div>
-                <h1>More and more extra great feautres</h1>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
+                <h1>Capoeira como filosofia de vida.</h1>
+                <div class="p-w-xl m-t-md">
+                <p>O que  era para ser uma simples academia de capoeira engajada se transformou em um espaço de reflexão e produção cultural, possibilitando o diálogo entre  diversas práticas educativas. Deste entrosamento comprometido com mudanças, evoluímos para uma República Cultura ou seja; ambiente aberto às diferentes práticas e experiências culturais, tendo como referência um  compromisso social focado na construção de um novo homem e uma nova sociedade. </p> 
+                </div>
+                
+
+
             </div>
         </div>
         <div class="row">
             <div class="col-lg-5 col-lg-offset-1 features-text">
-                <small>INSPINIA</small>
-                <h2>Perfectly designed </h2>
+                <small>Pratique</small>
+                <h2 class="font-bold text-info">Artes Marciais</h2>
                 <i class="fa fa-bar-chart big-icon pull-right"></i>
-                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with.</p>
+                <p>Existem centenas de estilos diferentes de artes marciais e cada uma desenvolve técnicas de luta e métodos de treinamento que garantem a eficiência do estilo. Nosso carro chefe é a capoeira mas, abrimos espaço para diversas outra modalidades tais como: Boxe, Judô, Muay-Tay entre outras.</p>
             </div>
             <div class="col-lg-5 features-text">
-                <small>INSPINIA</small>
-                <h2>Perfectly designed </h2>
+                <small>Aprenda</small>
+                <h2 class="font-bold text-info">Música</h2>
                 <i class="fa fa-bolt big-icon pull-right"></i>
-                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with.</p>
+                <p>Boas Músicas muitas vezes refletem o ambiente e o tempo de sua criação. A música em si é história, e cada uma normalmente tem o seu próprio plano de fundo e um enredo. Baseado nesta linha de pensamento que oferecemos diversos cursos de música, entre eles pode mos citar: Percusão, cordas e cantos.</p>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-5 col-lg-offset-1 features-text">
-                <small>INSPINIA</small>
-                <h2>Perfectly designed </h2>
+                <small>Faça</small>
+                <h2 class="font-bold text-info">Teatro</h2>
                 <i class="fa fa-clock-o big-icon pull-right"></i>
-                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with.</p>
+                <p>O teatro é uma das manifestações artísticas mais poderosas, principalmente por ser uma das mais completas, o estudante pode passar por várias experiências e formas de vida distintas e acaba melhorando o seu próprio repertório, tornando-se uma pessoa mais flexível, interessante, inteligente e autoconfiante.</p>
             </div>
             <div class="col-lg-5 features-text">
-                <small>INSPINIA</small>
-                <h2>Perfectly designed </h2>
+                <small>Construa</small>
+                <h2 class="font-bold text-info">Artesanato </h2>
                 <i class="fa fa-users big-icon pull-right"></i>
-                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with.</p>
+                <p>Artesanato existe desde a idade média quando trabalhadores qualificados eram necessários para produzir itens de necessidade básica. Hoje em dia, a maioria das mercadorias é feita em uma linha de produção de fábrica, então artesãos talentosos e capazes de exibir suas habilidades podem ter uma carreira reconhecida e lucrativa.</p>
             </div>
         </div>
     </div>
@@ -366,11 +307,11 @@
         <div class="row m-b-lg">
             <div class="col-lg-12 text-center">
                 <div class="navy-line"></div>
-                <h1>Fale conosco</h1>
-                <p> Organização Não governamental sem fins lucrativos, tem como objetivo transmitir a memória cultural de nossa história, através das mais diversas expressões culturais, saiba mais sobre nosso trabalho, fale conosco.</p>
-                <form action="cadInteressado" id="fale-conosco" method="POST">
+                <h1 class="m-b-lg">Fale conosco</h1>
+                
+                <form action="cadInteressado" class="m-t-xl" id="fale-conosco" method="POST">
                     @csrf
-                    <div class="col-md-6">
+                    <div class=" col-md-6">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
