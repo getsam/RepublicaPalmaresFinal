@@ -118,15 +118,52 @@ class CadastroController extends Controller
 
     public function editar(Request $request, $id)
     {
-        
+        // form pessoa
         $cpf = $request->cpf_editar;
         $tipo_doc  = $request->tipo_doc;
         $nome_editar = $request->nome_editar;
         $dt_nascimento = $request->dt_nascimento;
         $genero_editar = $request->genero_editar;
+        $email_editar = $request->email_editar;
 
-
+        // form endereco
         $logradouro_editar = $request->logradouro_editar;
         $numero_editar = $request->numero_editar;
+        $complemento_editar = $request->complemento_editar;
+        $bairro_editar = $request->bairro_editar;
+        $cidade_editar = $request->cidade_editar;
+        $uf_editar = $request->uf_editar;
+        $cep_editar = $request->cep_editar;
+
+        // form numero 
+        $telefone_editar = $request->telefone_editar;
+        $telefone2_editar = $request->telefone2_editar; 
+
+        $id_editar = DB::table('pessoa')
+                    ->select('endereco.id as endereco,telefone.id as telefone')
+                    ->join('endereco','endereco.id','=','pessoa.id_endereco')
+                    ->join('telefone','telefone.id','=','pessoa.id_telefone')
+                    ->where('pessoa.id','=', "$id")
+                    ->get();
+
+        DB::update("update pessoa set cpf = $cpf,
+                 tipo_documento = $tipo_doc,
+                 nome = $nome_editar,
+                 dt_nascimento = $dt_nascimento,
+                 genero = $genero_editar,
+                 email = $email_editar where id = ?", ["$id"]);
+        
+        DB::update("update endereco set logradouro = $logradouro_editar,
+                    numero = $numero_editar,
+                    complemento = $complemento_editar,
+                    bairro = $bairro_editar,
+                    cidade = $cidade_editar,
+                    uf = $uf_editar,
+                    cep = $cep_editar where id = ?", [$id_editar->first()->endereco]);
+        
+        DB::update("update telefone set telefone = $telefone_editar,
+                    telefone2 = $telefone2_editar where id = ?", [$id_editar->first()->telefone]);
+        
+        return redirect('/home/listapessoas');
     }
 }

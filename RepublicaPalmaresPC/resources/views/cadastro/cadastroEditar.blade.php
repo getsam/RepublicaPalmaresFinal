@@ -22,7 +22,8 @@
                                 @foreach ($endereco as $endereco)
                                 @foreach ($telefone as $telefone)
                             
-                                <form role="form" action="#" method="#">
+                                <form method="put">
+                                @csrf
                                     <div class="col-sm-12 ">
                                         <h3 class="text-center m-t-lg">Dados Básicos</h3>
                                     </div>
@@ -151,15 +152,15 @@
                                     
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="tel1_editar">Telefone 1</label>
-                                            <input value="{{ $telefone->telefone }}"type="text" placeholder="Prenche com o telefone" class="form-control" id="tel1_editar" name="tel1_editar">
+                                            <label for="telefone_editar">Telefone 1</label>
+                                            <input value="{{ $telefone->telefone }}"type="text" placeholder="Prenche com o telefone" class="form-control" id="telefone_editar" name="telefone_editar">
                                         </div>
                                     </div>
                                     
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="tel2_editar">Telefone 2</label>
-                                        <input value="{{ $telefone->telefone2 }}" type="text" placeholder="Prenche com o telefone" class="form-control" id="tel2_editar" name="tel2_editar">
+                                            <label for="telefone2_editar">Telefone 2</label>
+                                        <input value="{{ $telefone->telefone2 }}" type="text" placeholder="Prenche com o telefone" class="form-control" id="telefone2_editar" name="telefone2_editar">
                                         </div>
                                     </div>
                                     
@@ -186,35 +187,6 @@
                                 @endforeach
                                 @endforeach
                                 @endforeach
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="tab-2" class="tab-pane active">
-                        <div class="panel-body">
-                            <div class="p-sm">
-                                <div class="row m-b-md">
-                                    <h3 class="font-bold text-uppercase text-center m-b-md">Usúario de acesso</h3>
-                                    <div class="col-sm-4">
-                                        <div class="form-group">
-                                            <label for="emailUser_editar">Email</label>
-                                            <input type="email" placeholder="Ex. email@site.com" class="form-control"  id="emailUser_editar" name="emailUser_editar" required>
-                                        </div>
-                                    </div> 
-                                    <div class="col-sm-4">
-                                        <div class="form-group">
-                                            <label for="senha_editar">Senha</label>
-                                            <input type="password" placeholder="Cadastre uma senha" class="form-control"  id="senha_editar" name="senha_editar" required>
-                                        </div>
-                                    </div> 
-                                    <div class="col-sm-4">
-                                        <div class="form-group">
-                                            <label for="confSenha_editar">Confirma Senha</label>
-                                            <input type="password" placeholder="Confirme sua senha" class="form-control"  id="confSenha_editar" name="confSenha_editar" required>
-                                        </div>
-                                    </div> 
-
-                                </div>
                             </div>
                         </div>
                     </div>
