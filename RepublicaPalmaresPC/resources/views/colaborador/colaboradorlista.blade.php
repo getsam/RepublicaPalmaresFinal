@@ -34,58 +34,24 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr class="">
-                                                    <td>01</td>
-                                                    <td>27101925607</td>
-                                                    <td>Joao Batista de Souza</td>
-                                                    <td>Financeiro</td>
-                                                    <td>Tesoureiro</td>
-                                                    <td>10/03/2019</td>
-                                                    <td></td>
-                                                    <td class="text-center ">
-                                                        <a href="{{url('/homerestrita/colaboradoreditar')}}">
-                                                            <button class="btn-primary btn btn-xs">
-                                                                <i class="fa fa-lg fa-pencil"></i>
-                                                            </button>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>02</td>
-                                                    <td>27101925603</td>
-                                                    <td>Maria Batista de Souza</td>
-                                                    <td>Recpeção</td>
-                                                    <td>Recepcionista</td>
-                                                    <td>10/04/2019</td>
-                                                    <td>
-
-                                                    </td>
-                                                    <td class="text-center ">
-                                                        <a href="colaboradorEditar.html">
-                                                            <button class="btn-primary btn btn-xs">
-                                                                <i class="fa fa-lg fa-pencil"></i>
-                                                            </button>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                {{-- <tr class="">
-                                                    <td>03</td>
-                                                    <td>27101925609</td>
-                                                    <td>Eduardo Batista de Souza</td>
-                                                    <td>Aula</td>
-                                                    <td>Professor</td>
-                                                    <td>10/04/2019</td>
-                                                    <td>
-                                                        Professor de Capoeira (em fase de estágio (cordão azul)
-                                                    </td>
-                                                    <td class="text-center ">
-                                                        <a href="colaboradorEditar.html">
-                                                            <button class="btn-primary btn btn-xs">
-                                                                <i class="fa fa-lg fa-pencil"></i>
-                                                            </button>
-                                                        </a>
-                                                    </td>
-                                                </tr> --}}
+                                                @foreach ($colaboradores as $colaborador)
+                                                    <tr class="">
+                                                        <td>{{ $colaborador->id }}</td>
+                                                        <td>{{ $colaborador->cpf }}</td>
+                                                        <td>{{ $colaborador->nome }}</td>
+                                                        <td>{{ $colaborador->departamento }}</td>
+                                                        <td>{{ $colaborador->cargo }}</td>
+                                                        <td>{{ $colaborador->dt_entrada }}</td>
+                                                        <td>{{ $colaborador->observacao }}</td>
+                                                        <td class="text-center ">
+                                                            <a href="{{url("/homerestrita/colaborador/editar/$colaborador->id")}}">
+                                                                <button class="btn-primary btn btn-xs">
+                                                                    <i class="fa fa-lg fa-pencil"></i>
+                                                                </button>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>

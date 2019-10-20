@@ -17,6 +17,7 @@ class CriarTabelaColaboradorCargo extends Migration
             $table->integerIncrements('id');
             $table->integer('colaborador_id')->unsigned();
             $table->integer('cargo_id')->unsigned();
+            $table->date('dt_entrada')->nullable();
 
             $table->foreign('colaborador_id')
                 ->references('id')

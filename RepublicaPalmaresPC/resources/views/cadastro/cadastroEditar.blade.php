@@ -15,9 +15,6 @@
                     <!-- <li><a data-toggle="tab" href="#tab-2">Informações de acesso</a></li> -->
                 </ul>
                 <div class="tab-content">
-<<<<<<< HEAD
-                    
-=======
                     <div id="tab-1" class="tab-pane active">
                         <div class="panel-body">
                             <div class="row">
@@ -192,7 +189,6 @@
                             </div>
                         </div>
                     </div>
->>>>>>> 5cc2f6850263b6a546d661c588b87fef33d2a083
 
                     <div id="tab-2" class="tab-pane active">
                         <div class="panel-body">
