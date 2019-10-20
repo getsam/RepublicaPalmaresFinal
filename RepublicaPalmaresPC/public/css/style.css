@@ -1728,8 +1728,10 @@ div.dt-button-info {
   margin-bottom: 10px;
   margin-top: 10px;
 }
-.widget.style1 h2 {
-  font-size: 30px;
+.widget.style1 h2,
+.widget.style1 a h2 {
+  font-size: 22px;
+  color: #fff;
 }
 .widget h2,
 .widget h3 {

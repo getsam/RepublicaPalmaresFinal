@@ -15,8 +15,7 @@
                     <!-- <li><a data-toggle="tab" href="#tab-2">Informações de acesso</a></li> -->
                 </ul>
                 <div class="tab-content">
-                    
-
+                
                     <div id="tab-2" class="tab-pane active">
                         <div class="panel-body">
                             <div class="p-sm">
@@ -25,27 +24,27 @@
 
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <label for="nomeUser">Nome</label>
-                                            <input type="text" placeholder="Ex. Fulano de tal" class="form-control"  id="nomeUser" name="emailUser" required>
+                                            <label for="nomeUser_editar">Nome</label>
+                                            <input type="text" placeholder="Ex. Fulano de tal" class="form-control"  id="nomeUser_editar" name="emailUser" required>
                                         </div>
                                     </div> 
-                                    
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="emailUser">Email</label>
-                                            <input type="email" placeholder="Ex. email@site.com" class="form-control"  id="emailUser" name="emailUser" required>
+                                            <input type="email" placeholder="Ex. email@site.com" class="form-control"  id="emailUser_editar" name="emailUser_editar" required>
                                         </div>
                                     </div> 
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label for="senha">Senha</label>
-                                            <input type="password" placeholder="Cadastre uma senha" class="form-control"  id="senha" name="senha" required>
+                                        
+                                            <label for="senha_editar">Senha</label>
+                                            <input type="password" placeholder="Cadastre uma senha" class="form-control"  id="senha_editar" name="senha_editar" required>
                                         </div>
                                     </div> 
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label for="confSenha">Confirma Senha</label>
-                                            <input type="password" placeholder="Confirme sua senha" class="form-control"  id="confSenha" name="confSenha" required>
+                                            <label for="confSenha_editar">Confirma Senha</label>
+                                            <input type="password" placeholder="Confirme sua senha" class="form-control"  id="confSenha_editar" name="confSenha_editar" required>
                                         </div>
                                     </div> 
 
