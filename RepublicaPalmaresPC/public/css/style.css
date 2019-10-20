@@ -8247,6 +8247,16 @@ body.md-skin {
   justify-content: space-between;
 
 }
+
+@media(max-width:350px){
+  .d-flex-between {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+}
 .logo-content-sobre{
  display: flex;
  justify-content: center;
