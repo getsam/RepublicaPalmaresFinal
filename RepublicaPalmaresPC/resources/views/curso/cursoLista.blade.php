@@ -42,7 +42,7 @@
                                             @foreach ($cursos as $curso)
                                                 <tr class="">
                                                 <td>{{ $curso->modalidade }}</td>
-                                                <td>{{ $curso->nome }}</td>
+                                                <td>{{ $curso->nome_curso }}</td>
                                                 <td>{{ $curso->descricao }}</td>
                                                     <td class="text-center ">
                                                         <a href="{{url("/home/showeditarcurso/$curso->id")}}">

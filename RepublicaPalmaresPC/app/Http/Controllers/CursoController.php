@@ -30,7 +30,7 @@ class CursoController extends Controller
         $cursos = DB::table('curso')
             ->join('modalidade', 'curso.modalidade_id', '=', 'modalidade.id')
             ->select('curso.*','modalidade.modalidade')
-            ->orderBy('curso.nome')
+            ->orderBy('curso.nome_curso')
             ->get();
 
         return view('curso.cursoLista',compact('cursos'));
@@ -78,7 +78,7 @@ class CursoController extends Controller
 
         DB::table('curso')
             ->where('id', $id)
-            ->update(['nome' => $request->curso_criar,
+            ->update(['nome_curso' => $request->curso_criar,
                 'descricao' => $request->curso_descricao,
                 'qnt_pessoas' => $request->curso_capacidade,
                 'modalidade_id' => $request->modalidade_curso]);
@@ -106,7 +106,7 @@ class CursoController extends Controller
     public function registrar(Request $request)
     {
         $idCurso = DB::table('curso')->insertGetId([
-            'nome' => $request->curso_criar,
+            'nome_curso' => $request->curso_criar,
             'descricao' => $request->curso_descricao,
             'qnt_pessoas' => $request->curso_capacidade,
             'modalidade_id' => $request->modalidade_curso

@@ -23,16 +23,15 @@
                 <div class="p-sm">
                 <div class="row">
                         
-                        <form action="#" id="cadastrar_Aluno">
+                        <form action="cadastraraluno" method="POST" id="cadastrar_Aluno">
+                            @csrf
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="modalidade_aluno" class="label-control">Modalidade</label>
                                     <select data-placeholder="Selecione a modalidade..." id="modalidade_aluno" name="modalidade_aluno" class="chosen-select form-control"  tabindex="1">
-                                        <option value="">Selecione..</option>
-                                        <option value="1">Arte Marcial</option>
-                                        <option value="2">Artesanato</option>
-                                        <option value="3">Música</option>
-                                        <option value="4">Teatro</option>
+                                        @foreach ($modalidades as $modalidade)
+                                            <option value="{{ $modalidade->id }}">{{ $modalidade->modalidade }}</option>
+                                        @endforeach
                                     </select>   
                                 </div>
                             </div>
@@ -41,8 +40,9 @@
                                 <div class="form-group">
                                     <label for="curso_aluno" class="label-control">Curso</label>
                                     <select data-placeholder="Selecione o curso..." id="curso_aluno" name="curso_aluno" class="chosen-select form-control"  tabindex="1">
-                                        <option value="">Selecione..</option>
-                                        <option value="1">Capoeira</option>
+                                        @foreach ($cursos as $curso)
+                                            <option value="{{ $curso->modalidade_id }}">{{ $curso->nome }}</option>
+                                        @endforeach
                                     </select>   
                                 </div>
                             </div>
@@ -52,10 +52,9 @@
                                     <label for="doc_Aluno" class="label-control">CPF/ CNPJ</label>
                                     <select data-placeholder="Selecione o documento..." id="doc_Aluno" name="doc_Aluno" class="chosen-select form-control"  tabindex="1">
                                         <option value="">Selecione..</option>
-                                        @foreach ($pessoa as $pessoa)
-                                            <option value="1">{{ $pessoa->cpf }}</option>
+                                        @foreach ($pessoas as $pessoa)
+                                            <option value="{{ $pessoa->id }}">{{ $pessoa->cpf }}</option>
                                         @endforeach
-                                        
                                     </select>   
                                 </div>
                             </div>
@@ -65,8 +64,8 @@
                                     <label for="nome_Aluno" class="label-control">Aluno</label>
                                     <select data-placeholder="Selecione o anluno..." id="nome_Aluno" name="nome_Aluno" class="chosen-select form-control"  tabindex="1">
                                         <option value="">Selecione..</option>
-                                        @foreach ($pessoa1 as $pessoa)
-                                            <option value="1">{{ $pessoa->nome }}</option>    
+                                        @foreach ($pessoas as $pessoa)
+                                            <option value="{{ $pessoa->id }}">{{ $pessoa->nome }}</option>
                                         @endforeach
                                     </select>   
                                 </div>
@@ -77,13 +76,9 @@
                                     <label for="graduacao_aluno" class="label-control">Graduação</label>
                                     <select data-placeholder="Selecione a modalidade..." id="graduacao_aluno" name="graduacao_aluno" class="chosen-select form-control"  tabindex="1">
                                         <option value="">Selecione..</option>
-                                        <option value="1">Iniciante</option>
-                                        <option value="2">Verde</option>
-                                        <option value="3">Verde-amarelo</option>
-                                        <option value="4">Amarelo</option>
-                                        <option value="5">Amarelo-azul</option>
-                                        <option value="6">Azul</option>
-                                        <option value="7">Trançado</option>
+                                        @foreach ($graduacoes as $graduacao)
+                                            <option value="{{ $graduacao->id }}">{{ $graduacao->nome }}</option>
+                                        @endforeach
                                     </select>   
                                 </div>
                             </div>
@@ -98,19 +93,19 @@
                                         <input type="text" id="data_matricula" class="form-control" value="03/09/2019">
                                     </div>
                                 </div>
-                            </div>                                       
+                            </div>
                             
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label class="label-control" for="curso_descricao">Observação</label>
-                                    <textarea name="curso_descricao" class="form-control m-b" id="curso_descricao" placeholder="Observação" cols="30" rows="5" required></textarea> 
+                                    <label class="label-control" for="responsavel_aluno">Nome responsável (opcional)</label>
+                                    <input name="responsavel_aluno" class="form-control" id="responsavel_aluno" placeholder="Nome responsável"></textarea> 
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="text-center m-b-md m-t-sm">
                                     <button id="cancelar_modalidade" class="btn btn-warning text-uppercase" type="reset" value="Cancelar">Cancelar</button>
 
-                                    <button class="btn  btn-primary text-uppercase" type="button" value="Adicionar">Salvar</button>
+                                    <button class="btn  btn-primary text-uppercase" type="submit" value="Adicionar">Salvar</button>
                                 </div>
                             </div>
                             
@@ -156,5 +151,10 @@
                 $(selector).chosen(config[selector]);
             }
         })
+
+        // function mudarCurso(){
+        //     var idModalidade = $("#modalidade_aluno").val();
+        //     $("#curso_aluno option[value=" + idModalidade + "]").hide();
+        // }
     </script>    
 @endsection

@@ -59,6 +59,7 @@ Route::get('/home/doacaolista', 'DoacaoController@doacoes');
 // Rotas Aluno
 Route::get('/home/aluno', 'AlunoController@index');
 Route::get('/home/alunolista', 'AlunoController@alunos');
+Route::post('/home/cadastraraluno', 'AlunoController@registrar');
 
 // Rotas Colaborador
 Route::get('/home/colaborador', 'ColaboradorController@index');
