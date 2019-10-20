@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\App;
 use DB;
 use App\Endereco;
 use App\Pessoa;
+use App\Telefone;
 use Illuminate\Http\Request;
 
 class CadastroController extends Controller
@@ -139,31 +141,44 @@ class CadastroController extends Controller
         $telefone_editar = $request->telefone_editar;
         $telefone2_editar = $request->telefone2_editar; 
 
-        $id_editar = DB::table('pessoa')
-                    ->select('endereco.id as endereco,telefone.id as telefone')
+        // query de para pegar id de endereco, telefone 
+        
+        $id_endereco = DB::table('pessoa')
+                    ->select('endereco.id as endereco')
                     ->join('endereco','endereco.id','=','pessoa.id_endereco')
+                    ->where('pessoa.id','=', "$id")
+                    ->get();
+
+        $id_telefone = DB::table('pessoa')
+                    ->select('telefone.id as telefone')
                     ->join('telefone','telefone.id','=','pessoa.id_telefone')
                     ->where('pessoa.id','=', "$id")
                     ->get();
 
-        DB::update("update pessoa set cpf = $cpf,
-                 tipo_documento = $tipo_doc,
-                 nome = $nome_editar,
-                 dt_nascimento = $dt_nascimento,
-                 genero = $genero_editar,
-                 email = $email_editar where id = ?", ["$id"]);
+        Pessoa::where('id' , $id)
+            ->update(['cpf' => $cpf,
+                    'tipo_documento' => '1',
+                    'nome' => $nome_editar,
+                    'dt_nascimento' => $dt_nascimento,
+                    'genero' => $genero_editar,
+                    'email' => $email_editar]);
         
-        DB::update("update endereco set logradouro = $logradouro_editar,
-                    numero = $numero_editar,
-                    complemento = $complemento_editar,
-                    bairro = $bairro_editar,
-                    cidade = $cidade_editar,
-                    uf = $uf_editar,
-                    cep = $cep_editar where id = ?", [$id_editar->first()->endereco]);
+        Endereco::where('id',$id_endereco->first()->endereco)
+                ->update(['logradouro' => $logradouro_editar,
+                            'numero' => $numero_editar,
+                            'complemento' => $complemento_editar,
+                            'bairro' => $bairro_editar,
+                            'cidade' => $cidade_editar,
+                            'uf' => $uf_editar,
+                            'cep' => $cep_editar ]);
+
+        Telefone::where('id',$id_telefone->first()->telefone)
+                ->update(['telefone' => $telefone_editar,
+                        'telefone2' => $telefone2_editar]);
         
-        DB::update("update telefone set telefone = $telefone_editar,
-                    telefone2 = $telefone2_editar where id = ?", [$id_editar->first()->telefone]);
         
         return redirect('/home/listapessoas');
+
+        //return var_dump($id_telefone->first()->telefone);
     }
 }

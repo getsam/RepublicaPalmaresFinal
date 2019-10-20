@@ -39,7 +39,7 @@ Route::get('/home/criar', 'CadastroController@indexform');
 Route::post('/home/criar', 'CadastroController@registrar');
 Route::get('/home/listapessoas', 'CadastroController@listarpessoas');
 Route::get('/home/editar/{id}', 'CadastroController@showeditar');
-Route::put('/home/editar/{id}','CadastroController@editar');
+Route::post('/home/editar/{id}','CadastroController@editar');
 
 //rotas modalidade
 Route::get('/home/modalidade', 'ModalidadeController@modalidade');

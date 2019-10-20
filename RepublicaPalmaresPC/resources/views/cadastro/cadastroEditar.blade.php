@@ -22,7 +22,7 @@
                                 @foreach ($endereco as $endereco)
                                 @foreach ($telefone as $telefone)
                             
-                                <form method="put">
+                                <form method="post" >
                                 @csrf
                                     <div class="col-sm-12 ">
                                         <h3 class="text-center m-t-lg">Dados Básicos</h3>
@@ -30,7 +30,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="cpf_editar" class="label-control">CPF/CNPJ</label>
-                                            <input value="{{ $pessoa->cpf }}" type="text" placeholder="Preencha com o CPF" class="form-control" id="cpf _editar" name="cpf _editar" required>
+                                            <input value="{{ $pessoa->cpf }}" type="text" placeholder="Preencha com o CPF" class="form-control" id="cpf_editar" name="cpf_editar" required>
                                         </div>
                                     </div>
                                     
@@ -56,7 +56,7 @@
                                         <div class="form-group" id="data_1">
                                             <label class="label-control" for="dt_nascimento">Nascimento/Abertura</label>
                                             <div class="input-group date" >
-                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" id="nascimento_cadastro" name="nascimento_cadastro" value="{{ $pessoa->dt_nascimento }}" >
+                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input value="{{ $pessoa->dt_nascimento }}" type="text" class="form-control" id="dt_nascimento" name="dt_nascimento" >
                                             </div>
                                         </div>
                                     </div>
@@ -64,7 +64,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="genero_editar" class="label-control">Gênero</label>
-                                            <select value="{{ $pessoa->genero }}" class="form-control m-b" name="name_editar" id="name-editar" >
+                                            <select value="{{ $pessoa->genero }}" class="form-control m-b" name="genero_editar" id="genero_editar" >
                                                 <option value="0">Masculino</option>
                                                 <option value="1">Feminino</option>
                                             </select>                                                   
@@ -73,8 +73,8 @@
                                     
                                     <div class="col-sm-6" hidden>
                                         <div class="form-group">
-                                            <label for="genero_editar" class="label-control">Porte</label>
-                                            <select class="form-control m-b" name="name_editar" id="name-editar">
+                                            <label for="" class="label-control">Porte</label>
+                                            <select class="form-control m-b" name="" id="">
                                                 <option value="0">MEI</option>
                                                 <option value="1">ME</option>
                                                 <option value="2">Pequena</option>
