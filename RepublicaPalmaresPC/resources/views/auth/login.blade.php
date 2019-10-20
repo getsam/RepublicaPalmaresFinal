@@ -102,7 +102,7 @@
                                     </a>
                                 @endif -->
                     </form>     
-                    <p >
+                    <p class="m-t-lg">
                         <small>Desenvolvido por alunos da FIT &copy; 2019</small>
                     </p>
                 </div>
