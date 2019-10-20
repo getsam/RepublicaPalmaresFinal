@@ -22,21 +22,22 @@
                                 @foreach ($endereco as $endereco)
                                 @foreach ($telefone as $telefone)
                             
-                                <form role="form" action="#" method="#">
+                                <form method="post" >
+                                @csrf
                                     <div class="col-sm-12 ">
                                         <h3 class="text-center m-t-lg">Dados Básicos</h3>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="documento_editar" class="label-control">CPF/CNPJ</label>
-                                            <input value="{{ $pessoa->cpf }}" type="text" placeholder="Preencha com o CPF" class="form-control" id="documento_editar" name="documento_editar" required>
+                                            <label for="cpf_editar" class="label-control">CPF/CNPJ</label>
+                                            <input value="{{ $pessoa->cpf }}" type="text" placeholder="Preencha com o CPF" class="form-control" id="cpf_editar" name="cpf_editar" required>
                                         </div>
                                     </div>
                                     
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="tiposoc_editar" class="label-control">Tipo Pesooa</label>
-                                        <select value="{{ $pessoa->tipo_documento }}" class="form-control m-b" name="tiposoc_editar" id="tiposoc_editar">
+                                            <label for="tipo_doc" class="label-control">Tipo Pesooa</label>
+                                            <select value="{{ $pessoa->tipo_documento }}" class="form-control m-b" name="tipo_doc" id="tipo_doc">
                                                 <option value="">Selecione</option>
                                                 <option value="0">Pessoa Fisíca</option>
                                                 <option value="1">Pessoas Juridíca</option>
@@ -55,7 +56,7 @@
                                         <div class="form-group" id="data_1">
                                             <label class="label-control" for="dt_nascimento">Nascimento/Abertura</label>
                                             <div class="input-group date" >
-                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" id="nascimento_cadastro" name="nascimento_cadastro" value="{{ $pessoa->dt_nascimento }}" >
+                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input value="{{ $pessoa->dt_nascimento }}" type="text" class="form-control" id="dt_nascimento" name="dt_nascimento" >
                                             </div>
                                         </div>
                                     </div>
@@ -63,7 +64,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="genero_editar" class="label-control">Gênero</label>
-                                            <select value="{{ $pessoa->genero }}" class="form-control m-b" name="name_editar" id="name-editar" >
+                                            <select value="{{ $pessoa->genero }}" class="form-control m-b" name="genero_editar" id="genero_editar" >
                                                 <option value="0">Masculino</option>
                                                 <option value="1">Feminino</option>
                                             </select>                                                   
@@ -72,8 +73,8 @@
                                     
                                     <div class="col-sm-6" hidden>
                                         <div class="form-group">
-                                            <label for="genero_editar" class="label-control">Porte</label>
-                                            <select class="form-control m-b" name="name_editar" id="name-editar">
+                                            <label for="" class="label-control">Porte</label>
+                                            <select class="form-control m-b" name="" id="">
                                                 <option value="0">MEI</option>
                                                 <option value="1">ME</option>
                                                 <option value="2">Pequena</option>
@@ -91,8 +92,8 @@
                                     
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <label for="endereco_editar" class="label-control">Logradouro</label>
-                                            <input value="{{ $endereco->logradouro }}"type="text" placeholder="Prenche com o logradouro" class="form-control" id="endereco_editar" name="endereco_editar">
+                                            <label for="logradouro_editar" class="label-control">Logradouro</label>
+                                            <input value="{{ $endereco->logradouro }}"type="text" placeholder="Prenche com o logradouro" class="form-control" id="logradouro_editar" name="logradouro_editar">
                                         </div>
                                     </div>
                                     
@@ -151,15 +152,15 @@
                                     
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="tel1_editar">Telefone 1</label>
-                                            <input value="{{ $telefone->telefone }}"type="text" placeholder="Prenche com o telefone" class="form-control" id="tel1_editar" name="tel1_editar">
+                                            <label for="telefone_editar">Telefone 1</label>
+                                            <input value="{{ $telefone->telefone }}"type="text" placeholder="Prenche com o telefone" class="form-control" id="telefone_editar" name="telefone_editar">
                                         </div>
                                     </div>
                                     
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="tel2_editar">Telefone 2</label>
-                                        <input value="{{ $telefone->telefone2 }}" type="text" placeholder="Prenche com o telefone" class="form-control" id="tel2_editar" name="tel2_editar">
+                                            <label for="telefone2_editar">Telefone 2</label>
+                                        <input value="{{ $telefone->telefone2 }}" type="text" placeholder="Prenche com o telefone" class="form-control" id="telefone2_editar" name="telefone2_editar">
                                         </div>
                                     </div>
                                     
@@ -186,35 +187,6 @@
                                 @endforeach
                                 @endforeach
                                 @endforeach
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="tab-2" class="tab-pane active">
-                        <div class="panel-body">
-                            <div class="p-sm">
-                                <div class="row m-b-md">
-                                    <h3 class="font-bold text-uppercase text-center m-b-md">Usúario de acesso</h3>
-                                    <div class="col-sm-4">
-                                        <div class="form-group">
-                                            <label for="emailUser_editar">Email</label>
-                                            <input type="email" placeholder="Ex. email@site.com" class="form-control"  id="emailUser_editar" name="emailUser_editar" required>
-                                        </div>
-                                    </div> 
-                                    <div class="col-sm-4">
-                                        <div class="form-group">
-                                            <label for="senha_editar">Senha</label>
-                                            <input type="password" placeholder="Cadastre uma senha" class="form-control"  id="senha_editar" name="senha_editar" required>
-                                        </div>
-                                    </div> 
-                                    <div class="col-sm-4">
-                                        <div class="form-group">
-                                            <label for="confSenha_editar">Confirma Senha</label>
-                                            <input type="password" placeholder="Confirme sua senha" class="form-control"  id="confSenha_editar" name="confSenha_editar" required>
-                                        </div>
-                                    </div> 
-
-                                </div>
                             </div>
                         </div>
                     </div>

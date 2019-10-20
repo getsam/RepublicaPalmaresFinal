@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\App;
 use DB;
 use App\Endereco;
 use App\Pessoa;
+use App\Telefone;
 use Illuminate\Http\Request;
 
 class CadastroController extends Controller
@@ -116,8 +118,67 @@ class CadastroController extends Controller
         return view('cadastro.cadastroEditar', compact('pessoa','endereco','telefone'));
     }
 
-    public function editar(Request $request)
+    public function editar(Request $request, $id)
     {
-        //
+        // form pessoa
+        $cpf = $request->cpf_editar;
+        $tipo_doc  = $request->tipo_doc;
+        $nome_editar = $request->nome_editar;
+        $dt_nascimento = $request->dt_nascimento;
+        $genero_editar = $request->genero_editar;
+        $email_editar = $request->email_editar;
+
+        // form endereco
+        $logradouro_editar = $request->logradouro_editar;
+        $numero_editar = $request->numero_editar;
+        $complemento_editar = $request->complemento_editar;
+        $bairro_editar = $request->bairro_editar;
+        $cidade_editar = $request->cidade_editar;
+        $uf_editar = $request->uf_editar;
+        $cep_editar = $request->cep_editar;
+
+        // form numero 
+        $telefone_editar = $request->telefone_editar;
+        $telefone2_editar = $request->telefone2_editar; 
+
+        // query de para pegar id de endereco, telefone 
+        
+        $id_endereco = DB::table('pessoa')
+                    ->select('endereco.id as endereco')
+                    ->join('endereco','endereco.id','=','pessoa.id_endereco')
+                    ->where('pessoa.id','=', "$id")
+                    ->get();
+
+        $id_telefone = DB::table('pessoa')
+                    ->select('telefone.id as telefone')
+                    ->join('telefone','telefone.id','=','pessoa.id_telefone')
+                    ->where('pessoa.id','=', "$id")
+                    ->get();
+
+        Pessoa::where('id' , $id)
+            ->update(['cpf' => $cpf,
+                    'tipo_documento' => '1',
+                    'nome' => $nome_editar,
+                    'dt_nascimento' => $dt_nascimento,
+                    'genero' => $genero_editar,
+                    'email' => $email_editar]);
+        
+        Endereco::where('id',$id_endereco->first()->endereco)
+                ->update(['logradouro' => $logradouro_editar,
+                            'numero' => $numero_editar,
+                            'complemento' => $complemento_editar,
+                            'bairro' => $bairro_editar,
+                            'cidade' => $cidade_editar,
+                            'uf' => $uf_editar,
+                            'cep' => $cep_editar ]);
+
+        Telefone::where('id',$id_telefone->first()->telefone)
+                ->update(['telefone' => $telefone_editar,
+                        'telefone2' => $telefone2_editar]);
+        
+        
+        return redirect('/home/listapessoas');
+
+        //return var_dump($id_telefone->first()->telefone);
     }
 }

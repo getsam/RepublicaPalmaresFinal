@@ -65,13 +65,18 @@ class ColaboradorController extends Controller
             colaborador_cargo.dt_entrada,
             cargo.observacao'))
             ->get();
-            
+
         return view('colaborador.colaboradorlista', compact('colaboradores'));
         //return var_dump($colaboradores);
     }
 
-    public function editar()
+    public function showeditar(Request $request, $id)
     {
         return view('colaborador.colaboradorEditar');
+    }
+
+    public function editar()
+    {
+        //
     }
 }
