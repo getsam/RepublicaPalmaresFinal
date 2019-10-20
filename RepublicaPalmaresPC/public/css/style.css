@@ -6583,6 +6583,10 @@ body.landing-page {
 .landing-page address {
   font-size: 14px;
 }
+
+.landing-page address a{
+  color: inherit;
+}
 .landing-page h1 {
   margin-top: 10px;
   font-size: 30px;
