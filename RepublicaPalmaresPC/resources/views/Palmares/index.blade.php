@@ -35,7 +35,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="{{url('/')}}">
-                        REPÚBLICA DE CULTURAL
+                        REPÚBLICA CULTURAL
                     </a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
@@ -61,16 +61,15 @@
         <div class="item active">
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>República Cultural<br/>
-                        O espaço da Capoeira<br/>
-                        que abre portas <br/>
-                        para outros projetos.
-                    </h1>
-                    
-                    <!-- <p>
-                        <a class="btn btn-lg btn-primary" href="#" role="button">READ MORE</a>
-                        <a class="caption-link" href="#" role="button">Inspinia Theme</a>
-                    </p> -->
+                    <div class="carousel-content">
+                        <h1>O que  era para ser uma simples  academia de capoeira   engajada se transformo em um espaço de reflexão e produção cultural,  possibilitando o diálogo entre  diversas práticas educativas.
+                        </h1>
+
+                        
+                        <p class="m-t-lg">
+                            <a class="btn btn-lg btn-primary" href="#contact" role="button">Saiba mais</a>
+                        </p>
+                    </div>
                 </div> 
                 <!-- <div class="carousel-image wow zoomIn">
                     <img src="img/landing/laptop.png" alt="laptop"/>
@@ -83,12 +82,15 @@
         <div class="item">
             <div class="container">
                 <div class="carousel-caption blank">
-                    <h1>A profundidade de nossas ações<br/>
-                         fizeram de nossa associação<br/>
-                         uma entidade muito além<br/>
-                          de uma simples academia de capoeira.</h1>
-                    <!-- <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p> -->
-                    <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
+                    <div class="carousel-content">
+                        <h1>A profundidade de nossas ações<br/>
+                            fizeram de nossa associação<br/>
+                            uma entidade muito além<br/>
+                            de uma simples academia de capoeira.</h1>
+                        <p class="m-t-lg">
+                            <a class="btn btn-lg btn-primary" href="#contact" role="button">Saiba mais</a>
+                        </p>
+                    </div>
                 </div>
             </div>
             <!-- Set background for slide in css -->
@@ -124,11 +126,6 @@
     </div>
 </section>
 
-
-
-
-
-
 <section class="features">
     <div class="container">
         <div class="row">
@@ -136,11 +133,10 @@
             
                 <div class="navy-line m-b-lg"></div>
                 
-                <h1 class="m-b-n-xs">Capoeira</h1>
+                <h1 class="m-b-n-xxs">Capoeira</h1>
                 <small>Nosso carro chefe</small>
                 
-                <p class="m-t-lg">Mestre Bimba, Mestre Pastinha entre  outros anônimos, são figuras que se transformaram em ícones mundiais, em verdadeiras vergas de sustentação, e, porque não dizer raízes das duas vertentes da Capoeira do Brasil para o mundo; Bimba com a Regional e Pastinha com a capoeira Angola, um voando e marcializando e o outro se resguardando e serpenteando. Ambos na roda, na ginga, nos toques de berimbau verdadeiros tripés de nossa arte.</p>
-                <p>Depois de tantas lutas dentro e fora da roda, nossa memória e nosso saber vão aos poucos sendo reconhecido e valorizado. A Capoeira é hoje, patrimônio histórico e material do povo brasileiro tombado pelo IPHAM*.</p>
+                <p class="m-t-lg">Mestre Bimba, Mestre Pastinha entre  outros anônimos, são figuras que se transformaram em ícones mundiais, em verdadeiras vergas de sustentação, e, porque não dizer raízes das duas vertentes da Capoeira do Brasil para o mundo; Bimba com a Regional e Pastinha com a capoeira Angola, um voando e marcializando e o outro se resguardando e serpenteando. Ambos na roda, na ginga, nos toques de berimbau verdadeiros tripés de nossa arte. Depois de tantas lutas dentro e fora da roda, nossa memória e nosso saber vão aos poucos sendo reconhecido e valorizado. A Capoeira é hoje, patrimônio histórico e material do povo brasileiro tombado pelo IPHAM*.</p>
                 <p>A capoeira é fruto de uma experiência, de uma vivência histórica e tradicional de nosso povo, e sobreviveu praticamente tendo como base a oralidade. É hora de darmos um salto de qualidade para isto, este conhecimento, esta experiência educativa, precisa ser sistematizada e transformada em conteúdo histórico e pedagógico a ser trabalhado em ambientes que vão além das rodas de capoeira, nas salas de aulas até as universidades. Cabe a nós, o papel de protagonistas do destino da capoeira em nossa história. Não temos o direito de abandonar a capoeira como “um barco solto nas ondas do mar” sem direção.</p>
             </div>
         </div>
@@ -151,8 +147,11 @@
                 <p>Os negros vindos para o Brasil eram em sua maioria de Angola, diziam ser mais ágeis, por terem estatura mediana e por isto tinham mais aproveitamento no trabalho e no jogo da Capoeira. O nome “CAPOEIRA” deu-se pelo motivo dos escravos ao fugirem para as matas, cujo nome é Capoeira. Os senhores mandavam os capitães-do-mato buscarem os escravos, que os atacavam com pés, mãos e cabeça, dando-lhes surras ou até mesmo matando-os, porém os que sobreviviam voltavam para os seus patrões indignados. Então os Senhores perguntavam: -”Cadê os negros?” e a resposta era: – Nos pegaram na Capoeira”, referindo-se ao local onde formam vencidos</p>
                 <!-- <a href="" class="btn btn-primary">Learn more</a> -->
             </div>
-            <div class="col-lg-6 text-right m-t-n-lg wow zoomIn">
-                <img src="{{ asset('storage/img/landing/Logo_RCP.jpg')}}" class="img-responsive" alt="Capoeira republica de Palmares">
+            <div class="col-lg-6  col-md-6 logo-content-sobre wow zoomIn">
+                <div class="logo-container">
+                <img src="{{ asset('storage/img/Logo_capoeira_vetorizado_finalizado_normal-01.png')}}" class="img-responsive" alt="Capoeira republica de Palmares"/>
+                </div>
+                
             </div>
             
             <div class="col-lg-3 features-text text-right wow fadeInRight">
@@ -167,21 +166,24 @@
 </section>
 
 
-<section id="testimonials" class="navy-section testimonials" style="margin-top: 0">
+<section id="testimonials" class="navy-section testimonials" style="margin-top: 40px">
 
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center wow zoomIn">
                 <i class="fa fa-comment big-icon"></i>
                 <h1>
-                    What our users say
+                   Palavra de Mestre
                 </h1>
                 <div class="testimonials-text">
-                    <i>"Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."</i>
+                    <i>"ser mestre é ser antes de mais nada, ser um educador e assumir este papel na sociedade em que vivemos."</i>
                 </div>
                 <small>
-                    <strong>12.02.2014 - Andy Smith</strong>
+                    <strong>Luiz Carlos - Meste Azambuja</strong>
+                    
                 </small>
+                <br>
+                <small>Fundador do Grupo Itambé da Bahia e Mestre de Capoeira</small>
             </div>
         </div>
     </div>
@@ -193,14 +195,14 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="navy-line"></div>
-                <h1>What our partners say</h1>
-                <p>Donec sed odio dui. Etiam porta sem malesuada. </p>
+                <h1>Assim como o berimbau...</h1>
+                <p>O Berimbau é o maior representante não apenas da capoeira, durante uma roda de capoeira ele troca de mãos a fim de manter sempre o axé e toda a mandiga da capoeira; com o conhecimento e a informação deve se adotar o mesmo procedimento, ou seja, compartilhar divulgar difundir, disseminar, pois o conhecimento é uma grande arma e deve ser usado sempre com a intenção de construir uma sociedade melhor, um ser humano melhor e com isso um mundo melhor. </p>
             </div>
         </div>
         <div class="row features-block">
             <div class="col-lg-4">
                 <div class="bubble">
-                    "Uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+                    "Quem não pode com mandiga não  carrega patuá, Quem não vive, não pesquisa, Não tem nada pra falar"
                 </div>
                 <div class="comments-avatar">
                     <a href="" class="pull-left">
@@ -209,16 +211,16 @@
                     
                     <div class="media-body">
                         <div class="commens-name">
-                            Andrew Williams
+                            Mauro Sergio dos Santos - Mestre Falcão
                         </div>
-                        <small class="text-muted">Company X from California</small>
+                        <small class="text-muted">Mestrado em química e Mestre de capoeira</small>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-4">
                 <div class="bubble">
-                    "Uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+                    "Capoeirista não é aquele que sabe movimentar o corpo, e sim aquele que se deixa movimentar pela alma"
                 </div>
                 <div class="comments-avatar">
                     <a href="" class="pull-left">
@@ -227,16 +229,16 @@
                     
                     <div class="media-body">
                         <div class="commens-name">
-                            Andrew Williams
+                            José Carlos da Silva - Mestre Borboleta
                         </div>
-                        <small class="text-muted">Company X from California</small>
+                        <small class="text-muted">Presidente da ACRP e Mestre de Capoeira</small>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-4">
                 <div class="bubble">
-                    "Uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+                "Quem não pode com mandiga não  carrega patuá, Quem não vive, não pesquisa, Não tem nada pra falar"
                 </div>
                 <div class="comments-avatar">
                     <a href="" class="pull-left">
@@ -244,9 +246,9 @@
                     </a>
                     <div class="media-body">
                         <div class="commens-name">
-                            Andrew Williams
+                            Hélio Dionisio - Mestre Bambam
                         </div>
-                        <small class="text-muted">Company X from California</small>
+                        <small class="text-muted">Professor de Ed. Física e Mestre de Capoeira</small>
                     </div>
                 </div>
             </div>
@@ -277,7 +279,7 @@
                 <p>Existem centenas de estilos diferentes de artes marciais e cada uma desenvolve técnicas de luta e métodos de treinamento que garantem a eficiência do estilo. Nosso carro chefe é a capoeira mas, abrimos espaço para diversas outra modalidades tais como: Boxe, Judô, Muay-Tay entre outras.</p>
             </div>
             <div class="col-lg-5 features-text">
-                <small>Aprenda</small>
+                <small>Toque e cante</small>
                 <h2 class="font-bold text-info">Música</h2>
                 <i class="fa fa-bolt big-icon pull-right"></i>
                 <p>Boas Músicas muitas vezes refletem o ambiente e o tempo de sua criação. A música em si é história, e cada uma normalmente tem o seu próprio plano de fundo e um enredo. Baseado nesta linha de pensamento que oferecemos diversos cursos de música, entre eles pode mos citar: Percusão, cordas e cantos.</p>
@@ -285,13 +287,13 @@
         </div>
         <div class="row">
             <div class="col-lg-5 col-lg-offset-1 features-text">
-                <small>Faça</small>
+                <small>Aprenda</small>
                 <h2 class="font-bold text-info">Teatro</h2>
                 <i class="fa fa-clock-o big-icon pull-right"></i>
                 <p>O teatro é uma das manifestações artísticas mais poderosas, principalmente por ser uma das mais completas, o estudante pode passar por várias experiências e formas de vida distintas e acaba melhorando o seu próprio repertório, tornando-se uma pessoa mais flexível, interessante, inteligente e autoconfiante.</p>
             </div>
             <div class="col-lg-5 features-text">
-                <small>Construa</small>
+                <small>Faça</small>
                 <h2 class="font-bold text-info">Artesanato </h2>
                 <i class="fa fa-users big-icon pull-right"></i>
                 <p>Artesanato existe desde a idade média quando trabalhadores qualificados eram necessários para produzir itens de necessidade básica. Hoje em dia, a maioria das mercadorias é feita em uma linha de produção de fábrica, então artesãos talentosos e capazes de exibir suas habilidades podem ter uma carreira reconhecida e lucrativa.</p>
