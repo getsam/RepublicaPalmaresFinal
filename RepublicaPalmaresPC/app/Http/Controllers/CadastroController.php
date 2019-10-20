@@ -116,8 +116,17 @@ class CadastroController extends Controller
         return view('cadastro.cadastroEditar', compact('pessoa','endereco','telefone'));
     }
 
-    public function editar(Request $request)
+    public function editar(Request $request, $id)
     {
-        //
+        
+        $cpf = $request->cpf_editar;
+        $tipo_doc  = $request->tipo_doc;
+        $nome_editar = $request->nome_editar;
+        $dt_nascimento = $request->dt_nascimento;
+        $genero_editar = $request->genero_editar;
+
+
+        $logradouro_editar = $request->logradouro_editar;
+        $numero_editar = $request->numero_editar;
     }
 }

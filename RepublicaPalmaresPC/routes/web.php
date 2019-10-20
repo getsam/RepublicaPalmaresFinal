@@ -14,6 +14,8 @@
 use App\Http\Controllers\ColaboradorController;
 use Illuminate\Routing\Route as IlluminateRoute;
 use Illuminate\Support\Facades\Route;
+use phpDocumentor\Reflection\Types\This;
+
 //use Symfony\Component\Routing\Route;
 
 
@@ -63,7 +65,9 @@ Route::get('/home/alunolista', 'AlunoController@alunos');
 Route::get('/home/colaborador', 'ColaboradorController@index');
 Route::post('/home/colaborador','ColaboradorController@registrar');
 Route::get('/home/colaboradorlista', 'ColaboradorController@colaboradores');
-Route::get('/home/editarcolaborador' , 'ColaboradorController@editar');
+Route::get('/home/colaborador/editar/{id}' , 'ColaboradorController@showeditar');
+Route::put('/home/colaborador/editar/{id}', 'ColaboradorController@editar');
+
 
 // Rotas agenda
 Route::get('/home/agenda', 'AgendaController@index');

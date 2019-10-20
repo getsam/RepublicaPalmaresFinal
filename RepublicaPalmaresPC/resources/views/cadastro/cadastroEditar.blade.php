@@ -28,15 +28,15 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="documento_editar" class="label-control">CPF/CNPJ</label>
-                                            <input value="{{ $pessoa->cpf }}" type="text" placeholder="Preencha com o CPF" class="form-control" id="documento_editar" name="documento_editar" required>
+                                            <label for="cpf_editar" class="label-control">CPF/CNPJ</label>
+                                            <input value="{{ $pessoa->cpf }}" type="text" placeholder="Preencha com o CPF" class="form-control" id="cpf _editar" name="cpf _editar" required>
                                         </div>
                                     </div>
                                     
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="tiposoc_editar" class="label-control">Tipo Pesooa</label>
-                                        <select value="{{ $pessoa->tipo_documento }}" class="form-control m-b" name="tiposoc_editar" id="tiposoc_editar">
+                                            <label for="tipo_doc" class="label-control">Tipo Pesooa</label>
+                                            <select value="{{ $pessoa->tipo_documento }}" class="form-control m-b" name="tipo_doc" id="tipo_doc">
                                                 <option value="">Selecione</option>
                                                 <option value="0">Pessoa Fisíca</option>
                                                 <option value="1">Pessoas Juridíca</option>
@@ -91,8 +91,8 @@
                                     
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <label for="endereco_editar" class="label-control">Logradouro</label>
-                                            <input value="{{ $endereco->logradouro }}"type="text" placeholder="Prenche com o logradouro" class="form-control" id="endereco_editar" name="endereco_editar">
+                                            <label for="logradouro_editar" class="label-control">Logradouro</label>
+                                            <input value="{{ $endereco->logradouro }}"type="text" placeholder="Prenche com o logradouro" class="form-control" id="logradouro_editar" name="logradouro_editar">
                                         </div>
                                     </div>
                                     
