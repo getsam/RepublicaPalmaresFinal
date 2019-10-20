@@ -5,6 +5,15 @@
 @endsection
             
 @section('conteudo')
+    @if(!empty(Session::has('mensagem')))
+        <script> swal({ 
+                    title : " Cadastrada!!! " ,
+                    text: '{{Session::get('mensagem')}}',
+                    icon: "success",
+                    button: "Okay",
+                }); 
+        </script>
+    @endif
     <div class="row border-bottom">
     <!-- envelope do Conteúdo das views     -->
         <div class="wrapper wrapper-content animated fadeInRight">

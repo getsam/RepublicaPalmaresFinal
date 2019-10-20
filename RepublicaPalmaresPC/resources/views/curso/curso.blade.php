@@ -12,15 +12,7 @@
 @section('conteudo')
 
     <div class="wrapper wrapper-content animated fadeInRight"> 
-        @if(!empty(Session::has('mensagem')))
-        <script> swal({ 
-                    title : " Cadastrada!!! " ,
-                    text: '{{Session::get('mensagem')}}',
-                    icon: "success",
-                    button: "Okay",
-                }); 
-        </script>
-        @endif
+        
         <div class="row m-b-lg">
 
             <div class="ibox-content panel-body">
