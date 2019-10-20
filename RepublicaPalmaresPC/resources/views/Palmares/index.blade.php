@@ -34,7 +34,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{url('/')}}">
+                    <a class="navbar-brand page-scroll" href="#page-top">
                         REPÚBLICA CULTURAL
                     </a>
                 </div>
@@ -62,12 +62,12 @@
             <div class="container">
                 <div class="carousel-caption">
                     <div class="carousel-content">
-                        <h1>O que  era para ser uma simples  academia de capoeira   engajada se transformo em um espaço de reflexão e produção cultural,  possibilitando o diálogo entre  diversas práticas educativas.
+                        <h1>O que era para ser uma simples academia de capoeira engajada se transformou em um espaço de reflexão e produção cultural, possibilitando o diálogo entre diversas práticas educativas.
                         </h1>
 
                         
                         <p class="m-t-lg">
-                            <a class="btn btn-lg btn-primary" href="#contact" role="button">Saiba mais</a>
+                            <a class="btn btn-lg btn-primary page-scroll" href="#contact" role="button">Saiba mais</a>
                         </p>
                     </div>
                 </div> 
@@ -88,7 +88,7 @@
                             uma entidade muito além<br/>
                             de uma simples academia de capoeira.</h1>
                         <p class="m-t-lg">
-                            <a class="btn btn-lg btn-primary" href="#contact" role="button">Saiba mais</a>
+                            <a class="btn btn-lg btn-primary page-scroll" href="#contact" role="button">Saiba mais</a>
                         </p>
                     </div>
                 </div>
@@ -138,6 +138,7 @@
                 
                 <p class="m-t-lg">Mestre Bimba, Mestre Pastinha entre  outros anônimos, são figuras que se transformaram em ícones mundiais, em verdadeiras vergas de sustentação, e, porque não dizer raízes das duas vertentes da Capoeira do Brasil para o mundo; Bimba com a Regional e Pastinha com a capoeira Angola, um voando e marcializando e o outro se resguardando e serpenteando. Ambos na roda, na ginga, nos toques de berimbau verdadeiros tripés de nossa arte. Depois de tantas lutas dentro e fora da roda, nossa memória e nosso saber vão aos poucos sendo reconhecido e valorizado. A Capoeira é hoje, patrimônio histórico e material do povo brasileiro tombado pelo IPHAM*.</p>
                 <p>A capoeira é fruto de uma experiência, de uma vivência histórica e tradicional de nosso povo, e sobreviveu praticamente tendo como base a oralidade. É hora de darmos um salto de qualidade para isto, este conhecimento, esta experiência educativa, precisa ser sistematizada e transformada em conteúdo histórico e pedagógico a ser trabalhado em ambientes que vão além das rodas de capoeira, nas salas de aulas até as universidades. Cabe a nós, o papel de protagonistas do destino da capoeira em nossa história. Não temos o direito de abandonar a capoeira como “um barco solto nas ondas do mar” sem direção.</p>
+                
             </div>
         </div>
         <div class="row features-block">
@@ -145,7 +146,8 @@
                 <small>Capoeira</small>
                 <h2>Angola </h2>
                 <p>Os negros vindos para o Brasil eram em sua maioria de Angola, diziam ser mais ágeis, por terem estatura mediana e por isto tinham mais aproveitamento no trabalho e no jogo da Capoeira. O nome “CAPOEIRA” deu-se pelo motivo dos escravos ao fugirem para as matas, cujo nome é Capoeira. Os senhores mandavam os capitães-do-mato buscarem os escravos, que os atacavam com pés, mãos e cabeça, dando-lhes surras ou até mesmo matando-os, porém os que sobreviviam voltavam para os seus patrões indignados. Então os Senhores perguntavam: -”Cadê os negros?” e a resposta era: – Nos pegaram na Capoeira”, referindo-se ao local onde formam vencidos</p>
-                <!-- <a href="" class="btn btn-primary">Learn more</a> -->
+               
+                <a href="#contact" class="btn btn-primary m-t-md page-scroll">Saiba Mais »</a>
             </div>
             <div class="col-lg-6  col-md-6 logo-content-sobre wow zoomIn">
                 <div class="logo-container">
@@ -158,7 +160,8 @@
                 <small>Capoeira</small>
                 <h2>Regional </h2>
                 <p>Afluente da Capoeira Angola, a Capoeira Regional é caracterizada pela agilidade de seus movimentos, bem como a variedade bem maior do que os da Capoeira Angola. Digo “afluente da Capoeira Angola” porque foi a partir dela que Manoel dos Reis Machado criou a Capoeira Regional. Inspirado nos movimentos da Angola mesclados com os do batuque, uma dança africana na qual o pai de Manoel dos Reis Machado, o senhor Luiz Cândido Machado era campeão, foi criada a “luta regional baiana”, um dos títulos que a capoeira regional teve. O estilo regional de jogar capoeira é marcado pela rapidez de seus golpes e contra-golpes e pelo ritmo acelerado dos toques do berimbau.</p>
-                <!-- <a href="" class="btn btn-primary">Learn more</a> -->
+                
+                <a href="#contact" class="btn btn-primary m-t-md page-scroll">Saiba Mais »</a>
             </div>
         </div>
     </div>
@@ -277,12 +280,14 @@
                 <h2 class="font-bold text-info">Artes Marciais</h2>
                 <i class="fa fa-bar-chart big-icon pull-right"></i>
                 <p>Existem centenas de estilos diferentes de artes marciais e cada uma desenvolve técnicas de luta e métodos de treinamento que garantem a eficiência do estilo. Nosso carro chefe é a capoeira mas, abrimos espaço para diversas outra modalidades tais como: Boxe, Judô, Muay-Tay entre outras.</p>
+                <a href="#contact" class="navy-link m-t-md page-scroll">Saiba Mais »</a>
             </div>
             <div class="col-lg-5 features-text">
                 <small>Toque e cante</small>
                 <h2 class="font-bold text-info">Música</h2>
                 <i class="fa fa-bolt big-icon pull-right"></i>
                 <p>Boas Músicas muitas vezes refletem o ambiente e o tempo de sua criação. A música em si é história, e cada uma normalmente tem o seu próprio plano de fundo e um enredo. Baseado nesta linha de pensamento que oferecemos diversos cursos de música, entre eles pode mos citar: Percusão, cordas e cantos.</p>
+                <a href="#contact" class="navy-link m-t-md page-scroll">Saiba Mais »</a>
             </div>
         </div>
         <div class="row">
@@ -291,12 +296,14 @@
                 <h2 class="font-bold text-info">Teatro</h2>
                 <i class="fa fa-clock-o big-icon pull-right"></i>
                 <p>O teatro é uma das manifestações artísticas mais poderosas, principalmente por ser uma das mais completas, o estudante pode passar por várias experiências e formas de vida distintas e acaba melhorando o seu próprio repertório, tornando-se uma pessoa mais flexível, interessante, inteligente e autoconfiante.</p>
+                <a href="#contact" class="navy-link m-t-md page-scroll">Saiba Mais »</a>
             </div>
             <div class="col-lg-5 features-text">
                 <small>Faça</small>
                 <h2 class="font-bold text-info">Artesanato </h2>
                 <i class="fa fa-users big-icon pull-right"></i>
                 <p>Artesanato existe desde a idade média quando trabalhadores qualificados eram necessários para produzir itens de necessidade básica. Hoje em dia, a maioria das mercadorias é feita em uma linha de produção de fábrica, então artesãos talentosos e capazes de exibir suas habilidades podem ter uma carreira reconhecida e lucrativa.</p>
+                <a href="#contact" class="navy-link m-t-md page-scroll">Saiba Mais »</a>
             </div>
         </div>
     </div>

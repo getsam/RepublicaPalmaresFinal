@@ -6918,6 +6918,9 @@ body.landing-page {
   padding-bottom: 90px;
   background-color: #1ab394;
   background-image: url('../storage/img/landing/avatar_all.png');
+  background-size: 70%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
 }
 .landing-page .big-icon {
   font-size: 56px !important;
