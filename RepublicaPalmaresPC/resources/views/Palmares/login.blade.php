@@ -47,19 +47,15 @@
                 <h2 class="font-bold">República Cultural</h2>
                 <h3>Assossiação Cultural República de Palmares</h3>
                 <p>
-                    Perfectly designed and precisely prepared admin theme with over 50 pages with extra new web app views.
+                Ao longo destes anos criamos uma pedagogia e metodologia própria, capaz de transmitir nossas experiencias e reflexões sem limite de idade, as crianças, jovens e adultos.
                 </p>
                 
                 <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                O que era para ser uma simples academia de capoeira engajada se transformou em um espaço de reflexão e produção cultural, possibilitando o diálogo entre diversas práticas educativas.
                 </p>
                 
                 <p>
-                    When an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </p>
-                
-                <p>
-                    <small>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</small>
+                Deste entrosamento comprometido com mudanças, evoluímos para uma República Cultural
                 </p>
                 
             </div>
