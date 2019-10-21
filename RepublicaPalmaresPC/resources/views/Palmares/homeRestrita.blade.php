@@ -17,7 +17,7 @@
                             </div>
                             <div class="col-xs-8 text-right">
                                 <span> Inserir novo </span>
-                                <a href="#">
+                                <a href="/home/usuario">
                                     <h2 class="font-bold">Usúario</h2>
                                 </a>
                             </div>
@@ -32,7 +32,7 @@
                             </div>
                             <div class="col-xs-8 text-right">
                                 <span> Inserir novo</span>
-                                <a href="#">
+                                <a href="/home/aluno">
                                     <h2 class="font-bold">Aluno</h2>
                                 </a>
                             </div>
@@ -47,7 +47,7 @@
                             </div>
                             <div class="col-xs-8 text-right">
                                 <span> Consultar</span>
-                                <a href="#">
+                                <a href="/home/modalidade">
                                     <h2 class="font-bold">Modalidade</h2>
                                 </a>
                             </div>
@@ -62,7 +62,7 @@
                             </div>
                             <div class="col-xs-8 text-right">
                                 <span> Consultar</span>
-                                <a href="#">
+                                <a href="/home/cursolista">
                                     <h2 class="font-bold">Cursos</h2>
                                 </a>
                             </div>
