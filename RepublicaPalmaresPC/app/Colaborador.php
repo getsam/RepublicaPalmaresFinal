@@ -8,6 +8,7 @@ class Colaborador extends Model
 {   
     protected $table = 'colaborador';
     public $timestamps = false;
+    
 
     public function pessoa()
     {
@@ -16,6 +17,6 @@ class Colaborador extends Model
 
     public function cargos()
     {
-        return $this->belongsToMany(Cargo::class, ColaboradorCargo::class);
+        return $this->belongsToMany('App/Cargo')->using('App/ColaboradorCargo');
     }
 }

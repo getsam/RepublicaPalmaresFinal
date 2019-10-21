@@ -11,10 +11,10 @@ use Illuminate\Http\Request;
 
 class CadastroController extends Controller
 {
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     
 
     public function indexform()
@@ -141,7 +141,8 @@ class CadastroController extends Controller
         $telefone_editar = $request->telefone_editar;
         $telefone2_editar = $request->telefone2_editar; 
 
-        // query de para pegar id de endereco, telefone 
+        // query para pegar id de endereco, telefone 
+        //return dd($request->all());
         
         $id_endereco = DB::table('pessoa')
                     ->select('endereco.id as endereco')

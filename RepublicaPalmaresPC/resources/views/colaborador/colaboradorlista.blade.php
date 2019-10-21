@@ -26,8 +26,8 @@
                                                     <th>ID</th>
                                                     <th>CPF</th>
                                                     <th>Colaborador</th>
-                                                    <th>Depto</th>
                                                     <th>Cargo</th>
+                                                    <th>Depto</th>
                                                     <th>Data da entrada</th>
                                                     <th>Observação</th>
                                                     <th>Editar</th>
@@ -35,16 +35,22 @@
                                             </thead>
                                             <tbody>
                                                 @foreach ($colaboradores as $colaborador)
+                                                
+                
+                                                    
+                                                
                                                     <tr class="">
+                                                        
                                                         <td>{{ $colaborador->id }}</td>
                                                         <td>{{ $colaborador->cpf }}</td>
                                                         <td>{{ $colaborador->nome }}</td>
-                                                        <td>{{ $colaborador->departamento }}</td>
+               
                                                         <td>{{ $colaborador->cargo }}</td>
+                                                        <td>{{ $colaborador->departamento }}</td>
                                                         <td>{{ $colaborador->dt_entrada }}</td>
                                                         <td>{{ $colaborador->observacao }}</td>
                                                         <td class="text-center ">
-                                                            <a href="{{url("/home/departamento/editar/$colaborador->id")}}">
+                                                            <a href="{{url("/home/colaborador/editar/$colaborador->id")}}">
                                                                 <button class="btn-primary btn btn-xs">
                                                                     <i class="fa fa-lg fa-pencil"></i>
                                                                 </button>
@@ -52,6 +58,7 @@
                                                         </td>
                                                     </tr>
                                                 @endforeach
+                                                
                                             </tbody>
                                         </table>
                                     </div>
