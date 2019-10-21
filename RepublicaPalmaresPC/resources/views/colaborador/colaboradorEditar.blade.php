@@ -19,79 +19,73 @@
                 <div class="p-sm">
                    <div class="row">
 
-                        <form action="#" id="cadastrar_Colaborador">
+                        <form method="POST" action="#" id="cadastrar_Colaborador">
                             @csrf
                             @foreach ($colaborador as $colaborador)
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="dpto_colab_editar" class="label-control">Departamento</label>
                                     <select data-placeholder="Selecione a Departamento..." id="dpto_colab_editar" name="dpto_colab_editar" class="chosen-select form-control"  tabindex="1">
-                                        <option selected value="">{{ $colaborador->departamento }}</option>
-                                        <option value="1">Recepção</option>
-                                        <option value="2">Aulas</option>
-                                        <option value="3">Financeiro</option>
-                                        <option value="4">Depto Geral</option>
+                                        <option selected value="{{ $colaborador->departamento }}">{{ $colaborador->departamento }}</option>
+                                        @foreach ($departamentos as $departamento)
+                                        <option value="{{ $departamento->nome }}">{{ $departamento->nome }}</option>
+                                        @endforeach
                                     </select>   
                                 </div>
                             </div>
 
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <label for="depto_cargo_editar" class="label-control">Cargo</label>
-                                    <select data-placeholder="Selecione o Cargo..." id="depto_cargo_editar" name="depto_cargo_editar" class="chosen-select form-control"  tabindex="1">
-                                        <option value="">{{ $colaborador->cargo }}</option>
-                                        <option value="1">Recepicionista</option>
-                                        <option value="2">Professor(a)</option>
-                                        <option value="3">Tesoureiro</option>
-                                        <option value="4">Ajudante geral</option>
+                                    <label for="cargo_editar" class="label-control">Cargo</label>
+                                    <select data-placeholder="Selecione o Cargo..." id="cargo_editar" name="cargo_editar" class="chosen-select form-control"  tabindex="1">
+                                        <option selected value="{{ $colaborador->cargo }}">{{ $colaborador->cargo }}</option>
+                                        @foreach ($cargos as $cargo)
+                                        <option value="{{ $cargo->nome }}">{{ $cargo->nome }}</option>     
+                                        @endforeach
                                     </select>   
                                 </div>
                             </div>
 
                             <div class="col-sm-4">
                                 <div class="form-group" id="data_1">
-                                    <label for="data_matricula_editar" class="label-control">Data de entrada</label>
+                                    <label for="dt_entrada" class="label-control">Data de entrada</label>
                                     <div class="input-group date">
                                         <span class="input-group-addon">
                                             <i class="fa fa-calendar"></i>
                                         </span> 
-                                        <input value="{{ $colaborador->dt_entrada }}" type="text" id="data_matricula_editar" class="form-control" value="03/09/2017">
+                                        <input value="{{ $colaborador->dt_entrada }}" type="text" id="dt_entrada" class="form-control" value="03/09/2017">
                                     </div>
                                 </div>
                             </div>     
 
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <label for="doc_colab" class="label-control">CPF/ CNPJ</label>
-                                    <select data-placeholder="Selecione o documento..." id="doc_colab" name="doc_colab" class="chosen-select form-control"  tabindex="1">
-                                        <option selected value="">{{ $colaborador->cpf }}</option>
-                                        <option value="1">725.234.432-07</option>
-                                        <option value="2">010.234.098-98</option>
-                                        <option value="3">456.123.654.00</option>
-                                        <option value="4">123.321.123-32</option>
-                                        <option value="5">010.101.123-01</option>
+                                    <label for="cpf" class="label-control">CPF/ CNPJ</label>
+                                    <select data-placeholder="Selecione o documento..." id="cpf" name="cpf" class="chosen-select form-control"  tabindex="1">
+                                        <option selected value="{{ $colaborador->cpf }}">{{ $colaborador->cpf }}</option>
+                                        @foreach ($pessoas as $pessoa)
+                                            <option value="{{ $pessoa->cpf }}">{{ $pessoa->cpf }}</option>    
+                                        @endforeach
                                     </select>   
                                 </div>
                             </div>
 
                             <div class="col-sm-8">
                                 <div class="form-group">
-                                    <label for="nome_colab" class="label-control">Colaboador</label>
-                                    <select data-placeholder="Selecione o aluno..." id="nome_colab" name="nome_colab" class="chosen-select form-control"  tabindex="1">
+                                    <label for="nome" class="label-control">Colaboador</label>
+                                    <select data-placeholder="Selecione o aluno..." id="nome" name="nome" class="chosen-select form-control"  tabindex="1">
                                         <option selected value="">{{ $colaborador->nome }}</option>
-                                        <option value="1">João Batista da Silva</option>
-                                        <option value="2">Maria Aparecida dos Santos</option>
-                                        <option value="3">Claudio Marques Soares</option>
-                                        <option value="4">Alan Rocha</option>
-                                        <option value="5">Jorge Albano</option>
+                                        @foreach ($pessoas as $pessoa)
+                                        <option value="{{ $pessoa->nome }}">{{ $pessoa->nome }}</option>    
+                                        @endforeach
                                     </select>   
                                 </div>
                             </div>                         
 
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label class="label-control" for="curso_descricao">Observação</label>
-                                    <textarea name="curso_descricao" class="form-control m-b" id="curso_descricao" placeholder="Observação" cols="30" rows="5" required>{{ $colaborador->observacao }}}}</textarea> 
+                                    <label class="label-control" for="observacao">Observação</label>
+                                    <textarea name="observacao" class="form-control m-b" id="observacao" placeholder="Observação" cols="30" rows="5" required>{{ $colaborador->observacao }}}}</textarea> 
                                 </div>
                             </div>
 
@@ -99,7 +93,7 @@
                                 <div class="text-center m-b-md m-t-sm">
                                     <button id="cancelar_modalidade" class="btn btn-warning text-uppercase" type="reset" value="Cancelar">Cancelar</button>
 
-                                    <button class="btn  btn-primary text-uppercase" type="button" value="Adicionar">Salvar</button>
+                                    <button class="btn  btn-primary text-uppercase" type="submit" value="Adicionar">Salvar</button>
                                 </div>
                             </div>
                             @endforeach

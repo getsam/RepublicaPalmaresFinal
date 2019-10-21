@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Colaborador;
 use App\ColaboradorCargo;
+use App\Departamento;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -89,11 +90,59 @@ class ColaboradorController extends Controller
         cargo.observacao'))
         ->get();
 
-        return view('colaborador.colaboradorEditar', compact('colaborador'));
+        $departamentos = Departamento::all();
+        $pessoas = DB::table('pessoa')->get();
+        $cargos = DB::table('cargo')->get();
+
+        return view('colaborador.colaboradorEditar', compact('colaborador','departamentos','cargos','pessoas'));
     }
 
-    public function editar()
+    public function editar(Request $request, $id)
     {
+        $dpto = $request->dpto_colab_editar;
+        $cargo_editar = $request->cargo_editar;
+        $dt_entrada = $request->dt_entrada;
+
+        $cpf = $request->cpf;
+        $nome = $request->nome;
+        $observacao = $request->observacao;
+
+        // $departamento = DB::table('departamento')
+        //             ->select('departamento.id as departamento')
+        //             ->join('cargo','departamento.id','=','cargo.departamento_id')
+        //             ->where('departamento.nome','=', "$dpto")
+        //             ->get();
         
-    }
+        $colaborador = DB::table('colaborador')
+                    ->select('colaborador.id as colaborador')
+                    ->join('pessoa','pessoa.id','=','colaborador.pessoa_id')
+                    ->join('colaborador_cargo','colaborador_cargo.colaborador_id', '=', 'pessoa.id')
+                    
+                    ->where('pessoa.cpf','=', $cpf)
+                    ->get();
+
+        $pessoa = DB::table('pessoa')
+                    ->select('pessoa.id as pessoa')
+                    ->join('colaborador_cargo','colaborador_cargo.colaborador_id', '=', 'pessoa.id')
+                    ->where('pessoa.cpf','=', "$cpf")
+                    ->get();
+        
+        $cargo = DB::table('cargo')
+                    ->select('cargo.id as cargo')
+                    ->join('colaborador_cargo','colaborador_cargo.cargo_id', '=', 'cargo.id')
+                    ->where('cargo.nome','=', "$cargo_editar")
+                    ->get();
+        //dd($colaborador);
+        ColaboradorCargo::where('id',$id)->update([
+            'colaborador_id' => $colaborador->first()->colaborador,
+            'cargo_id' => $cargo->first()->cargo,
+            'dt_entrada' => $dt_entrada
+        ]);
+
+        Colaborador::where('id',$colaborador->first()->colaborador)->update([
+            'pessoa_id' => $pessoa->first()->pessoa
+        ]);
+
+        return redirect('/home/colaboradorlista');
+        }
 }
