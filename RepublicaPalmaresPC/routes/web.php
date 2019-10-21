@@ -67,7 +67,7 @@ Route::get('/home/colaborador', 'ColaboradorController@index');
 Route::post('/home/colaborador','ColaboradorController@registrar');
 Route::get('/home/colaboradorlista', 'ColaboradorController@colaboradores');
 Route::get('/home/colaborador/editar/{id}' , 'ColaboradorController@showeditar');
-Route::put('/home/colaborador/editar/{id}', 'ColaboradorController@editar');
+Route::post('/home/colaborador/editar/{id}', 'ColaboradorController@editar');
 
 // Rotas Usuario
 Route::get('home/usuario', 'UsuarioController@index');

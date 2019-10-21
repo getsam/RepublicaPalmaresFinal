@@ -77,11 +77,23 @@ class ColaboradorController extends Controller
 
     public function showeditar(Request $request, $id)
     {
-        return view('colaborador.colaboradorEditar');
+        $colaborador = ColaboradorCargo::query()->where('colaborador_cargo.id','=',$id)
+        ->join('colaborador', 'colaborador.id', '=', 'colaborador_cargo.colaborador_id')
+        ->join('pessoa', 'colaborador_cargo.colaborador_id', '=', 'pessoa.id')
+        ->join('cargo', 'cargo.id', '=', 'colaborador_cargo.cargo_id')
+        ->join('departamento', 'departamento.id', '=', 'cargo.depto_id')
+        ->select(DB::raw('colaborador_cargo.id, pessoa.cpf, pessoa.nome,
+        departamento.nome as departamento,
+        cargo.nome as cargo,
+        colaborador_cargo.dt_entrada,
+        cargo.observacao'))
+        ->get();
+
+        return view('colaborador.colaboradorEditar', compact('colaborador'));
     }
 
     public function editar()
     {
-        //
+        
     }
 }

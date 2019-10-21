@@ -50,7 +50,7 @@
                                                         <td>{{ $colaborador->dt_entrada }}</td>
                                                         <td>{{ $colaborador->observacao }}</td>
                                                         <td class="text-center ">
-                                                            <a href="{{url("/homerestrita/colaborador/editar/$colaborador->id")}}">
+                                                            <a href="{{url("/home/colaborador/editar/$colaborador->id")}}">
                                                                 <button class="btn-primary btn btn-xs">
                                                                     <i class="fa fa-lg fa-pencil"></i>
                                                                 </button>
