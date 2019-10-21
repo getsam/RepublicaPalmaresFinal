@@ -57,10 +57,12 @@ Route::put('/home/editarcurso/{id}', 'CursoController@editar');
 // Rotas Doação
 Route::get('/home/doacao', 'DoacaoController@index');
 Route::get('/home/doacaolista', 'DoacaoController@doacoes');
+Route::post('/home/criardoacao','DoacaoController@registrar');
 
 // Rotas Aluno
 Route::get('/home/aluno', 'AlunoController@index');
 Route::get('/home/alunolista', 'AlunoController@alunos');
+Route::post('/home/cadastraraluno', 'AlunoController@registrar');
 
 // Rotas Colaborador
 Route::get('/home/colaborador', 'ColaboradorController@index');

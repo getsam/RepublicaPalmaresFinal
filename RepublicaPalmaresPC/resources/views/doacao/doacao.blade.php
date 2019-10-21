@@ -19,18 +19,16 @@
                 <div class="p-sm">
                     <div class="" id="inserirCurso" >
                         <div class="row">     
-                            <form action="#" id="cadastrar_doacao">
-
+                            <form action="criardoacao" id="cadastrar_doacao" method="POST">
+                                @csrf
                                 <div class="col-sm-4">
                                     <div class="form-group">
                                         <label for="doc_Doador" class="label-control">CPF/ CNPJ</label>
                                         <select data-placeholder="Choose a Country..." id="doc_Doador" name="doc_Doador" class="chosen-select form-control"  tabindex="1">
                                             <option value="">Selecione..</option>
-                                            <option value="1">725.234.432-07</option>
-                                            <option value="2">010.234.098-98</option>
-                                            <option value="3">456.123.654.00</option>
-                                            <option value="4">123.321.123-32</option>
-                                            <option value="5">010.101.123-01</option>
+                                            @foreach ($pessoas as $pessoa)
+                                                <option value="{{ $pessoa->id }}">{{ $pessoa->cpf }}</option>
+                                            @endforeach
                                         </select>   
                                     </div>
                                 </div>
@@ -40,11 +38,9 @@
                                         <label for="nome_doador" class="label-control">Doador</label>
                                         <select data-placeholder="Choose a Country..." id="nome_doador" name="nome_doador" class="chosen-select form-control"  tabindex="1">
                                             <option value="">Selecione..</option>
-                                            <option value="1">João Batista da Silva</option>
-                                            <option value="2">Maria Aparecida dos Santos</option>
-                                            <option value="3">Claudio Marques Soares</option>
-                                            <option value="4">Alan Rocha</option>
-                                            <option value="5">Jorge Albano</option>
+                                            @foreach ($pessoas as $pessoa)
+                                                <option value="{{ $pessoa->id }}">{{ $pessoa->nome }}</option>
+                                            @endforeach
                                         </select>   
                                     </div>
                                 </div>
@@ -56,27 +52,27 @@
                                             <span class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
                                             </span> 
-                                            <input type="text" id="data_Doacao" class="form-control" value="03/04/2019">
+                                            <input type="text" id="data_Doacao" name="data_Doacao" class="form-control" value="03/04/2019">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="valor_Doacao" class="control-label">Valor Doação</label>
-                                        <input type="text" id="valor_Doacao" class="form-control text-right" data-mask="R$ 999,999,999,99" placeholder="">
+                                        <input type="text" id="valor_Doacao" name="valor_Doacao" class="form-control text-right" data-mask="R$ 999,999,999,99" placeholder="">
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <label class="label-control" for="curso_descricao">Observação</label>
-                                        <textarea name="curso_descricao" class="form-control m-b" id="curso_descricao" placeholder="Observação" cols="30" rows="5" required></textarea> 
+                                        <label class="label-control" for="doacao_obcervacao">Observação</label>
+                                        <textarea name="doacao_obcervacao" class="form-control m-b" id="doacao_obcervacao" placeholder="Observação" cols="30" rows="5" required></textarea> 
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="text-center m-b-md m-t-sm">
                                         <button id="cancelar_modalidade" class="btn btn-warning text-uppercase" type="reset" value="Cancelar">Cancelar</button>
 
-                                        <button class="btn  btn-primary text-uppercase" type="button" value="Adicionar">Salvar</button>
+                                        <button class="btn  btn-primary text-uppercase" type="submit" value="Adicionar">Salvar</button>
                                     </div>
                                 </div>
                                 <!-- tabela de doações anteriores -->
@@ -90,7 +86,6 @@
                                         <table class="table table-striped table-bordered table-hover lista_doacoes" >
                                             <thead>
                                                 <tr>
-                                                    <th class="text-center">ID</th>
                                                     <th class="text-center">Doador</th>
                                                     <th class="text-center">Data Doação</th>
                                                     <th class="text-center">Valor Doação</th>
@@ -98,53 +93,23 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr class="">
-                                                    <td>003</td>
-                                                    <td>
-                                                        Joao Batista da Silva
-                                                    </td>
-                                                    <td>
-                                                        15/05/2019
-                                                    </td>
-                                                    <td class="text-right">
-                                                       <span class="pull-left">R$</span>
-                                                       <span>1.500,00</span>
-                                                    </td>
-                                                    <td>
-                                                        Enviar recibo de Doação até 17/05/2019
-                                                    </td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>002</td>
-                                                    <td>
-                                                        Joao Batista da Silva
-                                                    </td>
-                                                    <td>
-                                                        
-                                                    </td>
-                                                    <td class="text-right">
+                                                @foreach ($doacoes as $doacao)
+                                                    <tr class="">
+                                                        <td>
+                                                            {{ $doacao->nome }}
+                                                        </td>
+                                                        <td>
+                                                            {{ date('d/m/Y', strtotime($doacao->dt_doacao)) }}
+                                                        </td>
+                                                        <td class="text-right">
                                                         <span class="pull-left">R$</span>
-                                                        <span>1.500,00</span>
-                                                    </td>
-                                                    <td>
-                                                        
-                                                    </td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>001</td>
-                                                    <td>
-                                                        Joao Batista da Silva
-                                                    </td>
-                                                    <td>
-                                                        15/03/2019
-                                                    </td>
-                                                    <td class="text-right">
-                                                        <span class="pull-left">R$</span>
-                                                        <span>1.500,00</span>
-                                                    </td>
-                                                    <td>
-                                                    </td>
-                                                </tr>
+                                                        <span>{{ $doacao->valor }}</span>
+                                                        </td>
+                                                        <td>
+                                                            {{ $doacao->observacao }}
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>

@@ -5,6 +5,15 @@
 @endsection
 
 @section('conteudo')
+    @if(!empty(Session::has('mensagem')))
+        <script> swal({ 
+                    title : " Cadastrada!!! " ,
+                    text: '{{Session::get('mensagem')}}',
+                    icon: "success",
+                    button: "Okay",
+                }); 
+        </script>
+    @endif
     <div class="row border-bottom">
         <!-- envelope do Conteúdo das views     -->
             <div class="wrapper wrapper-content animated fadeInRight">
@@ -23,71 +32,33 @@
                                         <table class="table table-striped table-bordered table-hover lista_Alunos" >
                                             <thead>
                                                 <tr>
-                                                    <th>ID</th>
                                                     <th>CPF</th>
                                                     <th>Aluno</th>
-                                                    <th>Graduação</th>
                                                     <th>Modalidade</th>
                                                     <th>Curso</th>
                                                     <th>Data da Matrícula</th>
-                                                    <th>Observação</th>
+                                                    <th>Nome Responsável</th>
                                                     <th>Editar</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr class="">
-                                                    <td>01</td>
-                                                    <td>27101925607</td>
-                                                    <td>Joao Batista de Souza</td>
-                                                    <td>Iniciante</td>
-                                                    <td>Arte marcial</td>
-                                                    <td>Capoeira</td>
-                                                    <td>10/03/2019</td>
-                                                    <td></td>
-                                                    <td class="text-center ">
-                                                        <a href="cursoEditar.html">
-                                                            <button class="btn-primary btn btn-xs">
-                                                                <i class="fa fa-lg fa-pencil"></i>
-                                                            </button>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>02</td>
-                                                    <td>27101925603</td>
-                                                    <td>Maria Batista de Souza</td>
-                                                    <td>Iniciante</td>
-                                                    <td>Arte marcial</td>
-                                                    <td>Capoeira</td>
-                                                    <td>10/04/2019</td>
-                                                    <td>
-                                                        Aluno com autismo (Leve), pode apresentar limitações.
-                                                    </td>
-                                                    <td class="text-center ">
-                                                        <a href="cursoEditar.html">
-                                                            <button class="btn-primary btn btn-xs">
-                                                                <i class="fa fa-lg fa-pencil"></i>
-                                                            </button>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>03</td>
-                                                    <td>27101925609</td>
-                                                    <td>Eduardo Batista de Souza</td>
-                                                    <td>Iniciante</td>
-                                                    <td>Arte marcial</td>
-                                                    <td>Capoeira</td>
-                                                    <td>10/04/2019</td>
-                                                    <td></td>
-                                                    <td class="text-center ">
-                                                        <a href="cursoEditar.html">
-                                                            <button class="btn-primary btn btn-xs">
-                                                                <i class="fa fa-lg fa-pencil"></i>
-                                                            </button>
-                                                        </a>
-                                                    </td>
-                                                </tr>
+                                                @foreach ($aluno_cursos as $aluno_curso)
+                                                    <tr class="">
+                                                    <td>{{ $aluno_curso->cpf }}</td>
+                                                    <td>{{ $aluno_curso->nome }}</td>
+                                                        <td>{{ $aluno_curso->modalidade }}</td>
+                                                        <td>{{ $aluno_curso->nome_curso }}</td>
+                                                        <td>10/03/2019</td>
+                                                    <td>{{ $aluno_curso->nome_responsavel }}</td>
+                                                        <td class="text-center ">
+                                                            <a href="cursoEditar.html">
+                                                                <button class="btn-primary btn btn-xs">
+                                                                    <i class="fa fa-lg fa-pencil"></i>
+                                                                </button>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>
