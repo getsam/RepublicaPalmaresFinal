@@ -2,9 +2,18 @@
 
 @section('link')
     <link rel="stylesheet" href="<?php echo asset('css/plugins/dataTables/datatables.min.css')?>">
+    <script src ="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 @endsection
     
 @section('conteudo')
+    @if(!empty(Session::has('mensagem')))
+        <script> swal({ title : " Cadastrada!!! " ,
+                        text: '{{Session::get('mensagem')}}',
+                        icon: "success",
+                        button: "Okay",
+            }); 
+        </script>
+    @endif
                 
     <div class="row border-bottom">
     <!-- envelope do Conteúdo das views     -->
@@ -31,115 +40,20 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr class="">
-                                                <td>353.345.123-07</td>
-                                                <td>Leonardo da Silva</td>
-                                                <td>Cesta Basica</td>
-                                                <td class="text-center ">
-                                                    <a href="cadastroEditar.html">
-                                                        <button class="btn-primary btn btn-xs">
-                                                            <i class="fa fa-lg fa-pencil"></i>
-                                                        </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr class="">
-                                                <td>623.361.121-07</td>
-                                                <td>Maria da Silva</td>
-                                                <td>Roupas</td>
-                                                <td class="text-center ">
-                                                    <a href="cadastroEditar.html">
-                                                        <button class="btn-primary btn btn-xs">
-                                                            <i class="fa fa-lg fa-pencil"></i>
-                                                        </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr class="">
-                                                <td>653.321.122-07</td>
-                                                <td>Joao da Silva</td>
-                                                <td>Equipamento Ginastica</td>
-                                                <td class="text-center ">
-                                                    <a href="cadastroEditar.html">
-                                                        <button class="btn-primary btn btn-xs">
-                                                            <i class="fa fa-lg fa-pencil"></i>
-                                                        </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr class="">
-                                                <td>223.321.112-07</td>
-                                                <td>Alex oliveira</td>
-                                                <td>300 R$</td>
-                                                <td class="text-center ">
-                                                    <a href="cadastroEditar.html">
-                                                        <button class="btn-primary btn btn-xs">
-                                                            <i class="fa fa-lg fa-pencil"></i>
-                                                        </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr class="">
-                                                <td>479.751.146-07</td>
-                                                <td>João Lucas</td>
-                                                <td>Instrumentos Musicais</td>
-                                                <td class="text-center ">
-                                                    <a href="cadastroEditar.html">
-                                                        <button class="btn-primary btn btn-xs">
-                                                            <i class="fa fa-lg fa-pencil"></i>
-                                                        </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr class="">
-                                                <td>343.321.843-07</td>
-                                                <td>Pedro Alvarez</td>
-                                                <td>Materiais para Costura</td>
-                                                <td class="text-center ">
-                                                    <a href="cadastroEditar.html">
-                                                        <button class="btn-primary btn btn-xs">
-                                                            <i class="fa fa-lg fa-pencil"></i>
-                                                        </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr class="">
-                                                <td>124.345.298-07</td>
-                                                <td>Fabio Mesquita</td>
-                                                <td>Roupas de frio</td>
-                                                <td class="text-center ">
-                                                    <a href="cadastroEditar.html">
-                                                        <button class="btn-primary btn btn-xs">
-                                                            <i class="fa fa-lg fa-pencil"></i>
-                                                        </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr class="">
-                                                <td>153.451.143-07</td>
-                                                <td>Julian Brandt</td>
-                                                <td>Cordões Para Graduação</td>
-                                                <td class="text-center ">
-                                                    <a href="cadastroEditar.html">
-                                                        <button class="btn-primary btn btn-xs">
-                                                            <i class="fa fa-lg fa-pencil"></i>
-                                                        </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr class="">
-                                                <td>567.355.455-07</td>
-                                                <td>Everson Bastos</td>
-                                                <td>Equipamentos Esportivos</td>
-                                                <td class="text-center ">
-                                                    <a href="cadastroEditar.html">
-                                                        <button class="btn-primary btn btn-xs">
-                                                            <i class="fa fa-lg fa-pencil"></i>
-                                                        </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-
+                                            @foreach ($doacoes as $doacao)
+                                                <tr class="">
+                                                    <td>{{ $doacao->cpf }}</td>
+                                                    <td>{{ $doacao->nome }}</td>
+                                                    <td>{{ $doacao->observacao }}</td>
+                                                    <td class="text-center ">
+                                                        <a href="#/{{ $doacao->id }}">
+                                                            <button class="btn-primary btn btn-xs">
+                                                                <i class="fa fa-lg fa-pencil"></i>
+                                                            </button>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
