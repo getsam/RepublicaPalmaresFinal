@@ -11,10 +11,10 @@ use Illuminate\Http\Request;
 
 class CadastroController extends Controller
 {
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     
 
     public function indexform()
