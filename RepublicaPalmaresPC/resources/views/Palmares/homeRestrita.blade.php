@@ -9,7 +9,7 @@
     <div class="row m-b-lg">
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="widget style1 navy-bg">
                         <div class="row">
                             <div class="col-xs-4 text-center">
@@ -24,7 +24,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="widget style1 navy-bg">
                         <div class="row">
                             <div class="col-xs-4 text-center">
@@ -39,7 +39,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="widget style1 navy-bg">
                         <div class="row">
                             <div class="col-xs-4 text-center">
@@ -54,7 +54,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="widget style1 navy-bg">
                         <div class="row">
                             <div class="col-xs-4 text-center">
