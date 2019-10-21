@@ -54,12 +54,17 @@ class ColaboradorController extends Controller
 
     public function colaboradores()
     {   
-        $colaboradores = DB::table('colaborador')
-            ->join('pessoa', 'colaborador.pessoa_id', '=', 'pessoa.id')
-            ->join('colaborador_cargo', 'colaborador.id', '=', 'colaborador_cargo.colaborador_id')
+
+        //$colaboradores = Colaborador::all();
+
+        //dd($colaboradores);
+        //dd($colaboradores);
+        $colaboradores = DB::table('colaborador_cargo')
+            ->join('colaborador', 'colaborador.id', '=', 'colaborador_cargo.colaborador_id')
+            ->join('pessoa', 'colaborador_cargo.colaborador_id', '=', 'pessoa.id')
             ->join('cargo', 'cargo.id', '=', 'colaborador_cargo.cargo_id')
             ->join('departamento', 'departamento.id', '=', 'cargo.depto_id')
-            ->select(DB::raw('colaborador.id, pessoa.cpf, pessoa.nome,
+            ->select(DB::raw('colaborador_cargo.id, pessoa.cpf, pessoa.nome,
             departamento.nome as departamento,
             cargo.nome as cargo,
             colaborador_cargo.dt_entrada,

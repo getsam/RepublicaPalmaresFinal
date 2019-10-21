@@ -142,42 +142,42 @@ class CadastroController extends Controller
         $telefone2_editar = $request->telefone2_editar; 
 
         // query de para pegar id de endereco, telefone 
-        
-        $id_endereco = DB::table('pessoa')
-                    ->select('endereco.id as endereco')
-                    ->join('endereco','endereco.id','=','pessoa.id_endereco')
-                    ->where('pessoa.id','=', "$id")
-                    ->get();
+        return dd($request->all());
+        // $id_endereco = DB::table('pessoa')
+        //             ->select('endereco.id as endereco')
+        //             ->join('endereco','endereco.id','=','pessoa.id_endereco')
+        //             ->where('pessoa.id','=', "$id")
+        //             ->get();
 
-        $id_telefone = DB::table('pessoa')
-                    ->select('telefone.id as telefone')
-                    ->join('telefone','telefone.id','=','pessoa.id_telefone')
-                    ->where('pessoa.id','=', "$id")
-                    ->get();
+        // $id_telefone = DB::table('pessoa')
+        //             ->select('telefone.id as telefone')
+        //             ->join('telefone','telefone.id','=','pessoa.id_telefone')
+        //             ->where('pessoa.id','=', "$id")
+        //             ->get();
 
-        Pessoa::where('id' , $id)
-            ->update(['cpf' => $cpf,
-                    'tipo_documento' => '1',
-                    'nome' => $nome_editar,
-                    'dt_nascimento' => $dt_nascimento,
-                    'genero' => $genero_editar,
-                    'email' => $email_editar]);
+        // Pessoa::where('id' , $id)
+        //     ->update(['cpf' => $cpf,
+        //             'tipo_documento' => '1',
+        //             'nome' => $nome_editar,
+        //             'dt_nascimento' => $dt_nascimento,
+        //             'genero' => $genero_editar,
+        //             'email' => $email_editar]);
         
-        Endereco::where('id',$id_endereco->first()->endereco)
-                ->update(['logradouro' => $logradouro_editar,
-                            'numero' => $numero_editar,
-                            'complemento' => $complemento_editar,
-                            'bairro' => $bairro_editar,
-                            'cidade' => $cidade_editar,
-                            'uf' => $uf_editar,
-                            'cep' => $cep_editar ]);
+        // Endereco::where('id',$id_endereco->first()->endereco)
+        //         ->update(['logradouro' => $logradouro_editar,
+        //                     'numero' => $numero_editar,
+        //                     'complemento' => $complemento_editar,
+        //                     'bairro' => $bairro_editar,
+        //                     'cidade' => $cidade_editar,
+        //                     'uf' => $uf_editar,
+        //                     'cep' => $cep_editar ]);
 
-        Telefone::where('id',$id_telefone->first()->telefone)
-                ->update(['telefone' => $telefone_editar,
-                        'telefone2' => $telefone2_editar]);
+        // Telefone::where('id',$id_telefone->first()->telefone)
+        //         ->update(['telefone' => $telefone_editar,
+        //                 'telefone2' => $telefone2_editar]);
         
         
-        return redirect('/home/listapessoas');
+        // return redirect('/home/listapessoas');
 
         //return var_dump($id_telefone->first()->telefone);
     }

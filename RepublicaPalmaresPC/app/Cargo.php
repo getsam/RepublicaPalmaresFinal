@@ -16,6 +16,6 @@ class Cargo extends Model
 
     public function colaboradores()
     {
-        return $this->belongsToMany(Colaborador::class, ColaboradorCargo::class, 'colaborador_id', 'cargo_id');
+        return $this->hasMany(Colaborador::class)->using('App/ColaboradorCargo')->withPivot(['cargo_id']);
     }
 }
