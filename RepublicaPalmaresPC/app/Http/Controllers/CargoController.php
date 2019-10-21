@@ -9,10 +9,10 @@ use Illuminate\Support\Facades\DB;
 
 class CargoController extends Controller
 {
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function registrarCargo(Request $request)
     {
