@@ -53,7 +53,7 @@
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <label class="label-control"for="curso_criar">Nome Curso</label>
-                                        <input type="text" class="form-control m-b"name="curso_criar" id="curso_criar" value="{{ $curso->nome }}" required/>
+                                        <input type="text" class="form-control m-b"name="curso_criar" id="curso_criar" value="{{ $curso->nome_curso }}" required/>
                                     </div>
                                 </div>
 
@@ -162,7 +162,7 @@
                                 <div class="col-sm-8">
                                         <div class="form-group">
                                             <label for="nomeGraduacao_Curso" class="label-control">Nome Graduação</label>
-                                            <input type="text" class="form-control m-b"name="nomeGraduacao_Curso" id="nomeGraduacao_Curso" required>
+                                            <input type="text" class="form-control m-b"name="nomeGraduacao_Curso" id="nomeGraduacao_Curso">
                                         </div>
                                     </div>
 
