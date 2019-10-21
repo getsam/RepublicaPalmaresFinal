@@ -75,6 +75,7 @@ Route::put('/home/colaborador/editar/{id}', 'ColaboradorController@editar');
 // Rotas agenda
 Route::get('/home/agenda', 'AgendaController@index');
 Route::get('/home/agendaevento', 'AgendaController@eventos');
+Route::post('/home/criarevento', 'AgendaController@registrar');
 
 //Rotas departamento,cargo
 Route::get('/home/departamento', 'DepartamentoController@index');

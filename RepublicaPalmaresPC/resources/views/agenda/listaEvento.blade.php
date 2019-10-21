@@ -29,40 +29,29 @@
                                                 <th>Fim</th>
                                                 <th>Local/ Endereço</th>
                                                 <th>Descricao</th>
+                                                <th>Capacidade Pessoas</th>
                                                 <th></th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr class="">
-                                                <td>Festival de capoeira</td>
-                                                <td>15/10/2019</td>
-                                                <td>10:00</td>
-                                                <td>15:00</td>
-                                                <td>Av. Gal Newton Stilac 1775 Jd das Flores Osasco SP</td>
-                                                <td>Encontro de confraternização entre Capoeiristas de Sp</td>
-                                                <td class="text-center ">
-                                                    <a href="EventosEditar.html">
-                                                        <button class="btn-primary btn btn-xs">
-                                                            <i class="fa fa-lg fa-pencil"></i>
-                                                        </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr class="">
-                                                <td>Café da manhã com Professores e Mestre</td>
-                                                <td>15/10/2019</td>
-                                                <td>8:00</td>
-                                                <td>12:00</td>
-                                                <td>Av. Gal Newton Stilac 1775 Jd das Flores Osasco SP</td>
-                                                <td>Encontro de confraternização entre Capoeiristas de SP, com a presença de ilustres autoridades da capoeira</td>
-                                                <td class="text-center ">
-                                                    <a href="EventosEditar.html">
-                                                        <button class="btn-primary btn btn-xs">
-                                                            <i class="fa fa-lg fa-pencil"></i>
-                                                        </button>
-                                                    </a>
-                                                </td>
-                                            </tr>
+                                            @foreach ($eventos as $evento)
+                                                <tr class="">
+                                                    <td>{{ $evento->nome_evento }}</td>
+                                                    <td>{{ date('d-m-Y', strtotime($evento->data_evento)) }}</td>
+                                                    <td>{{ $evento->hora_inicio }}</td>
+                                                    <td>{{ $evento->hora_fim}}</td>
+                                                    <td>{{ $evento->local_evento }}</td>
+                                                    <td>{{ $evento->descricao }}</td>
+                                                    <td>{{ $evento->capacidade_evento }}</td>
+                                                    <td class="text-center ">
+                                                        <a href="EventosEditar.html">
+                                                            <button class="btn-primary btn btn-xs">
+                                                                <i class="fa fa-lg fa-pencil"></i>
+                                                            </button>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

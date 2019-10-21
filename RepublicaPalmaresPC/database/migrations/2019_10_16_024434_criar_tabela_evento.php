@@ -15,19 +15,13 @@ class CriarTabelaEvento extends Migration
     {
         Schema::create('evento', function (Blueprint $table) {
             $table->integerIncrements('id');
-            $table->integer('modalidade_id')->unsigned();
-            $table->integer('curso_id')->unsigned();
-            $table->integer('pessoa_id')->unsigned();
-
-            $table->foreign('modalidade_id')
-                ->references('id')
-                ->on('modalidade');
-            $table->foreign('curso_id')
-                ->references('id')
-                ->on('curso');
-            $table->foreign('pessoa_id')
-                ->references('id')
-                ->on('pessoa');
+            $table->string('nome_evento');
+            $table->date('data_evento');
+            $table->time('hora_inicio');
+            $table->time('hora_fim');
+            $table->string('capacidade_evento')->nullable();
+            $table->string('local_evento');
+            $table->text('descricao');
         });
     }
 
