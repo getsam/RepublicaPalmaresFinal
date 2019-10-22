@@ -21,34 +21,43 @@
                         <div class="panel-body">
                             <div class="p-sm">
                                 <div class="row m-b-md">
+                                    <form method="POST" action="{{ route('register') }}">
+                                    @csrf
                                     <h3 class="font-bold text-uppercase text-center m-b-md">Usúario de acesso</h3>
 
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <label for="nomeUser">Nome</label>
-                                            <input type="text" placeholder="Ex. Fulano de tal" class="form-control"  id="nomeUser" name="emailUser" required>
+                                            <label for="name">Nome</label>
+                                            <input type="text" placeholder="Ex. Fulano de tal" class="form-control"  id="name" name="name" required>
                                         </div>
                                     </div> 
                                     
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label for="emailUser">Email</label>
-                                            <input type="email" placeholder="Ex. email@site.com" class="form-control"  id="emailUser" name="emailUser" required>
+                                            <label for="email">Email</label>
+                                            <input type="email" placeholder="Ex. email@site.com" class="form-control"  id="email" name="email" required>
                                         </div>
                                     </div> 
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label for="senha">Senha</label>
-                                            <input type="password" placeholder="Cadastre uma senha" class="form-control"  id="senha" name="senha" required>
+                                            <label for="password">Senha</label>
+                                            <input type="password" placeholder="Cadastre uma password" class="form-control"  id="password" name="password" required>
                                         </div>
                                     </div> 
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label for="confSenha">Confirma Senha</label>
-                                            <input type="password" placeholder="Confirme sua senha" class="form-control"  id="confSenha" name="confSenha" required>
+                                            <label for="password-confirm">Confirma Senha</label>
+                                            <input type="password" placeholder="Confirme sua senha" class="form-control"  id="password-confirm" name="password_confirmation" required>
                                         </div>
                                     </div> 
-
+                                    <div class="form-group row mb-0">
+                                        <div class="col-md-6 offset-md-4">
+                                            <button type="submit" class="btn btn-primary">
+                                                Salvar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
                                 </div>
                             </div>
                         </div>

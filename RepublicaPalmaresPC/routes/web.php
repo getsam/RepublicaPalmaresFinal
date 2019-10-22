@@ -19,7 +19,7 @@ use phpDocumentor\Reflection\Types\This;
 //use Symfony\Component\Routing\Route;
 
 
-Route::get('/', 'PalmaresController@index');
+Route::get('/', 'PalmaresController@index')->name('index');
 
 
 Route::get('/registrar', 'RegistroController@create')
