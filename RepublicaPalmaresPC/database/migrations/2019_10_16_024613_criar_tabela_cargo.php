@@ -23,7 +23,7 @@ class CriarTabelaCargo extends Migration
 
             $table->foreign('depto_id')
                 ->references('id')
-                ->on('depto');
+                ->on('departamento');
         });
     }
 

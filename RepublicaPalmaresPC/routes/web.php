@@ -41,6 +41,9 @@ Route::get('/home/listapessoas', 'CadastroController@listarpessoas');
 Route::get('/home/editar/{id}', 'CadastroController@showeditar');
 Route::post('/home/editar/{id}','CadastroController@editar');
 
+//usuario 
+Route::get('/home/usuario', 'UsuarioController@index');
+
 //rotas modalidade
 Route::get('/home/modalidade', 'ModalidadeController@modalidade');
 Route::get('/home/listarModalidade/{id}', 'ModalidadeController@listarModalidade');
@@ -79,6 +82,7 @@ Route::get('/home/usuarioLista', 'UsuarioController@listarUsuarios');
 // Rotas agenda
 Route::get('/home/agenda', 'AgendaController@index');
 Route::get('/home/agendaevento', 'AgendaController@eventos');
+Route::post('/home/criarevento', 'AgendaController@registrar');
 
 //Rotas departamento,cargo
 Route::get('/home/departamento', 'DepartamentoController@index');

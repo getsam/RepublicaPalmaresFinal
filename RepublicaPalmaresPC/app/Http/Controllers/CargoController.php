@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Cargo;
 use App\Departamento;
 use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\DB;
 
 class CargoController extends Controller
@@ -40,7 +41,7 @@ class CargoController extends Controller
                 "Cadastro do {$cargo->nome} criado com sucesso"
         );
 
-        return redirect('/home/departamento');
+        return redirect('/home/departamentolista');
 
         // return var_dump();
 

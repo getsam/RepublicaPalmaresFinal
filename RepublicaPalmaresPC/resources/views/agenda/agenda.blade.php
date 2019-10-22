@@ -6,11 +6,20 @@
     <!-- switchery -  mascara -->
     <link href="<?php echo asset('css/plugins/switchery/switchery.css')?>" rel="stylesheet">
     <link href="<?php echo asset('css/plugins/clockpicker/clockpicker.css')?>" rel="stylesheet")>
+    <script src ="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 @endsection
 
-@section('conteudo')
+@section('conteudo') 
+    @if(!empty(Session::has('mensagem')))
+    <script> swal({ title : " Cadastrada!!! " ,
+                    text: '{{Session::get('mensagem')}}',
+                    icon: "success",
+                    button: "Okay",
+        }); 
+    </script>
+    @endif
     <div class="wrapper wrapper-content animated fadeInRight"> 
-                    
+     
         <div class="row m-b-lg">
             
             <div class="ibox-content panel-body">
@@ -27,7 +36,8 @@
                             <!-- <div class="col-sm-12 m-b-md">
                                 <h3 class="text-center m-t-lg"></h3>
                             </div> -->
-                            <form action="#" id="cadastrar_evento">
+                            <form action="criarevento" method="POST" id="cadastrar_evento">
+                                @csrf
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <label for="nome_evento" class="label-control">Nome do evento</label>
@@ -42,7 +52,7 @@
                                             <span class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
                                             </span> 
-                                            <input type="text" id="data_Evento" class="form-control" value="15/03/2019" >
+                                            <input type="text" id="data_Evento" name="data_Evento" class="form-control" value="15/03/2019" >
                                         </div>
                                     </div>
                                 </div>
@@ -51,7 +61,7 @@
                                     <label for="horaInicio_evento" class="label-control">Horário inicial</label>
                                     <div class="input-group clockpicker" data-autoclose="true">
                                             
-                                        <input type="text" class="form-control" id="horaInicio_evento" value="09:30">
+                                        <input type="text" class="form-control" id="horaInicio_evento" name="horaInicio_evento" value="09:30">
                                         <span class="input-group-addon">
                                             <span class="fa fa-clock-o"></span>
                                         </span>
@@ -62,7 +72,7 @@
                                     <label for="horaFim_evento" class="label-control">Horário Final</label>
                                     <div class="input-group clockpicker" data-autoclose="true">
                                             
-                                        <input type="text" class="form-control" id="horaFim_evento" value="09:30">
+                                        <input type="text" class="form-control" id="horaFim_evento" name="horaFim_evento" value="09:30">
                                         <span class="input-group-addon">
                                             <span class="fa fa-clock-o"></span>
                                         </span>
@@ -98,7 +108,7 @@
                                     <div class="text-center m-b-md m-t-sm">
                                         <button id="cancelar_modalidade" class="btn btn-warning text-uppercase" type="reset" value="Cancelar">Cancelar</button>
 
-                                        <button class="btn  btn-primary text-uppercase" type="button" value="Adicionar">Salvar</button>
+                                        <button class="btn  btn-primary text-uppercase" type="submit" value="Adicionar">Salvar</button>
                                     </div>
                                 </div>
 
