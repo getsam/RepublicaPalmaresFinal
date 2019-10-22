@@ -51,7 +51,7 @@
                     <li>
                         <a href="#"><i class="fa fa-user "></i> <span class="nav-label">Usúario</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="{{url('/home/usuario')}}">Criar</a></li>
+                            <li><a href="{{url('/register')}}">Criar</a></li>
                             <li><a href="{{url('/home/usuarioLista')}}">Editar</a></li>
                         </ul>
                     </li>

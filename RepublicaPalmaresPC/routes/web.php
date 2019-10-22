@@ -73,6 +73,7 @@ Route::post('/home/colaborador/editar/{id}', 'ColaboradorController@editar');
 
 // Rotas Usuario
 Route::get('home/usuario', 'UsuarioController@index');
+
 Route::get('/home/usuarioLista', 'UsuarioController@listarUsuarios');
 
 // Rotas agenda
