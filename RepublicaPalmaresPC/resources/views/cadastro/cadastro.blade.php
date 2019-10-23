@@ -204,33 +204,6 @@
                                         </div>
                                     </div>
                                 </fieldset><!-- FIM - dados de contato -->
-
-                                <h1>Informações de Acessos</h1>
-                                <fieldset>
-                                    
-                                    <div class="row">
-                                        <h3 class="font-bold text-uppercase text-center">Usúario de acesso</h3>
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label for="emailUser_cadastro">Email</label>
-                                                <input type="email" placeholder="Ex. email@site.com" class="form-control"  id="emailUser_cadastro" name="emailUser_cadastro" required>
-                                            </div>
-                                        </div> 
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label for="senha_cadastro">Senha</label>
-                                                <input type="password" placeholder="Cadastre uma senha" class="form-control"  id="senha_cadastro" name="senha_cadastro" required>
-                                            </div>
-                                        </div> 
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label for="confSenha_cadastro">Confirma Senha</label>
-                                                <input type="password" placeholder="Confirme sua senha" class="form-control"  id="confSenha_cadastro" name="confSenha_cadastro" required>
-                                            </div>
-                                        </div> 
-
-                                    </div>
-                                </fieldset>
                             </form>
                         </div>
 
