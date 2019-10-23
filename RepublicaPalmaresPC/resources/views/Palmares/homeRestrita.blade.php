@@ -10,64 +10,66 @@
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="widget style1 navy-bg">
-                        <div class="row">
-                            <div class="col-xs-4 text-center">
-                                <i class="fa fa-user fa-5x"></i>
-                            </div>
-                            <div class="col-xs-8 text-right">
-                                <span> Inserir novo </span>
-                                <a href="/home/usuario">
-                                    <h2 class="font-bold">Usúario</h2>
-                                </a>
+                    <a href="/home/usuario">
+                        <div class="widget style1 navy-bg">
+                            <div class="row">
+                                <div class="col-xs-4 text-center">
+                                    <i class="fa fa-user fa-5x"></i>
+                                </div>
+                                <div class="col-xs-8 text-right">
+                                    <span> Inserir novo </span>                                    
+                                        <h2 class="font-bold">Usúario</h2>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="widget style1 navy-bg">
-                        <div class="row">
-                            <div class="col-xs-4 text-center">
-                                <i class="fa fa-users fa-5x"></i>
-                            </div>
-                            <div class="col-xs-8 text-right">
-                                <span> Inserir novo</span>
-                                <a href="/home/aluno">
-                                    <h2 class="font-bold">Aluno</h2>
-                                </a>
+                    <a href="/home/aluno">
+                        <div class="widget style1 navy-bg">
+                            <div class="row">
+                                <div class="col-xs-4 text-center">
+                                    <i class="fa fa-users fa-5x"></i>
+                                </div>
+                                <div class="col-xs-8 text-right">
+                                    <span> Inserir novo</span>
+                                        <h2 class="font-bold">Aluno</h2>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="widget style1 navy-bg">
-                        <div class="row">
-                            <div class="col-xs-4 text-center">
-                                <i class="fa fa-shield fa-5x"></i>
-                            </div>
-                            <div class="col-xs-8 text-right">
-                                <span> Consultar</span>
-                                <a href="/home/modalidade">
-                                    <h2 class="font-bold">Modalidade</h2>
-                                </a>
+                    <a href="/home/modalidade">
+                        <div class="widget style1 navy-bg">
+                            <div class="row">
+                                <div class="col-xs-4 text-center">
+                                    <i class="fa fa-shield fa-5x"></i>
+                                </div>
+                                <div class="col-xs-8 text-right">
+                                    <span> Consultar</span>
+                                    
+                                        <h2 class="font-bold">Modalidade</h2>
+                                    
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="widget style1 navy-bg">
-                        <div class="row">
-                            <div class="col-xs-4 text-center">
-                                <i class="fa fa-diamond fa-5x"></i>
-                            </div>
-                            <div class="col-xs-8 text-right">
-                                <span> Consultar</span>
-                                <a href="/home/cursolista">
-                                    <h2 class="font-bold">Cursos</h2>
-                                </a>
+                    <a href="/home/cursolista">
+                        <div class="widget style1 navy-bg">
+                            <div class="row">
+                                <div class="col-xs-4 text-center">
+                                    <i class="fa fa-diamond fa-5x"></i>
+                                </div>
+                                <div class="col-xs-8 text-right">
+                                    <span> Consultar</span>
+                                        <h2 class="font-bold">Cursos</h2>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div class="row">
@@ -132,13 +134,9 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
-            
         </div>
-        
     </div>
-    
 @endsection
 
 @section('scripts')
@@ -178,6 +176,5 @@
                 ]
             });
         });
-        
     </script>    
 @endsection
