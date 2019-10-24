@@ -32,7 +32,7 @@ Route::get('/home', 'HomeController@index')
 ->name('home');
 
 //rotas cadastro interessado
-Route::post('cadInteressado', 'HomeController@registrar');
+Route::post('cadInteressado', 'PalmaresController@registrar');
 
 //rotas cadastro pessoas
 Route::get('/home/criar', 'CadastroController@indexform');
