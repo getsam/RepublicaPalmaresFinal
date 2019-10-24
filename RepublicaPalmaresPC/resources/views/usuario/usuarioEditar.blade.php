@@ -12,7 +12,7 @@
             <div class="tabs-container">
                 <ul class="nav nav-tabs">
                     <li class="active" ><a data-toggle="tab" href="#tab-1"> Usúario</a></li>
-                    <!-- <li><a data-toggle="tab" href="#tab-2">Informações de acesso</a></li> -->
+                
                 </ul>
                 <div class="tab-content">
                 
@@ -21,33 +21,35 @@
                             <div class="p-sm">
                                 <div class="row m-b-md">
                                     <h3 class="font-bold text-uppercase text-center m-b-md">Usúario de acesso</h3>
-
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <label for="nomeUser_editar">Nome</label>
-                                            <input type="text" placeholder="Ex. Fulano de tal" class="form-control"  id="nomeUser_editar" name="emailUser" required>
-                                        </div>
-                                    </div> 
-                                    <div class="col-sm-4">
-                                        <div class="form-group">
-                                            <label for="emailUser">Email</label>
-                                            <input type="email" placeholder="Ex. email@site.com" class="form-control"  id="emailUser_editar" name="emailUser_editar" required>
-                                        </div>
-                                    </div> 
-                                    <div class="col-sm-4">
-                                        <div class="form-group">
-                                        
-                                            <label for="senha_editar">Senha</label>
-                                            <input type="password" placeholder="Cadastre uma senha" class="form-control"  id="senha_editar" name="senha_editar" required>
-                                        </div>
-                                    </div> 
-                                    <div class="col-sm-4">
-                                        <div class="form-group">
-                                            <label for="confSenha_editar">Confirma Senha</label>
-                                            <input type="password" placeholder="Confirme sua senha" class="form-control"  id="confSenha_editar" name="confSenha_editar" required>
-                                        </div>
-                                    </div> 
-
+                                    <form method="post" action="">
+                                        @csrf
+                                        @method("PUT")
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="nomeUser_editar">Nome</label>
+                                                <input value="{{ $pessoa->name }}" type="text" placeholder="Ex. Fulano de tal" class="form-control"  id="nomeUser_editar" name="emailUser" required>
+                                                </div>
+                                            </div> 
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label for="emailUser">Email</label>
+                                                    <input value="{{ $pessoa->email }}" type="email" placeholder="Ex. email@site.com" class="form-control"  id="emailUser_editar" name="emailUser_editar" required>
+                                                </div>
+                                            </div> 
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                
+                                                    <label for="senha_editar">Senha</label>
+                                                    <input value="{{ $pessoa->password }}" type="password" placeholder="Cadastre uma senha" class="form-control"  id="senha_editar" name="senha_editar" required>
+                                                </div>
+                                            </div> 
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label for="confSenha_editar">Confirma Senha</label>
+                                                    <input value="{{ $pessoa->password }}" type="password" placeholder="Confirme sua senha" class="form-control"  id="confSenha_editar" name="confSenha_editar" required>
+                                                </div>
+                                            </div> 
+                                    </form>
                                 </div>
                             </div>
                         </div>

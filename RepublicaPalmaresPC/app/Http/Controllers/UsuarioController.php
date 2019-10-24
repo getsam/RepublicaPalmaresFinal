@@ -23,4 +23,17 @@ class UsuarioController extends Controller
 
         return view('usuario.usuarioLista',compact('users'));
     }
+
+    public function showEditar(Request $request, $id)
+    {
+        $user = User::all()
+        ->where('id','=',$id);
+
+        
+        foreach($user as $item){
+            $pessoa = $item;
+        }
+
+        return view('usuario.usuarioEditar',compact('pessoa'));
+    }
 }
