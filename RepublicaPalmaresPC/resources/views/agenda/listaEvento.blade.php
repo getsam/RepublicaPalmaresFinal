@@ -37,7 +37,7 @@
                                             @foreach ($eventos as $evento)
                                                 <tr class="">
                                                     <td>{{ $evento->nome_evento }}</td>
-                                                    <td>{{ date('d-m-Y', strtotime($evento->data_evento)) }}</td>
+                                                    <td>{{ date('d/m/Y', strtotime($evento->data_evento)) }}</td>
                                                     <td>{{ $evento->hora_inicio }}</td>
                                                     <td>{{ $evento->hora_fim}}</td>
                                                     <td>{{ $evento->local_evento }}</td>

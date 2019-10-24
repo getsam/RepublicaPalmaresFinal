@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Evento;
 use App\Pessoa;
 use App\Interessado;
 use Illuminate\Http\Request;
@@ -25,7 +26,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('Palmares.homeRestrita');
+        $eventos = Evento::query()
+            ->select('evento.*')
+            ->orderBy('evento.nome_evento')
+            ->get();
+
+        return view('Palmares.homeRestrita', compact('eventos'));
     }
     
 
