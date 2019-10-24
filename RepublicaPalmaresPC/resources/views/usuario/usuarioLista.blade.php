@@ -8,7 +8,7 @@
     <div class="row border-bottom">
         <!-- envelope do Conteúdo das views     -->
            
-                
+                 
             <!-- ESPAÇO CONTEUDO DA PAGINA -->
             <div class="wrapper wrapper-content animated fadeInRight">
                 <div class="row">
@@ -19,8 +19,33 @@
                             </div>
                             <div class="ibox-content">
         
-                                
-        
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered table-hover lista_Alunos" >
+                                        <thead>
+                                            <tr>
+                                                <th>Id</th>
+                                                <th>Nome</th>
+                                                <th>Email</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach ($users as $user)
+                                                <tr class="">
+                                                <td>{{ $user->id }}</td>
+                                                <td>{{ $user->name }}</td>
+                                                <td>{{ $user->email }}</td>
+                                                    <td class="text-center ">
+                                                        <a href="{{ url("/home/editarUser/$user->id") }}">
+                                                            <button class="btn-primary btn btn-xs">
+                                                                <i class="fa fa-lg fa-pencil"></i>
+                                                            </button>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>

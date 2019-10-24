@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class UsuarioController extends Controller
@@ -18,6 +19,8 @@ class UsuarioController extends Controller
 
     public function listarUsuarios()
     {
-        return view('usuario.usuarioLista');
+        $users = User::all();
+
+        return view('usuario.usuarioLista',compact('users'));
     }
 }
