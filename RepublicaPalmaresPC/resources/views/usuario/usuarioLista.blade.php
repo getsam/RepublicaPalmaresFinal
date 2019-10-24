@@ -26,6 +26,7 @@
                                                 <th>Id</th>
                                                 <th>Nome</th>
                                                 <th>Email</th>
+                                                <th> </th>
                                             </tr>
                                         </thead>
                                         <tbody>

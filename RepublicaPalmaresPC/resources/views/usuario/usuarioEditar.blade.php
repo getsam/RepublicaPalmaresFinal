@@ -49,6 +49,13 @@
                                                     <input value="{{ $pessoa->password }}" type="password" placeholder="Confirme sua senha" class="form-control"  id="confSenha_editar" name="confSenha_editar" required>
                                                 </div>
                                             </div> 
+
+                                            <div class="m-t-lg m-b-lg  col-sm-12 ">
+                                                <div class="text-center">
+                                                    <button class="btn  btn-primary" type="submit" value="Enviar"> Salvar</button>
+                                                    <button class="btn  btn-danger" type="reset" value="Enviar"> Cancelar</button>
+                                                </div>
+                                            </div>
                                     </form>
                                 </div>
                             </div>

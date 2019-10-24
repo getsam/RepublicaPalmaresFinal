@@ -50,11 +50,11 @@
                                             <input type="password" placeholder="Confirme sua senha" class="form-control"  id="password-confirm" name="password_confirmation" required>
                                         </div>
                                     </div> 
-                                    <div class="form-group row mb-0">
-                                        <div class="col-md-6 offset-md-4">
-                                            <button type="submit" class="btn btn-primary">
-                                                Salvar
-                                            </button>
+                                    <div class="col-sm-12">
+                                        <div class="text-center m-b-md m-t-sm">
+                                            <button id="cancelar_modalidade" class="btn btn-warning text-uppercase" type="reset" value="Cancelar">Cancelar</button>
+        
+                                            <button class="btn  btn-primary text-uppercase" type="submit" value="Adicionar">Salvar</button>
                                         </div>
                                     </div>
                                 </form>
