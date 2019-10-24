@@ -29,7 +29,7 @@ class AlunoController extends Controller
             ->get();
 
         $cursos = Curso::query()
-            ->orderBy('nome')
+            ->orderBy('nome_curso')
             ->get();
 
         $graduacoes = Graduacao::query()

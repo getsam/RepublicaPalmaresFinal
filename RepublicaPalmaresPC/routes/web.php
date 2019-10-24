@@ -41,8 +41,6 @@ Route::get('/home/listapessoas', 'CadastroController@listarpessoas');
 Route::get('/home/editar/{id}', 'CadastroController@showeditar');
 Route::post('/home/editar/{id}','CadastroController@editar');
 
-//usuario 
-Route::get('/home/usuario', 'UsuarioController@index');
 
 //rotas modalidade
 Route::get('/home/modalidade', 'ModalidadeController@modalidade');
