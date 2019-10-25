@@ -91,8 +91,8 @@
                         <p class="text-muted text-right">
                                 <small>Não possui uma conta?</small>
                         </p>
-                        <button class="btn btn-sm btn-white btn-block">
-                        <a href="/home"></a> Criar uma conta</button>
+                        
+                        <a class="btn btn-sm btn-white btn-block" href="{{url('/home/#fale-conosco')}}">Criar uma conta</a> 
                                 
                                 <!-- Este techo de código deve ser aplicado  ao modal (myModal) que é chamado -->
 
