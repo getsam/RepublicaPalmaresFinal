@@ -58,7 +58,7 @@
             </div>
             <div class="col-md-6">
                 <div class="ibox-content">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form id="entrar_sistema" method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group">

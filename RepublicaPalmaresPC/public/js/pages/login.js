@@ -1,12 +1,13 @@
+//names da pg login
 $('#btn-login').on('click', function(e){
     $('#entrar_sistema').validate({
         rules:{
-            email_login: {required: true},
-            senha_login: {required: true, minlength: 4},
+            email: {required: true},
+            password: {required: true, minlength: 4},
         },
         messages:{                
-            email_login: {required: 'Preenchimento obrigatório!', email:'O endereço de e-mail deve ter o formato correto "email@site.com'},
-            senha_login: {required: 'Preenchimento obrigatório!', minlength: 'Minímo 4 caracteres'},
+            email: {required: 'Preenchimento obrigatório!', email:'O endereço de e-mail deve ter o formato correto "email@site.com'},
+            password: {required: 'Preenchimento obrigatório!', minlength: 'Minímo 4 caracteres'},
         }
     });//fecha seleção do form	
 });
