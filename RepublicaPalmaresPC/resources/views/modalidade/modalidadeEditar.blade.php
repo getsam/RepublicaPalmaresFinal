@@ -21,8 +21,9 @@
                                     <div class="col-sm-12 m-b-md">
                                         <h3 class="text-center m-t-lg">Editar Modalidade</h3>
                                     </div>
-                                    <form method="POST" id="cadastrar_modalidade">
+                                    <form method="POST">
                                         @csrf
+                                        @method('PUT')
                                         <div class="col-sm-3">
                                             <div class="form-group">
                                                 <label class="label-control" for="Id_modalidade_criar">ID da Modalidade</label>

@@ -47,4 +47,17 @@ class ModalidadeController extends Controller
 
         return redirect('/home/modalidade');
     }
+
+    public function editar(Request $request, $id)
+    {
+        $nome = $request->modalidade_criar;
+        $descricao = $request->modalidade_descricao;
+
+        Modalidade::where('id',$id)->update([
+            'modalidade' => $nome,
+            'descricao' => $descricao
+        ]);
+
+        return redirect('home/modalidade');
+    }
 }
