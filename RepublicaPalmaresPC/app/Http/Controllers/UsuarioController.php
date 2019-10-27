@@ -36,4 +36,22 @@ class UsuarioController extends Controller
 
         return view('usuario.usuarioEditar',compact('pessoa'));
     }
+    
+    public function editar(Request $request,$id)
+    {
+        //form
+        $nome = $request->nomeUser;
+        $email = $request->emailUser_editar;
+        $senha = $request->senha_editar;
+
+        //dd($request->all());
+        User::where('id',$id)->update([
+            'name' => $nome,
+            'email' => $email,
+            'password' => $senha
+        ]);
+
+        return redirect('/home/usuarioLista');
+
+    }
 }

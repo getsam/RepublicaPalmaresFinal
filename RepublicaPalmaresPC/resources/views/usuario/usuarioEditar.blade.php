@@ -26,8 +26,8 @@
                                         @method("PUT")
                                             <div class="col-sm-12">
                                                 <div class="form-group">
-                                                    <label for="nomeUser_editar">Nome</label>
-                                                <input value="{{ $pessoa->name }}" type="text" placeholder="Ex. Fulano de tal" class="form-control"  id="nomeUser_editar" name="emailUser" required>
+                                                    <label for="nomeUser">Nome</label>
+                                                <input value="{{ $pessoa->name }}" type="text" placeholder="Ex. Fulano de tal" class="form-control"  id="nomeUser" name="nomeUser" required>
                                                 </div>
                                             </div> 
                                             <div class="col-sm-4">
