@@ -24,13 +24,14 @@
                             
                                 <form method="post" >
                                 @csrf
+                                @method('PUT')
                                     <div class="col-sm-12 ">
                                         <h3 class="text-center m-t-lg">Dados Básicos</h3>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="cpf" class="label-control">CPF/CNPJ</label>
-                                            <input value="{{ $pessoa->cpf }}" type="text" placeholder="Preencha com o CPF" class="form-control" id="cpf" name="pessoa.cpf" required>
+                                            <input value="{{ $pessoa->cpf }}" type="text" placeholder="Preencha com o CPF" class="form-control" id="cpf" name="cpf_editar" required>
                                         </div>
                                     </div>
                                     

@@ -65,7 +65,7 @@
                                     <select data-placeholder="Selecione o anluno..." id="nome_Aluno" name="nome_Aluno" class="chosen-select form-control"  tabindex="1">
                                         <option value="">Selecione..</option>
                                         @foreach ($pessoas as $pessoa)
-                                            <option value="{{ $pessoa->id }}">{{ $pessoa->nome }}</option>
+                                        <option id="{{ $pessoa->id }}" value="{{ $pessoa->id }}">{{ $pessoa->nome }}</option>
                                         @endforeach
                                     </select>   
                                 </div>

@@ -94,6 +94,7 @@
                                             <th>Fim</th>
                                             <th>Local/ Endereço</th>
                                             <th>Descricao</th>
+                                            <th>Capacidade Evento</th>
                                             <th></th>
                                         </tr>
                                     </thead>

@@ -142,7 +142,7 @@ class CadastroController extends Controller
         $telefone2_editar = $request->telefone2_editar; 
 
         // query para pegar id de endereco, telefone 
-        //return dd($request->all());
+        // return dd($request->all());
         
         $id_endereco = DB::table('pessoa')
                     ->select('endereco.id as endereco')
@@ -180,6 +180,6 @@ class CadastroController extends Controller
         
         return redirect('/home/listapessoas');
 
-        //return var_dump($id_telefone->first()->telefone);
+        return var_dump($id_telefone->first()->telefone);
     }
 }
