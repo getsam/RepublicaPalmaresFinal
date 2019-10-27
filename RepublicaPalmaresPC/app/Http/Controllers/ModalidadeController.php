@@ -21,13 +21,16 @@ class ModalidadeController extends Controller
         return view('modalidade.modalidade',compact('modalidades'));
     }
 
-    public function listarModalidade(Request $request, $id)
+    public function showEditar(Request $request, $id)
     {
         $id = $id;
         $modalidade = Modalidade::query()
             ->where('id','=', "$id")
             ->get();
-        return view('modalidade.modalidadeLista',compact('modalidade','id'));
+        foreach ($modalidade as $modalidade){
+            $item = $modalidade;
+        }
+        return view('modalidade.modalidadeEditar',compact('item','id'));
     }
 
     public function registrar(Request $request)

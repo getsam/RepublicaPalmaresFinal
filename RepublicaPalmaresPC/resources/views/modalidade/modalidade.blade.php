@@ -54,7 +54,7 @@
                                                     {{$modalidade->descricao}}
                                                 </td>
                                                 <td class="text-center ">
-                                                <a href="{{url("/home/listarModalidade/$modalidade->id")}}">
+                                                <a href="{{url("/home/editarmodalidade/$modalidade->id")}}">
                                                     <button class="btn-info btn btn-xs">
                                                         <i class="fa fa-lg fa-pencil"></i>
                                                     </button>
