@@ -79,7 +79,13 @@ class ColaboradorController extends Controller
             $colaborador_cargo->cargo_id = $id_cargo->first()->id;
             $colaborador_cargo->dt_entrada = date('Y/m/d');
             $colaborador_cargo->save();
+
+            $request->session()
+            ->flash('mensagem',
+                "Cadastro do {$nome}  no cargo { $cargo } cadastrado com sucesso."
+            );
         }
+
 
         
         return redirect('/home/colaboradorlista');
@@ -177,6 +183,7 @@ class ColaboradorController extends Controller
         Cargo::where('id', $cargo->first()->id)->update([
             'observacao' => $observacao
         ]);
+        
 
         return redirect('/home/colaboradorlista');
         }

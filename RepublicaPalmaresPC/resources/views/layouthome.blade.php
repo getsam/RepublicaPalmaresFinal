@@ -113,7 +113,14 @@
 
             <!-- Barra superior header da pagina -->
             <div class="row border-bottom">
-                
+                    @if(!empty(Session::has('mensagem')))
+                        <script> swal({ title : " Cadastrada!!! " ,
+                                        text: '{{Session::get('mensagem')}}',
+                                        icon: "success",
+                                        button: "Okay",
+                            }); 
+                        </script>
+                     @endif
                 <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
                     <!-- botão hamburguer de esconder/expandir mennu -->
                     <div class="navbar-header">
