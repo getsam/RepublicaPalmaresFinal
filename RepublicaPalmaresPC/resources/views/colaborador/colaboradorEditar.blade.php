@@ -20,6 +20,7 @@
                    <div class="row">
 
                         <form method="POST" action="#" id="cadastrar_Colaborador">
+                            @method('PUT')
                             @csrf
                             @foreach ($colaborador as $colaborador)
                             <div class="col-sm-4">

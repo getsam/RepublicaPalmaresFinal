@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Cargo;
 use App\Colaborador;
 use App\ColaboradorCargo;
 use App\Departamento;
@@ -148,7 +149,6 @@ class ColaboradorController extends Controller
                     ->select('colaborador.id as colaborador')
                     ->join('pessoa','pessoa.id','=','colaborador.pessoa_id')
                     ->join('colaborador_cargo','colaborador_cargo.colaborador_id', '=', 'pessoa.id')
-                    
                     ->where('pessoa.cpf','=', $cpf)
                     ->get();
 
@@ -158,20 +158,24 @@ class ColaboradorController extends Controller
                     ->where('pessoa.cpf','=', "$cpf")
                     ->get();
         
-        $cargo = DB::table('cargo')
-                    ->select('cargo.id as cargo')
-                    ->join('colaborador_cargo','colaborador_cargo.cargo_id', '=', 'cargo.id')
-                    ->where('cargo.nome','=', "$cargo_editar")
-                    ->get();
-        //dd($colaborador);
+        $cargo = Cargo::where('cargo.nome',$cargo_editar)
+                ->join('colaborador_cargo','colaborador_cargo.cargo_id', '=', 'cargo.id');
+
+
+        // dd($cargo->first()->id);
+
         ColaboradorCargo::where('id',$id)->update([
             'colaborador_id' => $colaborador->first()->colaborador,
-            'cargo_id' => $cargo->first()->cargo,
+            'cargo_id' => $cargo->first()->id,
             'dt_entrada' => $dt_entrada
         ]);
 
-        Colaborador::where('id',$colaborador->first()->colaborador)->update([
+        Colaborador::where('id', $colaborador->first()->colaborador)->update([
             'pessoa_id' => $pessoa->first()->pessoa
+        ]);
+
+        Cargo::where('id', $cargo->first()->id)->update([
+            'observacao' => $observacao
         ]);
 
         return redirect('/home/colaboradorlista');
