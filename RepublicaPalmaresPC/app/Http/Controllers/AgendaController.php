@@ -49,4 +49,12 @@ class AgendaController extends Controller
 
         return view('agenda.listaEvento',compact('eventos'));
     }
+
+    public function showeditar(Request $request, $id){
+        $eventos = Evento::all()->where('id',"$id");
+
+        // dd($eventos->first());
+
+        return view('agenda.agendaeditar', compact('eventos'));
+    }
 }

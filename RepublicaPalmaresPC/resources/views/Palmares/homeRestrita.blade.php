@@ -109,7 +109,7 @@
                                                     <td>{{ $evento->descricao }}</td>
                                                     <td>{{ $evento->capacidade_evento }}</td>
                                                     <td class="text-center ">
-                                                        <a href="EventosEditar.html">
+                                                        <a href="{{ url("home/eventoseditar/$evento->id") }}">
                                                             <button class="btn-primary btn btn-xs">
                                                                 <i class="fa fa-lg fa-pencil"></i>
                                                             </button>
