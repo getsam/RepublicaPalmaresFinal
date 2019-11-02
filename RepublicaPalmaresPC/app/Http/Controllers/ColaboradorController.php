@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Colaborador;
 use App\ColaboradorCargo;
 use App\Departamento;
+use App\Pessoa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -38,18 +39,48 @@ class ColaboradorController extends Controller
 
         $id_cargo = DB::table('cargo')
             ->where('nome', '=', "$cargo");
+             
+        $id = $id_pessoa->first()->id;
+
+        $verificaPessoa = Pessoa::all()->where('id',"$id");
+
+        $verificaColaborador = Colaborador::all();
+
+        $encontrou = false;
+
+        foreach( $verificaColaborador as $colaborador){
+            if($colaborador->pessoa_id == $id_pessoa->first()->id){
+                $encontrou = true;
+                }
+            }
+
+        if (!$encontrou){
+            $colaborador = new Colaborador();
+            $colaborador->pessoa_id = $id_pessoa->first()->id;
+            $colaborador->save();
+        }
+
         
-        $colaborador = new Colaborador();
-        $colaborador->pessoa_id = $id_pessoa->first()->id;
-        $colaborador->save();
 
-        $colaborador_cargo = new ColaboradorCargo();
-        $colaborador_cargo->colaborador_id = $id_pessoa->first()->id;
-        $colaborador_cargo->cargo_id = $id_cargo->first()->id;
-        $colaborador_cargo->dt_entrada = date('Y/m/d');
+        $colaboradorNoCargo = false;
+        $verificaCC = ColaboradorCargo::all();
+        //percorrendo a base pra verificar a possivel existencia do mesmo registro na tabela
+        foreach($verificaCC as $cc){
+            if( ($cc->colaborador_id ==$id_pessoa->first()->id) && ($cc->cargo_id == $id_cargo->first()->id) ){
+                $colaboradorNoCargo = true;
+            }
+        }
 
-        $colaborador_cargo->save();
+        if(!$colaboradorNoCargo){
 
+            $colaborador_cargo = new ColaboradorCargo();
+            $colaborador_cargo->colaborador_id = $id_pessoa->first()->id;
+            $colaborador_cargo->cargo_id = $id_cargo->first()->id;
+            $colaborador_cargo->dt_entrada = date('Y/m/d');
+            $colaborador_cargo->save();
+        }
+
+        
         return redirect('/home/colaboradorlista');
     }
 
