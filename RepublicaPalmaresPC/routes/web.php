@@ -23,7 +23,7 @@ Route::get('/', 'PalmaresController@index')->name('index');
 
 
 Route::get('/registrar', 'RegistroController@create')
-->name('registrar');
+    ->name('registrar');
 Route::post('/registrar', 'RegistroController@store');
 Auth::routes();
 

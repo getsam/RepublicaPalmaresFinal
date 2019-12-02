@@ -62,7 +62,7 @@
                             <div class="col-sm-8">
                                 <div class="form-group">
                                     <label for="nome_Aluno" class="label-control">Aluno</label>
-                                    <select data-placeholder="Selecione o anluno..." id="nome_Aluno" name="nome_Aluno" class="chosen-select form-control"  tabindex="1">
+                                    <select data-placeholder="Selecione o aluno..." id="nome_Aluno" name="nome_Aluno" class="chosen-select form-control"  tabindex="1">
                                         <option value="">Selecione..</option>
                                         @foreach ($pessoas as $pessoa)
                                         <option id="{{ $pessoa->id }}" value="{{ $pessoa->id }}">{{ $pessoa->nome }}</option>
@@ -155,6 +155,8 @@
         // function mudarCurso(){
         //     var idModalidade = $("#modalidade_aluno").val();
         //     $("#curso_aluno option[value=" + idModalidade + "]").hide();
+        //     var el = $('.chosen-single span').text();
+        //     console.log(el);
         // }
     </script>    
 @endsection
