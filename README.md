@@ -7,6 +7,7 @@ Projeto desenvolvido para cadastro e consulta de colaboradores, alunos e doadore
 ![](RepublicaPalmaresPC/img/desktop-rpc.png)
 
 ### --
+### __
 ![](RepublicaPalmaresPC/img/desktop-rpcII.png)
 
 ### Login
@@ -15,7 +16,7 @@ Projeto desenvolvido para cadastro e consulta de colaboradores, alunos e doadore
 ### HomeUsers
 ![](RepublicaPalmaresPC/img/home-rpc.png)
 
-### Responsividade 
+### Mobile
 ![](RepublicaPalmaresPC/img/mobile-rpc.png)
 
 ## Executando
