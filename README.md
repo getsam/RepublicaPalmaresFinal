@@ -1,38 +1,50 @@
-# Republica Palmares Painel Control
+﻿# Republica Palmares Painel Control
 
 ## Sobre
 Projeto desenvolvido para cadastro e consulta de colaboradores, alunos e doadores da Republica Cultural de Palmares
 
+## Interface
+![](RepublicaPalmaresPC/img/desktop-rpc.png)
+
+
+![](RepublicaPalmaresPC/img/desktop-rpcII.png)
+
+### Login
+![](RepublicaPalmaresPC/img/login-rpc.png)
+
+### HomeUsers
+![](RepublicaPalmaresPC/img/home-rpc.png)
+
+### Responsividade 
+![](RepublicaPalmaresPC/img/mobile-rpc.png)
 
 ## Executando
 
-Para rodar este projeto e testar na sua maquina é necessario ter o php https://php.net/
+### Pré-Requisitos
+- O apache intalado
+- O MySQL >= 8 instalado na maquina
+- O PHP >= v 7.1.3 instalado na maquina https://php.net/
+- O composer instalado na maquina https://getcomposer.org/
+ 
+Após ter os requisitos instalados, o Laravel pode ser instalado via Composer através do comando:
 
-tambem é necessario ter o composer instalado https://getcomposer.org/
+	composer global required laravel/installer
 
-atribua os dois as variaveis path de ambiente do seu sistema 
 
-É necessario instalar as dependencias do projeto portanto na pasta do projeto use
+## Banco de Dados
 
-    composer install
+Foi utilizado o banco de dados MySQL e o mesmo é necessário para o funcionamento do projeto. Acesse a pasta RepublicaPalmaresPC e execute o comando:
+
+	php artisan migrate
+
+Se o comando não rodar, então crie um database chamado republicapalmares
+ou então mude as configurações do banco ficam no arquivo .env
+
+
+
+Com o laravel instalado, acesse a pasta RepublicaPalmaresPC e insira o comando:
+
+	php artisan serve (ou php -S localhost:8000 -t public)
     
-Para rodar o servidor use o comando abaixo
-
-    php artisan serve (ou php -S localhost:8000 -t public)
 
 Accesse `http://localhost:8000/`
-
-para acessar o login use 
-
-    user: admin@republica.com
-    pass: 12345678
-
-## Banco 
-
-Para usar as funcionalidades do banco voce precisa de um servidor mysql local rodando na porta 3306
-
-crie um database chamado republicapalmares ou pode alterar as configurações do banco no arquivo .env
-    
-use os comandos 
-
-    php artisan migrate 
